@@ -10,6 +10,7 @@ $COLUMNS : 12;
             left  : .5rem;
             right : .5rem;
         }
+        width: 100%;
         position : relative;
 
         @include sm {

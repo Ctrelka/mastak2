@@ -1,5 +1,62 @@
 @import "./../../common/constants";
 
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    @include sm{
+        height: 72px;
+    }
+    @include hd{
+        height: 96px;
+    }
+
+    &__inner{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__inner_logo-img{
+        width:115px;
+        display:block;
+        margin-right: auto;
+    }
+
+    &__inner_link{
+        justify-content: flex-end;
+    }
+
+    &__inner_link-text{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: #D0021B;
+        margin-right: 1rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    &__burger_line{
+        display: block;
+        background: #4B5661;
+        border-radius: 2px;
+        width: 40px;
+        height: 4px;
+        &:nth-child(2){
+            margin-top: 0.5rem;
+        }
+    }
+
+
 
 }

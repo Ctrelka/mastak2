@@ -1,0 +1,17 @@
+@import "./../../common/constants";
+
+.footer-line{
+
+    &__inner{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__inner_stroke{
+        background: #D0021B;
+        border-radius: 1.5px;
+        height:2px;
+        width: 100%;
+    }
+
+}

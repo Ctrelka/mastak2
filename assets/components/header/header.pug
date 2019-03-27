@@ -1,2 +1,11 @@
 mixin header()
-    +b.header header
+    +b.HEADER.header
+        .container
+            +e.inner
+                    +e.inner_logo(href='/')
+                        +e.inner_logo-img(src=require("./../images/logo.png"), alt='Mastak')
+                    +e.inner_link
+                        +e.inner_link-text(href='/') contact us
+                        +e.burger(href="#")
+                            +e.SPAN.burger_line
+                            +e.SPAN.burger_line

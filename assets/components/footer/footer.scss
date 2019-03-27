@@ -1,5 +1,40 @@
 @import "./../../common/constants";
 
-.footer {
+.footer{
+
+    &__inner{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include sm {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
+    &__inner_text{
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #8D9BB0;
+    }
+
+    &__inner_link{
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #4B5661;
+        padding-left:0.25rem;
+        padding-top: 0.5rem;
+        @include sm {
+            padding-top: 0rem;
+        }
+    }
 
 }
