@@ -1,6 +1,6 @@
 mixin footer()
-    .footer
+    +b.footer
         .container
-            .footer__inner
-                span.footer__inner_text This website uses cookies to improve your experience.
-                a(class='footer__inner_link' href='#') Allow cookies. Cookie Policy
+            +e.inner
+                +e.SPAN.text This website uses cookies to improve your experience.
+                +e.link(href="#") Allow cookies. Cookie Policy

@@ -1,7 +1,6 @@
 @import "./../../common/constants";
 
 .footer{
-
     &__inner{
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -10,13 +9,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         @include sm {
             flex-direction: row;
             justify-content: flex-start;
         }
     }
 
-    &__inner_text{
+    &__text{
         font-style: italic;
         font-weight: normal;
         font-size: 12px;
@@ -24,7 +24,7 @@
         color: #8D9BB0;
     }
 
-    &__inner_link{
+    &__link{
         font-style: italic;
         font-weight: normal;
         font-size: 12px;
@@ -32,9 +32,9 @@
         color: #4B5661;
         padding-left:0.25rem;
         padding-top: 0.5rem;
+
         @include sm {
-            padding-top: 0rem;
+            padding-top: 0;
         }
     }
-
 }
