@@ -32,7 +32,7 @@ body {
         flex-shrink : 0;
     }
 
-    .checkout, .reviews__inner, .program-wrapper, .contacts-wrapper, .single-wrapper, .page-wrapper, .page404, .title, footer, .partnership, .news, .seminarforu, .stock, .features {
+    .page404, .title, footer {
         position : relative;
         z-index  : 1;
     }
