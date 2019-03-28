@@ -26,6 +26,10 @@ body {
 
     main {
         flex : 1;
+
+        &__h_100vh {
+            height : 100vh;
+        }
     }
 
     footer {
@@ -37,7 +41,7 @@ body {
         z-index  : 1;
     }
 
-    .program{
+    .program {
         position : relative;
         z-index  : 2;
     }
