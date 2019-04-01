@@ -1,1 +1,45 @@
-{"common":{"js":"/src/js/common.f5540967f82d4be6355c.min.js","css":"/src/css/common.f5540967f82d4be6355c.min.css"},"home":{"js":"/src/js/home.f5540967f82d4be6355c.min.js"},"p404":{"js":"/src/js/p404.f5540967f82d4be6355c.min.js","css":"/src/css/p404.f5540967f82d4be6355c.min.css"},"":{"woff":["/src/fonts/Gilroyextrabold.21bab4.woff","/src/fonts/Gilroylight.1b3910.woff","/src/fonts/PFBeauSansPro-Light.4a3b45.woff","/src/fonts/pfbeausanspro-bold.4a02db.woff"],"woff2":["/src/fonts/Gilroyextrabold.4e7357.woff2","/src/fonts/Gilroylight.b76241.woff2"],"ttf":["/src/fonts/Gilroyextrabold.cccee9.ttf","/src/fonts/Gilroylight.0e8ff4.ttf","/src/fonts/PFBeauSansPro-Light.611cb9.ttf","/src/fonts/pfbeausanspro-bold.630c2a.ttf"],"eot":["/src/fonts/PFBeauSansPro-Light.149cdf.eot","/src/fonts/pfbeausanspro-bold.3a63f5.eot"],"html":["/src/home.html","/src/p404.html"],"svg":"/src/icons/egg.85cddb.svg","png":["/src/icons/logo.ee3ce5.png","/src/icons/maks.1581d2.png","/src/icons/maks2.e004f3.png"]}}
+{
+    "common": {
+        "js": "/src/js/common.f5540967f82d4be6355c.min.js",
+        "css": "/src/css/common.f5540967f82d4be6355c.min.css"
+    },
+    "home": {
+        "js": "/src/js/home.f5540967f82d4be6355c.min.js"
+    },
+    "p404": {
+        "js": "/src/js/p404.f5540967f82d4be6355c.min.js",
+        "css": "/src/css/p404.f5540967f82d4be6355c.min.css"
+    },
+    "": {
+        "woff": [
+            "/src/fonts/Gilroyextrabold.21bab4.woff",
+            "/src/fonts/Gilroylight.1b3910.woff",
+            "/src/fonts/PFBeauSansPro-Light.4a3b45.woff",
+            "/src/fonts/pfbeausanspro-bold.4a02db.woff"
+        ],
+        "woff2": [
+            "/src/fonts/Gilroyextrabold.4e7357.woff2",
+            "/src/fonts/Gilroylight.b76241.woff2"
+        ],
+        "ttf": [
+            "/src/fonts/Gilroyextrabold.cccee9.ttf",
+            "/src/fonts/Gilroylight.0e8ff4.ttf",
+            "/src/fonts/PFBeauSansPro-Light.611cb9.ttf",
+            "/src/fonts/pfbeausanspro-bold.630c2a.ttf"
+        ],
+        "eot": [
+            "/src/fonts/PFBeauSansPro-Light.149cdf.eot",
+            "/src/fonts/pfbeausanspro-bold.3a63f5.eot"
+        ],
+        "html": [
+            "/src/home.html",
+            "/src/p404.html"
+        ],
+        "svg": "/src/icons/egg.85cddb.svg",
+        "png": [
+            "/src/icons/logo.ee3ce5.png",
+            "/src/icons/maks.1581d2.png",
+            "/src/icons/maks2.e004f3.png"
+        ]
+    }
+}
