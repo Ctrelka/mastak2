@@ -1,0 +1,23 @@
+@import "./../../common/constants";
+
+.titleMedium{
+    &__text{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 64px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #CDD6DE;
+
+        @include sm{
+            font-size: 120px;
+            line-height: 120px;
+        }
+        @include md{
+            font-size: 172px;
+            line-height: 172px;
+        }
+    }
+}
