@@ -1,31 +1,35 @@
 @import "./../../common/constants";
 
-.cookie{
+.cookie {
 
-    &__inner{
-        margin-top: 2rem;
-        margin-bottom:8rem;
-        @include lg{
-            margin-top: 4rem;
+    &__inner {
+        margin-top    : 2rem;
+        margin-bottom : 8rem;
+
+        @include lg {
+            margin-top : 4rem;
         }
     }
 
-    &__text{
-        font-family: "Open Sans";
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 18px;
-        margin-top: 3rem;
-        color: #626262;
-        @include sm{
-            margin-top: 2rem;
+    &__text {
+        font-family : "Open Sans";
+        font-style  : normal;
+        font-weight : normal;
+        font-size   : 16px;
+        line-height : 18px;
+        margin-top  : 3rem;
+        color       : #626262;
+
+        @include sm {
+            margin-top : 2rem;
         }
-        @include md{
-            margin-top: 4rem;
+
+        @include md {
+            margin-top : 4rem;
         }
-        @include hd{
-            margin-top: 6rem;
+
+        @include hd {
+            margin-top : 6rem;
         }
     }
 }
