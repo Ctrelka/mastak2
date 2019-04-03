@@ -9,3 +9,22 @@ mixin header()
                     +e.burger(href="#")
                         +e.SPAN.burger-line
                         +e.SPAN.burger-line
+        +e.NAV.menu
+            .container
+                +e.menu-title MENU
+                    +e.UL.menu-list
+                        +e.LI.menu-list-item
+                            a(href='#') web
+                        +e.LI.menu-list-item
+                            a(href='#') design
+                        +e.LI.menu-list-item_active.menu-list-item_active-link-load
+                            a(href='#') portfolio
+                        +e.LI.menu-list-item
+                            a(href='#') team
+                        +e.LI.menu-list-item
+                            a(href='#') contact
+                    +e.menu-soc
+                        +e.menu-soc-item-link(href='#')
+                                +e.menu-soc-item-link-img(src=require("./../images/fb.png"), alt='Facebook')
+                        +e.menu-soc-item-link(href='#')
+                                +e.menu-soc-item-link-img(src=require("./../images/inst.png"), alt='Facebook')
