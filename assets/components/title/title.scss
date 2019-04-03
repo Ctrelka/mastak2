@@ -1,27 +1,5 @@
 @import "./../../common/constants";
 
-.titleBig{
-    &__text{
-        font-family: "Gilroy";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 40px;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: #CDD6DE;
-        @include sm{
-            font-size: 60px;
-            line-height: 60px;
-        }
-        @include lg{
-            font-size: 76px;
-            line-height: 76px;
-        }
-    }
-}
-
-
 .titleLittle{
     &__text{
         font-family: "Gilroy";
@@ -44,8 +22,30 @@
 }
 
 
-
 .titleMedium{
+    &__text{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 40px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #CDD6DE;
+        @include sm{
+            font-size: 60px;
+            line-height: 60px;
+        }
+        @include lg{
+            font-size: 80px;
+            line-height: 80px;
+        }
+    }
+}
+
+
+
+.titleBig{
     &__text{
         font-family: "Gilroy";
         font-style: normal;
