@@ -27,6 +27,7 @@ let entries = {
     home: './home.js',
     p404: './p404.js',
     cookie: './cookie.js',
+    contact: './contact.js',
 };
 
 let pugs = {
@@ -38,6 +39,9 @@ let pugs = {
     },
     cookie: {
         title: "cookie title"
+    },
+    contact: {
+        title: "contact title"
     },
 };
 
