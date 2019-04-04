@@ -1,14 +1,16 @@
-mixin titleBig()
+mixin titleBig(title,colorMod)
+    - var titleColorMod = colorMod ? colorMod : ''
     +b.titleBig
-        +e.H1.text portfolio
+        +e.H1(class = `text ${titleColorMod}`)= title
 
 
-mixin titleLittle()
+mixin titleLittle(title,colorMod)
+    - var titleColorMod = colorMod ? colorMod : ''
     +b.titleLittle
-        +e.H1.text contact
+        +e.H1.text(class = `text ${titleColorMod}`)= title
 
 
-
-mixin titleMedium()
+mixin titleMedium(title,colorMod)
+    - var titleColorMod = colorMod ? colorMod : ''
     +b.titleMedium
-        +e.H1.text contact
+        +e.H1.text(class = `text ${titleColorMod}`)= title
