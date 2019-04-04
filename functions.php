@@ -33,13 +33,13 @@
 //	require_once __DIR__ . '/core/cmb2/index.php';
 //	require_once __DIR__ . '/core/cmb2/themeSettings.php';
 
-//	require_once  __DIR__ . '/core/carbon/optionPage.php';
+	require_once  __DIR__ . '/core/carbon/optionPage.php';
 //	require_once  __DIR__ . '/core/carbon/homePage.php';
 //	require_once  __DIR__ . '/core/carbon/postPage.php';
 //	require_once  __DIR__ . '/core/carbon/contactMeta.php';
 //	require_once  __DIR__ . '/core/carbon/productMeta.php';
 //	require_once  __DIR__ . '/core/carbon/productCatMeta.php';
-//	require_once __DIR__ . '/vendor/autoload.php';
+	require_once __DIR__ . '/vendor/autoload.php';
 //
 //	require_once __DIR__ . '/core/addProductVarioatetionField.php';
 //	require_once __DIR__ . '/core/myAjax/createOrder.php';
