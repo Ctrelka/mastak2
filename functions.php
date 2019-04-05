@@ -16,6 +16,7 @@
 
 	require_once __DIR__ . '/utils/Assets.php';
 	require_once __DIR__ . '/utils/SingletonOptions.php';
+    require_once __DIR__ . '/core/mastakFunctions.php';
 
 	require_once __DIR__ . '/core/init_theme.php';
 //	require_once __DIR__ . '/core/custom-types/index.php';

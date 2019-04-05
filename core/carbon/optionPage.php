@@ -14,13 +14,14 @@
                 Field::make('image', 'crb_logo_img', __('Logo'))
                     ->set_value_type('url')
                     ->set_width(50),
-
+//------------------------------------------Контактная информаця
                 Field::make('separator', 'crb_contact_data_op_sep', __('Контактная информаця')),
                 Field::make('select', 'crb_contact_us_link', 'Страница контактов')
                     ->add_options('page_selecting'),
                 Field::make('text', 'crb_fb', 'Ссылка facebook'),
                 Field::make('text', 'crb_insta', 'Ссылка instagram'),
 
+//------------------------------------------Страница cookie
                 Field::make('select', 'wsb_cookie_policy', 'Страница cookie')
                     ->add_options('page_selecting'),
                 //				Field::make( 'text', 'crb_phone_vel', 'Номер телефон(velcom)' )
@@ -97,15 +98,4 @@
     add_action('after_setup_theme', 'crb_load');
     function crb_load() {
         \Carbon_Fields\Carbon_Fields::boot();
-    }
-
-    function page_selecting() {
-        $my_query   = new WP_Query();
-        $pages = $my_query->query(['post_type' => 'page']);
-
-        $news_list = [];
-        foreach ($pages as $page) {
-            $news_list[$page->ID] = $page->post_title;
-        }
-        return $news_list;
     }
