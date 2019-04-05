@@ -1,0 +1,14 @@
+@import "./../../common/constants";
+
+.contactPage {
+    @include sm{
+        height: 100vh;
+    }
+
+
+    &__inner {
+        margin-top : 2rem;
+
+    }
+
+}

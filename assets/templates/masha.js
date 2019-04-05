@@ -7,5 +7,6 @@ import './../mastak-lib/loader/loader';
 import './../components/header/header';
 import './../components/footer/footer';
 import './../components/footer-line/footer-line';
-
+import '../components/title/title';
+import '../components/cookie/cookie';
 

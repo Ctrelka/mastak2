@@ -26,6 +26,8 @@ const THEME_NAME = 'mastak2';
 let entries = {
     home: './home.js',
     p404: './p404.js',
+    cookie: './cookie.js',
+    contact: './contact.js',
 };
 
 let pugs = {
@@ -34,6 +36,12 @@ let pugs = {
     },
     p404: {
         title: "p404 title"
+    },
+    cookie: {
+        title: "cookie title"
+    },
+    contact: {
+        title: "contact title"
     },
 };
 

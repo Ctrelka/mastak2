@@ -19,8 +19,12 @@
 
             if (is_page_template('template-home.php')) {
                 wp_enqueue_script('home', Assets::getJs('home'), false, null, true);
+            }if (is_page_template('template-cookie.php')) {
+                wp_enqueue_script('cookie', Assets::getJs('cookie'), false, null, true);
             } else if (is_404()) {
                 wp_enqueue_script('p404', Assets::getJs('p404'), false, null, true);
+            } else {
+                wp_enqueue_script('cookie', Assets::getJs('cookie'), false, null, true);
             }
         });
     });

@@ -34,8 +34,8 @@ function zankoav_theme_init() {
 	
 	register_nav_menus( [
 			                    'main_menu'  => 'Main Menu',
-			                    'right_menu' => 'Right Menu',
-			                    'footer_menu' => 'Footer Menu',
+//			                    'right_menu' => 'Right Menu',
+//			                    'footer_menu' => 'Footer Menu',
 	                    ] );
 	
 	/**
