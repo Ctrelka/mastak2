@@ -1,6 +1,7 @@
 @import "./../../common/constants";
 
 .contactPage {
+    background: radial-gradient(1234.98px at 25.37% 5.49%, #FFFFFF 0%, #FBFCFC 30.43%, #E1E6E8 100%);
     @include sm{
         height: 100vh;
     }
@@ -183,6 +184,17 @@
         margin-bottom: 2rem;
     }
 
+
+    &__info-message-input{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__info-message-textarea{
+    margin-top: 1rem;
+        height: 112px;
+}
 
 
 }

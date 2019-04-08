@@ -32,3 +32,14 @@ mixin contact()
                                 +e.info-adrress-content-link(href='tel:+13128743507') +1 312 874 3507
                                 +e.info-adrress-content-text 1620 S Michigan Ave, Suite 1214 Chicago, IL 60616
                                 +button('view on map','button__color_red')
+                    +e.info-message
+                        form(id="info-message" method='POST' action='/')
+                            +e.info-message-input
+                                +input("text", "username","Name")
+                                +input("text", "useremail","E-mail")
+                            +e.info-message-textarea
+                                +e.textarea
+                                    +textarea("usermessage" , "Message")
+                            .col-12.col-sm-6.col-offset-sm-2.pt-sm-10
+                                +e.button
+                                    +button('Записаться','button__color-submit_grey',"submit","userbutton")
