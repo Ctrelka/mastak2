@@ -11,4 +11,178 @@
 
     }
 
+    &__person-item-first{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        margin-top: 1rem;
+        &:before{
+            content: "";
+            position: absolute;
+            height : 2px;
+            background: #979797;
+            width: 100%;
+            bottom: 0;
+
+        }
+    }
+
+    &__person-item-first-image{
+        width: 183px;
+        height : 184px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: -20px;
+    }
+
+    &__person-item-first-image-foto{
+        width: 100%;
+        height : auto;
+
+    }
+
+    &__person-item-first-about{
+        display : flex;
+        flex-direction: column;
+        padding-bottom: 4rem;
+    }
+
+    &__person-item-first-about-name{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 32px;
+        color: #4B5661;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+
+    }
+
+    &__person-item-first-about-text{
+        font-family: "Open Sans" , sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #626262;
+    }
+
+
+
+
+    &__person-item-second{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        position: relative;
+        margin-top: 2rem;
+        overflow-y: hidden;
+        &:before{
+            content: "";
+            position: absolute;
+            height : 2px;
+            background: #979797;
+            width: 100%;
+            bottom: 0;
+
+        }
+    }
+
+    &__person-item-second-image{
+        width: 183px;
+        height : 184px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: -0.5rem;
+    }
+
+    &__person-item-second-image-foto{
+        width: 100%;
+        height : auto;
+
+    }
+
+    &__person-item-second-about{
+        display : flex;
+        flex-direction: column;
+        padding-bottom: 4rem;
+    }
+
+    &__person-item-second-about-name{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 32px;
+        color: #4B5661;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+
+    }
+
+    &__person-item-second-about-text{
+        font-family: "Open Sans" , sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #626262;
+    }
+
+    &__info-adrress-content{
+        display: none;
+        &_active{
+            display: block;
+        }
+    }
+
+    &__info-adrress-tabs-item{
+        font-family: "Open Sans" ,sans-serif;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        color: #CDD6DE;
+        &_active{
+            color: #4B5661;
+        }
+        &:nth-child(2){
+            margin-left: 1rem;
+        }
+    }
+
+    &__info-adrress-tabs{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__info-adrress-content-link{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 20px;
+        color: #4B5661;
+    }
+
+    &__info-adrress-content-text{
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 20px;
+        color: #4B5661;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__info-adrress{
+        margin-bottom: 2rem;
+    }
+
+
+
 }
