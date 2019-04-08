@@ -9,26 +9,26 @@
 
         Container::make( 'post_meta', "Отзывовы" )
             ->where( 'post_type', '=', 'page' )
-            ->where( 'post_template', '=', 'template-home.php' )
+            ->where( 'post_template', '=', 'template-contacts.php' )
             ->add_fields( [
-                    Field::make( 'checkbox', 'crb_show_reviews', 'Показывать отзывы' )
-                        ->set_option_value( 'yes' ),
-                    Field::make( 'complex', 'crb_reviews', 'Слайдер отзывов' )
-                        ->add_fields( 'review', [
-                                Field::make( 'text', 'reviewer_name', __( 'Имя' ) )
+                    Field::make( 'complex', 'contact_persons', 'Менеджеры' )
+                        ->add_fields( 'contact_person', [
+                                Field::make( 'image', 'photo', __( 'photo' ) )
+                                    ->set_value_type( 'url' )
                                     ->set_width( 50 ),
-                                Field::make( 'text', 'reviewer_position', 'Должнасть' )
+                                Field::make( 'text', 'person_name', __( 'Имя' ) )
                                     ->set_width( 50 ),
-                                Field::make( 'image', 'reviewer_image', __( 'Image' ) )
-                                    ->set_value_type( 'url' )
-                                    ->set_width( 33 ),
-                                Field::make( 'file', 'reviewer_video', __( 'Video' ) )
-                                    ->set_value_type( 'url' )
-                                    ->set_type( 'video' )
-                                    ->set_width( 33 ),
-                                Field::make( 'image', 'video_preview', 'Превью' )
-                                    ->set_value_type( 'url' )
-                                    ->set_width( 33 ),
+                                Field::make( 'text', 'person_position', 'Должнасть' )
+                                    ->set_width( 50 ),
+                                Field::make( 'text', 'person_email', 'Email' )
+                                    ->set_width( 50 ),
+                            ]
+                        ),
+                    Field::make( 'separator', 'crb_contact_info_op_sep', 'Контактная информаия'),
+                    Field::make( 'complex', 'contact_information', 'Контакты' )
+                        ->add_fields( 'contact_person', [
+                                Field::make( 'text', 'country', 'Страна' ),
+                                Field::make( 'text', 'address', 'Адресс' )
                             ]
                         ),
                 ]
