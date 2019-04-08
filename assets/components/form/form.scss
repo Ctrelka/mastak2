@@ -1,0 +1,46 @@
+@import "./../../common/constants";
+
+
+.input {
+    padding       : 1rem;
+    font-family: "Open Sans",sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    border: none;
+    outline       : none;
+    background: #fff;
+    width: 144px;
+    height : 30px;
+    display: inline-block;
+
+    &::placeholder {
+        color: #CDD6DE;
+    }
+
+    &_error {
+        border : 1px solid red;
+    }
+}
+
+
+.textarea {
+    outline       : none;
+    padding       : 1rem;
+    font-family   : 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    height: 112px;
+    width         : 100%;
+
+    &::placeholder {
+        color: #CDD6DE;
+    }
+
+    &_error {
+        border : 1px solid red;
+    }
+}
