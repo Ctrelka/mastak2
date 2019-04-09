@@ -35,11 +35,16 @@ mixin contact()
                     +e.info-message
                         form(id="info-message" method='POST' action='/')
                             +e.info-message-input
-                                +input("text", "username","Name")
-                                +input("text", "useremail","E-mail")
+                                +e.info-message-input-inner
+                                    +input("text", "username","Name")
+                                    +e.info-message-input-inner-response
+                                +e.info-message-input-inner
+                                    +input("text", "username","E-mail")
+                                    +e.info-message-input-inner-response
                             +e.info-message-textarea
                                 +e.textarea
                                     +textarea("usermessage" , "Message")
+                                    +e.info-message-input-inner-response
                             .col-12.col-sm-6.col-offset-sm-2.pt-sm-10
                                 +e.button
-                                    +button('Записаться','button__color-submit_grey',"submit","userbutton")
+                                    +button('sent message','button__color-submit_grey',"submit","userbutton")

@@ -2,21 +2,25 @@
 
 
 .input {
-    padding       : 1rem;
-    font-family: "Open Sans",sans-serif;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 14px;
-    border: none;
-    outline       : none;
-    background: #fff;
-    width: 144px;
-    height : 30px;
-    display: inline-block;
+    padding     : 1rem;
+    font-family : "Open Sans", sans-serif;
+    font-style  : italic;
+    font-weight : normal;
+    font-size   : 14px;
+    line-height : 14px;
+    border      : none;
+    outline     : none;
+    background  : #fff;
+    width       : 144px;
+    height      : 30px;
+    display     : inline-block;
+
+    @include m-land{
+        width       : 270px;
+    }
 
     &::placeholder {
-        color: #CDD6DE;
+        color : #CDD6DE;
     }
 
     &_error {
@@ -26,21 +30,37 @@
 
 
 .textarea {
-    outline       : none;
-    padding       : 1rem;
-    font-family   : 'Open Sans', sans-serif;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 14px;
-    height: 112px;
-    width         : 100%;
+    outline     : none;
+    padding     : 1rem;
+    font-family : 'Open Sans', sans-serif;
+    font-style  : italic;
+    font-weight : normal;
+    font-size   : 14px;
+    line-height : 14px;
+    height      : 112px;
+    width       : 100%;
 
     &::placeholder {
-        color: #CDD6DE;
+        color : #CDD6DE;
     }
 
     &_error {
         border : 1px solid red;
     }
+}
+
+
+.button__color-submit_grey{
+    font-family: Open Sans,sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 14px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25);
+    transform: skewX(-30deg);
+    display: inline-block;
+    width: 130px;
+    background: #4B5661;
+    border: none;
 }
