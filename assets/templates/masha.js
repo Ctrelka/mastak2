@@ -10,3 +10,4 @@ import './../components/footer-line/footer-line';
 import '../components/title/title';
 import '../components/cookie/cookie';
 import '../components/form/form';
+import '../components/preloader/preloader';
