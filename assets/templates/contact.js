@@ -11,3 +11,4 @@ import '../components/title/title';
 import '../components/contact/contact';
 import '../components/button/button';
 import '../components/form/form';
+import '../components/preloader/preloader';
