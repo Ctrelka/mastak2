@@ -1,5 +1,7 @@
 @import "./../../common/constants";
 
+$RED : #D0021B;
+$GREY : #4B5661;
 
 .input {
     padding     : 1rem;
@@ -35,6 +37,7 @@
     line-height : 14px;
     height      : 112px;
     width       : 100%;
+    border      : none;
 
     &::placeholder {
         color : #CDD6DE;
@@ -46,18 +49,58 @@
 }
 
 
-.button__color-submit_grey{
-    font-family: Open Sans,sans-serif;
-    font-style: italic;
-    font-size: 18px;
-    line-height: 14px;
-    text-align: center;
-    color: #fff;
-    box-shadow: 0 4px 4px rgba(0,0,0,.25);
-    transform: skewX(-30deg);
-    display: inline-block;
-    width: 130px;
-    background: #4B5661;
-    border: none;
-    outline: none;
+.button__submit {
+    font-family      : 'Open Sans', sans-serif;
+    font-style       : italic;
+    font-size        : 18px;
+    line-height      : 14px;
+    text-align       : center;
+    color            : $GREY;
+    box-shadow       : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform        : skewX(-30deg);
+    display          : inline-block;
+    width            : 130px;
+    transition       : all .3s ease;
+    outline          : none;
+    position         : relative;
+    cursor           : pointer;
+    background-color : transparent;
+
+    &:before {
+        content    : '';
+        position   : absolute;
+        top        : 0;
+        left       : 0;
+        width      : 0;
+        height     : 100%;
+        transition : all .4s ease;
+    }
+
+    &:hover:before {
+        width : 100%;
+    }
+
+
+    &__text {
+        transform : skewX(30deg);
+        display   : inline-block;
+        padding   : 1px 0 0.25rem;
+    }
+
+
+    &_color_grey {
+        color  : $GREY;
+        border : 1px solid $GREY;
+
+        &:before {
+            background : $GREY;
+        }
+
+        &:hover {
+            color : $WHITE;
+        }
+    }
 }
+
+
+

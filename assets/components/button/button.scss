@@ -1,6 +1,7 @@
 @import "./../../common/constants";
 
 $RED : #D0021B;
+$GREY : #4B5661;
 
 .button {
     font-family : 'Open Sans', sans-serif;
@@ -14,8 +15,9 @@ $RED : #D0021B;
     display     : inline-block;
     width       : 120px;
     transition  : all .3s ease;
+    outline     : none;
     position    : relative;
-    outline: none;
+
     &:before {
         content    : '';
         position   : absolute;
@@ -27,7 +29,7 @@ $RED : #D0021B;
     }
 
     &:hover:before {
-        width       : 100%;
+        width : 100%;
     }
 
 
