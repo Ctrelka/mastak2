@@ -11,13 +11,9 @@
     border      : none;
     outline     : none;
     background  : #fff;
-    width       : 144px;
+    width       : 100%;
     height      : 30px;
-    display     : inline-block;
 
-    @include m-land{
-        width       : 270px;
-    }
 
     &::placeholder {
         color : #CDD6DE;
@@ -63,4 +59,5 @@
     width: 130px;
     background: #4B5661;
     border: none;
+    outline: none;
 }

@@ -18,6 +18,11 @@ $(document).ready(function() {
 });
 
 
+$('.preloader__text-grey').click(function () {
+    $('#info-message').css("display","block");
+    $('.preloader').removeClass('preloader_active');
+});
+
 
 $('.contactPage__info-adrress-tabs-item').click(function () {
     $(this)
@@ -31,15 +36,24 @@ $('#info-message').submit(function (event) {
     let email = $(this).find("[name*='useremail']").val();
     let name = $(this).find("[name*='username']").val();
     let message = $(this).find("[name*='usermessage']").val();
-    let spam = $(this).find("[name*='message']").val();
-
     if (name.length === 0) {
         console.log('username', Validator.ERROR_EMPTY_FIELD);
-        $('.contactPage__info-message-input-inner-response').text('The field "name" is required');
+        $('.contactPage__info-message-input-inner-response-name').text('The field "name" is required');
         $(this).find("[name*='username']").addClass('input_error');
         return;
     } else {
         $(this).find("[name*='username']").removeClass('input_error');
+        $('.contactPage__info-message-input-inner-response-name').text('');
+    }
+
+    if (!Validator.email(email)) {
+        console.log('useremail', Validator.ERROR_EMAIL_FIELD);
+        $('.contactPage__info-message-input-inner-response-email').text('Incorrect e-mail');
+        $(this).find("[name*='useremail']").addClass('input_error');
+        return;
+    } else {
+        $(this).find("[name*='useremail']").removeClass('input_error');
+        $('.contactPage__info-message-input-inner-response-email').text('');
     }
 
     if (message.length === 0) {
@@ -49,23 +63,16 @@ $('#info-message').submit(function (event) {
         return;
     } else {
         $(this).find("[name*='usermessage']").removeClass('textarea_error');
+        $('.contactPage__info-message-input-inner-response').text('');
     }
 
-    if (!Validator.email(email)) {
-        console.log('useremail', Validator.ERROR_EMAIL_FIELD);
-        $('.contactPage__info-message-input-inner-response').text('Incorrect e-mail');
-        $(this).find("[name*='useremail']").addClass('input_error');
-        return;
-    } else {
-        $(this).find("[name*='useremail']").removeClass('input_error');
-    }
+
 
     let data = {
         action: 'sendForm',
         name: name,
         email: email,
-        message: message,
-        spam: spam
+        message: message
     };
 
     $.ajax({
@@ -80,17 +87,22 @@ $('#info-message').submit(function (event) {
             let resp = JSON.parse(response);
             if (resp.status === 1) {
                 $('.contactPage__info-message-input-inner-response').text(resp.text);
+                $('.contactPage__info-message-input-inner-response-name').text(resp.text);
+                $('.contactPage__info-message-input-inner-response-email').text(resp.text);
             }
             if (resp.status === 0) {
                 $('.contactPage__info-message-input-inner-response').text(resp.text);
+                $('.contactPage__info-message-input-inner-response-name').text(resp.text);
+                $('.contactPage__info-message-input-inner-response-email').text(resp.text);
             }
             $('#info-message')[0].reset();
-            $('.preloader').removeClass('preloader_active');
+            $('#info-message').css("display","none");
         },
         error: function (x, y, z) {
             console.log(x);
             $('.preloader').removeClass('preloader_active');
             $('.contactPage__info-message-input-inner-response').text('ERROR');
+
         }
     });
 });
