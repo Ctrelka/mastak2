@@ -8,8 +8,8 @@ $GREY_MIDDLE : #626262;
 
     &__inner {
         position : relative;
-        z-index  : 10;
         top      : 12rem;
+        z-index  : 10;
 
         @include sm {
             width       : 47%;
