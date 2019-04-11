@@ -6,9 +6,6 @@ outline {
 
 .contactPage {
     background : radial-gradient(1234.98px at 25.37% 5.49%, #FFFFFF 0%, #FBFCFC 30.43%, #E1E6E8 100%);
-    @include sm {
-        height : 100vh;
-    }
 
 
     &__inner {

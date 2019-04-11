@@ -37,4 +37,18 @@
             padding-top: 0;
         }
     }
+
+    &__pos_a{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        @include sm{
+            left: unset;
+            right: unset;
+        }
+
+    }
 }
