@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>contact title</title>
-  <link href="/src/css/common.ccca0897078ffe58b19b.min.css" rel="stylesheet"><link href="/src/css/contact.ccca0897078ffe58b19b.min.css" rel="stylesheet"></head>
-  <body class="body_overflow_hidden app">
+  <link href="/src/css/common.450929de2dfd0997afe5.min.css" rel="stylesheet"></head>
+  <body class="body_overflow_hidden app app__bg_color-grey">
     <div class="loader">
       <div class="loader__spinner loader__spinner_egg"></div>
     </div>
@@ -37,23 +37,98 @@
         </div>
       </nav>
     </header>
-    <div class="contactPage">
-      <div class="container">
-        <div class="contactPage__inner">
-          <div class="titleBig">
-            <h1 class="titleBig__text">contact
-            </h1>
-          </div>
-          <div class="contactPage__person">
+    <main class="main">
+      <div class="contactPage">
+        <div class="container">
+          <div class="contactPage__inner">
+            <div class="titleBig">
+              <h1 class="titleBig__text">contact
+              </h1>
+            </div>
+            <div class="contactPage__inner-container">
+              <div class="container">
+                <div class="contactPage__person row">
+                  <div class="contactPage__person-item-first col-12 col-md-6">
+                    <div class="contactPage__person-item-first-image"><img class="contactPage__person-item-first-image-foto" src="/wp-content/themes/mastak2/src/icons/person-one.33ec41.png" alt="Person" title=""/>
+                    </div>
+                    <div class="contactPage__person-item-first-about">
+                      <p class="contactPage__person-item-first-about-name">Olga Glazkova
+                      </p><span class="contactPage__person-item-first-about-text">marketing consultant</span><span class="contactPage__person-item-first-about-text">olga@mastakstudio.com</span>
+                    </div>
+                  </div>
+                  <div class="contactPage__person-item-second col-12 col-md-6">
+                    <div class="contactPage__person-item-second-image"><img class="contactPage__person-item-second-image-foto" src="/wp-content/themes/mastak2/src/icons/person-two.9101ba.png" alt="Person" title=""/>
+                    </div>
+                    <div class="contactPage__person-item-second-about">
+                      <p class="contactPage__person-item-second-about-name">Max Nikolaev
+                      </p><span class="contactPage__person-item-second-about-text">marketing consultant</span><span class="contactPage__person-item-second-about-text">max@mastakstudio.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="contactPage__info row">
+                  <div class="contactPage__info-adrress col-12 col-sm-6">
+                    <div class="contactPage__info-adrress-tabs"><span class="contactPage__info-adrress-tabs-item">US</span><span class="contactPage__info-adrress-tabs-item">Belarus</span>
+                    </div>
+                    <div class="contactPage__info-adrress-contents">
+                      <div class="contactPage__info-adrress-content"><a class="contactPage__info-adrress-content-link" href="tel:+13128743507">+1 312 874 3507</a>
+                        <div class="contactPage__info-adrress-content-text">1620 S Michigan Ave, Suite 1214 Chicago, IL 60616
+                        </div><a class="button button__color_red" href="#"><span class="button__text">view on map</span></a>
+                      </div>
+                      <div class="contactPage__info-adrress-content"><a class="contactPage__info-adrress-content-link" href="tel:+13128743507">+1 312 874 3507</a>
+                        <div class="contactPage__info-adrress-content-text">1620 S Michigan Ave, Suite 1214 Chicago, IL 60616
+                        </div><a class="button button__color_red" href="#"><span class="button__text">view on map</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contactPage__info-message col-12 col-sm-6">
+                    <form id="info-message" method="POST" action="/">
+                      <div class="contactPage__info-message-input row">
+                        <div class="contactPage__info-message-input-inner col-6">
+                          <input class="input" type="text" name="username" placeholder="Name">
+                          <div class="contactPage__info-message-input-inner-response-name">
+                          </div>
+                        </div>
+                        <div class="contactPage__info-message-input-inner col-6">
+                          <input class="input" type="text" name="useremail" placeholder="E-mail">
+                          <div class="contactPage__info-message-input-inner-response-email">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="contactPage__info-message-textarea">
+                        <div class="contactPage__textarea">
+                          <textarea class="textarea" name="usermessage" placeholder="Message"></textarea>
+                          <div class="contactPage__info-message-input-inner-response">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="contactPage__button">
+                        <button class="button button__submit button__submit_color_grey" type="submit" name="userbutton"><span class="button__text">sent message</span></button>
+                      </div>
+                    </form>
+                    <div class="preloader">
+                      <div class="preloader__text-red">Thank you
+                      </div>
+                      <div class="preloader__spinner preloader__message"></div>
+                      <div class="preloader__text-grey">one more message
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+    </main>
+    <footer>
       <div class="container">
-        <div class="footer__inner"><span class="footer__text">This website uses cookies to improve your experience.</span><a class="footer__link" href="#">Allow cookies. Cookie Policy</a>
+        <div class="footer">
+          <div class="footer__inner"><span class="footer__text">This website uses cookies to improve your experience.</span><a class="footer__link" href="#">Allow cookies. Cookie Policy</a>
+          </div>
         </div>
       </div>
-    </div>
-  <script type="text/javascript" src="/src/js/common.ccca0897078ffe58b19b.min.js"></script><script type="text/javascript" src="/src/js/contact.ccca0897078ffe58b19b.min.js"></script></body>
+    </footer>
+  <script type="text/javascript" src="/src/js/common.450929de2dfd0997afe5.min.js"></script><script type="text/javascript" src="/src/js/contact.450929de2dfd0997afe5.min.js"></script></body>
 </html>
