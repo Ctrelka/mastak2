@@ -3,6 +3,7 @@
 $GREY_LIGHT : #CDD6DE;
 $GREY_DARK : #4B5661;
 $RED : #D0021B;
+$WHITE : #fff;
 
 .titleLittle {
     &__text {
@@ -77,6 +78,12 @@ $RED : #D0021B;
 
     &__color_grey {
         color : $GREY_DARK;
+    }
+
+    &__color_white {
+        color : $WHITE;
+        opacity: 0.38;
+        mix-blend-mode: normal;
     }
 }
 

@@ -1,0 +1,246 @@
+@import "./../../common/constants";
+
+$MAX-WIDTH_LG : 1200px;
+$MAX-WIDTH_HD : 1728px;
+
+
+
+.team{
+
+    &__inner{
+        margin-top:2rem;
+        padding   : {
+            left  : .5rem;
+            right : .5rem;
+        }
+        width: 100%;
+
+        @include sm {
+            padding   : {
+                left  : 1rem;
+                right : 1rem;
+            }
+        }
+
+        @include md {
+            padding   : {
+                left  : 1.5rem;
+                right : 1.5rem;
+            }
+        }
+
+        @include lg {
+            max-width    : $MAX-WIDTH_LG;
+            padding      : 0;
+            margin-left  : auto;
+            margin-right : auto;
+        }
+
+        @include hd {
+            max-width : $MAX-WIDTH_HD;
+            margin-top: 6rem;
+        }
+    }
+
+    &__inner-container{
+        display: flex;
+        flex-direction: column;
+
+        @include md{
+            flex-direction: row;
+        }
+
+    }
+
+    &__text{
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #FFFFFF;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        @include md{
+          max-width: 40%;
+            font-size: 16px;
+        }
+
+        @include hd{
+            max-width: 35%;
+            font-size: 20px;
+        }
+    }
+
+    &__image-container-team-first{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height : auto;
+        bottom : -50px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 3;
+        opacity: 0;
+        transition: all .4s;
+        animation: imageFirst 1s ease 0.6s forwards;
+    }
+
+    &__image-container-team-first-image{
+        width: 249px;
+        height : auto;
+
+        @include sm{
+            width: 406px;
+        }
+
+        @include md{
+            width: 550px;
+
+        }
+
+        @include lg{
+            width: 560px;
+
+        }
+
+        @include hd{
+            width: 80%;
+
+        }
+    }
+
+
+    &__image-container-team-second-image{
+        width: 100%;
+        height : auto;
+        max-width: 306px;
+
+        @include sm{
+            max-width: 499px;
+        }
+
+        @include md{
+            max-width: 100%;
+        }
+    }
+
+    &__image-container-team-second{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height : auto;
+        bottom : 10px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 2;
+        opacity : 0;
+        transition: all .4s;
+        animation: imageSecond 1s ease 0.6s forwards;
+
+    }
+
+
+    &__image-container-team-third-image{
+        width: 100%;
+        height : auto;
+        max-width: 306px;
+
+        @include sm{
+            max-width: 499px;
+        }
+
+        @include md{
+            max-width: 100%;
+        }
+    }
+
+    &__image-container-team-third{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height : auto;
+        bottom : 30px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 1;
+        opacity : 0;
+        transition: all .4s;
+        animation: imageThird 1s ease 0.8s forwards;
+
+    }
+
+    &__image-container{
+        height: 293px;
+        margin-top: 1rem;
+        z-index: 1;
+        position: relative;
+        width: 100%;
+
+        @include sm{
+            height: 479px;
+            margin-top: 0px;
+            bottom: 0;
+        }
+
+        @include md{
+            right : 0%;
+            bottom: 0;
+            position: absolute;
+            width: 60%;
+        }
+
+        @include lg{
+            right: 0%;
+        }
+
+        @include hd{
+            width: 50%;
+            height: 753px;
+            right: 8%;
+        }
+    }
+
+
+}
+
+
+@keyframes imageFirst {
+    0%{
+        opacity: 0;
+        bottom: -50px;
+    }
+
+    100%{
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes imageSecond {
+    0%{
+        opacity: 0;
+        bottom: 10px;
+    }
+
+    100%{
+        opacity: 1;
+        bottom: 5px;
+    }
+}
+
+@keyframes imageThird {
+    0%{
+        opacity: 0;
+        bottom: 30px;
+    }
+
+    100%{
+        opacity: 1;
+        bottom: 20px;
+    }
+}

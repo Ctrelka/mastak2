@@ -2,6 +2,7 @@
 
 $RED : #D0021B;
 $GREY : #4B5661;
+$DARK_GREY : #6A747D;
 
 .button {
     font-family : 'Open Sans', sans-serif;
@@ -58,6 +59,20 @@ $GREY : #4B5661;
 
         &:before {
             background : $GREY;
+        }
+
+        &:hover {
+            color : $WHITE;
+        }
+    }
+
+    &__color_white {
+        color  : $DARK_GREY;
+        border : none;
+        background-color: $WHITE;
+
+        &:before {
+            background : $DARK_GREY;
         }
 
         &:hover {

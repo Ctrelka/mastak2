@@ -2,11 +2,11 @@ include ./../mixins
 doctype html
 html
     +head()
-    body(class="body_overflow_hidden app app__bg_color-grey")
+    body(class="body_overflow_hidden app app__bg_color-red")
         +loader('loader__spinner_egg')
         +header()
         main.main
-            +contact()
+            +team()
         footer
             .container
-                +footer()
+                +footer("footer__pos_a")
