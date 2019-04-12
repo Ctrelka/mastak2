@@ -1,0 +1,505 @@
+@import "./../../common/constants";
+
+.teamAll {
+
+    &__inner {
+        margin-top : 2rem;
+    }
+
+    &__core-inner {
+        margin-top : 2rem;
+
+        @include md {
+            margin-top : 0rem;
+        }
+    }
+
+    &__core-inner-item {
+        width  : 100%;
+        height : auto;
+
+        @include sm {
+            width    : 484px;
+            position : absolute;
+            right    : 0;
+        }
+
+        @include md {
+            position     : relative;
+            display      : block;
+            margin-left  : auto;
+            margin-right : auto;
+            max-width    : 350px;
+        }
+
+        @include lg {
+            max-width : 520px;
+        }
+
+        @include hd {
+            max-width : 600px;
+        }
+    }
+
+    &__core-inner-item-image {
+        width  : 100%;
+        height : auto;
+    }
+
+    &__core-inner-content {
+        padding-top    : 1rem;
+        padding-bottom : 1rem;
+        margin-bottom  : 2rem;
+
+        @include sm {
+            max-width : 288px;
+        }
+
+        @include md {
+            margin-top : -12rem;
+        }
+
+        @include lg {
+            max-width  : 384px;
+            margin-top : -8rem;
+        }
+
+        @include hd {
+            margin-top : -10rem;
+        }
+    }
+
+    &__core-inner-content-title {
+        font-family    : Gilroy;
+        font-style     : normal;
+        font-weight    : 800;
+        font-size      : 30px;
+        line-height    : 44px;
+        text-transform : uppercase;
+        color          : #D0021B;
+
+        @include lg {
+            font-size   : 36px;
+            line-height : 44px;
+        }
+
+        @include hd {
+            font-size   : 50px;
+            line-height : 44px;
+        }
+    }
+
+    &__core-inner-content-text {
+        font-family : Open Sans, sans-serif;
+        font-style  : normal;
+        font-weight : normal;
+        font-size   : 16px;
+        line-height : 24px;
+        color       : #565656;
+        padding-top : 1rem;
+
+        @include hd {
+            font-size   : 20px;
+            line-height : 24px;
+            padding-top : 2rem;
+        }
+    }
+
+    &__core-inner-items {
+
+        @include sm {
+            display : flex;
+        }
+
+        @include md {
+            flex-direction : column;
+        }
+
+    }
+
+    &__core-inner-items-content-first {
+
+        @include sm {
+            display        : flex;
+            flex-direction : column;
+            margin-top     : 20.5rem;
+            margin-left    : 2rem;
+        }
+
+        @include md {
+            flex-direction  : row;
+            justify-content : space-between;
+            width           : 100%;
+            margin-top      : 0rem;
+            margin-left     : 0rem;
+        }
+    }
+
+    &__core-inner-items-content-second {
+
+        @include sm {
+            margin-top  : 38.25rem;
+            margin-left : 2rem;
+        }
+
+        @include md {
+            margin-top   : 0rem;
+            margin-left  : 0rem;
+            display      : block;
+            margin-right : auto;
+            margin-left  : auto;
+        }
+    }
+
+    &__sharing-inner {
+        margin-top : 2rem;
+
+        @include md {
+            margin-top : 6rem;
+        }
+
+        @include lg {
+            margin-top : 8rem;
+        }
+
+        @include hd {
+            margin-top : 10rem;
+        }
+    }
+
+    &__sharing-inner-container {
+
+        @include md {
+            display       : flex;
+            align-items   : center;
+            position      : relative;
+            margin-bottom : 4rem;
+        }
+
+        @include lg {
+            margin-bottom : 6rem;
+        }
+
+
+        @include hd {
+            margin-bottom : 10rem;
+        }
+    }
+
+    &__sharing-inner-item {
+        width  : 100%;
+        height : auto;
+
+        @include sm {
+            max-width    : 611px;
+            display      : block;
+            margin-left  : auto;
+            margin-right : auto;
+        }
+
+        @include md {
+            max-width    : 500px;
+            margin-left  : unset;
+            margin-right : unset;
+            position     : absolute;
+            left         : 50%;
+            transform    : translateX(-50%);
+        }
+
+        @include lg {
+            max-width : 650px;
+        }
+
+        @include hd {
+            max-width : 786px;
+        }
+    }
+
+    &__sharing-inner-item-image {
+        width  : 100%;
+        height : auto;
+    }
+
+    &__sharing-inner-content {
+        padding-top    : 1rem;
+        padding-bottom : 1rem;
+        margin-bottom  : 2rem;
+
+        @include sm {
+            max-width : 320px;
+        }
+
+        @include md {
+            max-width : 424px;
+        }
+
+        @include lg {
+            max-width : 561px;
+        }
+
+        &:last-child {
+
+            .teamAll__sharing-inner-content-title {
+
+                &:before {
+                    color          : #8D9BB0;
+                    content        : "&";
+                    font-family    : Gilroy;
+                    font-style     : normal;
+                    font-weight    : 800;
+                    font-size      : 30px;
+                    line-height    : 44px;
+                    text-transform : uppercase;
+                    margin-right   : 0.5rem;
+
+                    @include lg {
+                        font-size   : 36px;
+                        line-height : 44px;
+                    }
+
+                    @include hd {
+                        font-size   : 50px;
+                        line-height : 44px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__sharing-inner-content-title {
+        font-family    : Gilroy;
+        font-style     : normal;
+        font-weight    : 800;
+        font-size      : 30px;
+        line-height    : 44px;
+        text-transform : uppercase;
+        color          : #D0021B;
+
+        @include lg {
+            font-size   : 36px;
+            line-height : 44px;
+        }
+
+        @include hd {
+            font-size   : 50px;
+            line-height : 44px;
+        }
+    }
+
+    &__sharing-inner-content-text {
+        font-family : Open Sans, sans-serif;
+        font-style  : normal;
+        font-weight : normal;
+        font-size   : 16px;
+        line-height : 24px;
+        color       : #565656;
+        padding-top : 1rem;
+
+        @include hd {
+            font-size   : 20px;
+            line-height : 24px;
+            padding-top : 2rem;
+        }
+    }
+
+    &__sharing-inner-text {
+        font-family   : Gilroy;
+        font-style    : normal;
+        font-weight   : 800;
+        font-size     : 20px;
+        line-height   : 20px;
+        color         : #8D9BB0;
+        margin-bottom : 1rem;
+
+        @include sm {
+            margin-left   : 2rem;
+            margin-bottom : 2rem;
+        }
+
+        @include md {
+            max-width    : 200px;
+            margin-left  : 0rem;
+            margin-right : 1.5rem;
+        }
+
+        @include lg {
+            font-size   : 26px;
+            line-height : 32px;
+            max-width   : 224px;
+        }
+
+        @include hd {
+            font-size   : 30px;
+            line-height : 32px;
+            max-width   : 246px;
+            margin-left : 13rem;
+        }
+    }
+
+    &__sharing-inner-items-content {
+        display         : flex;
+        justify-content : space-between;
+        margin-left     : 2rem;
+        margin-right    : 2rem;
+
+        @include md {
+            margin-left  : 0rem;
+            margin-right : 0rem;
+            margin-top   : 1rem;
+        }
+    }
+
+    &__ecom-inner {
+        margin-top : 2rem;
+
+        @include md {
+            margin-top : 6rem;
+        }
+
+        @include lg {
+            margin-top : 8rem;
+        }
+
+    }
+
+    &__ecom-inner-item {
+        width  : 100%;
+        height : auto;
+
+        @include sm {
+            max-width    : 600px;
+            display      : block;
+            margin-left  : auto;
+            margin-right : auto;
+        }
+
+        @include md {
+            max-width    : 500px;
+            margin-left  : unset;
+            margin-right : unset;
+            position     : absolute;
+            left         : 50%;
+            transform    : translateX(-50%);
+        }
+
+        @include lg {
+            max-width : 650px;
+        }
+
+        @include hd {
+            max-width : 847px;
+        }
+    }
+
+    &__ecom-inner-item-image {
+        width  : 100%;
+        height : auto;
+    }
+
+    &__ecom-inner-content {
+        padding-top    : 1rem;
+        padding-bottom : 1rem;
+        margin-bottom  : 7rem;
+
+        @include sm {
+            margin-left  : 3rem;
+            margin-right : 3rem;
+        }
+
+        @include md {
+            max-width    : 648px;
+            margin-top   : 1rem;
+            display      : block;
+            margin-right : auto;
+            margin-left  : auto;
+        }
+    }
+
+    &__ecom-inner-content-title {
+        font-family    : Gilroy;
+        font-style     : normal;
+        font-weight    : 800;
+        font-size      : 30px;
+        line-height    : 44px;
+        text-transform : uppercase;
+        color          : #D0021B;
+
+        @include hd {
+            font-size   : 50px;
+            line-height : 44px;
+        }
+    }
+
+    &__ecom-inner-content-text {
+        font-family : Open Sans, sans-serif;
+        font-style  : normal;
+        font-weight : normal;
+        font-size   : 16px;
+        line-height : 24px;
+        color       : #565656;
+        padding-top : 1rem;
+
+        @include lg {
+            max-width : 648px;
+        }
+
+        @include hd {
+            font-size   : 20px;
+            line-height : 24px;
+            padding-top : 2rem;
+        }
+
+    }
+
+    &__ecom-inner-text {
+        font-family   : Gilroy;
+        font-style    : normal;
+        font-weight   : 800;
+        font-size     : 20px;
+        line-height   : 20px;
+        color         : #8D9BB0;
+        margin-bottom : 1rem;
+
+        @include sm {
+            margin-left   : 2rem;
+            margin-bottom : 2rem;
+        }
+
+        @include md {
+            max-width    : 200px;
+            margin-left  : 0rem;
+            margin-right : 1.5rem;
+        }
+
+        @include lg {
+            font-size   : 26px;
+            line-height : 32px;
+            max-width   : 224px;
+        }
+
+        @include hd {
+            font-size   : 30px;
+            line-height : 32px;
+            max-width   : 254px;
+            margin-left : 13rem;
+        }
+    }
+
+    &__ecom-inner-container {
+
+        @include md {
+            display       : flex;
+            align-items   : center;
+            margin-bottom : 4rem;
+        }
+
+        @include lg {
+            margin-bottom : 6rem;
+        }
+
+        @include hd {
+            margin-bottom : 8rem;
+        }
+    }
+}
