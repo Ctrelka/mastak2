@@ -29,6 +29,7 @@ let entries = {
     cookie: './cookie.js',
     contact: './contact.js',
     team: './team.js',
+    teamAll: './teamAll.js',
 };
 
 let pugs = {
@@ -46,6 +47,9 @@ let pugs = {
     },
     team: {
         title: "team title"
+    },
+    teamAll: {
+        title: "teamAll title"
     },
 };
 
