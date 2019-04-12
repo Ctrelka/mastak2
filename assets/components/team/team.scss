@@ -78,37 +78,27 @@ $MAX-WIDTH_HD : 1728px;
         left: 0;
         width: 100%;
         height : auto;
-        bottom : -50px;
+        transform: translateY(-50px);
+        bottom : 0px;
         display: flex;
         align-items: flex-end;
         justify-content: center;
         z-index: 3;
         opacity: 0;
         transition: all .4s;
-        animation: imageFirst 1s ease 0.6s forwards;
+        animation: imageFirst 1s .5s forwards;
     }
 
     &__image-container-team-first-image{
-        width: 249px;
+        width: 100%;
         height : auto;
 
         @include sm{
-            width: 406px;
+            max-width: 499px;
         }
 
         @include md{
-            width: 550px;
-
-        }
-
-        @include lg{
-            width: 560px;
-
-        }
-
-        @include hd{
-            width: 80%;
-
+            max-width: 100%;
         }
     }
 
@@ -132,14 +122,15 @@ $MAX-WIDTH_HD : 1728px;
         left: 0;
         width: 100%;
         height : auto;
-        bottom : 10px;
+        transform: translateY(10px);
+        bottom : 0px;
         display: flex;
         align-items: flex-end;
         justify-content: center;
         z-index: 2;
         opacity : 0;
         transition: all .4s;
-        animation: imageSecond 1s ease 0.6s forwards;
+        animation: imageSecond 1s .8s forwards;
 
     }
 
@@ -163,14 +154,15 @@ $MAX-WIDTH_HD : 1728px;
         left: 0;
         width: 100%;
         height : auto;
-        bottom : 30px;
+        transform: translateY(30px);
+        bottom : 0px;
         display: flex;
         align-items: flex-end;
         justify-content: center;
         z-index: 1;
         opacity : 0;
         transition: all .4s;
-        animation: imageThird 1s ease 0.8s forwards;
+        animation: imageThird 1s 1s forwards;
 
     }
 
@@ -185,12 +177,12 @@ $MAX-WIDTH_HD : 1728px;
             height: 479px;
             margin-top: 0px;
             bottom: 0;
+            position: absolute;
         }
 
         @include md{
             right : 0%;
             bottom: 0;
-            position: absolute;
             width: 60%;
         }
 
@@ -213,35 +205,41 @@ $MAX-WIDTH_HD : 1728px;
 @keyframes imageFirst {
     0%{
         opacity: 0;
-        bottom: -50px;
+        transform: translateY(50px);
+        //bottom: -50px;
     }
 
     100%{
         opacity: 1;
-        bottom: 0;
+        transform: translateY(0);
+        //bottom: 0;
     }
 }
 
 @keyframes imageSecond {
     0%{
         opacity: 0;
-        bottom: 10px;
+        transform: translateY(-10px);
+        //bottom: 10px;
     }
 
     100%{
         opacity: 1;
-        bottom: 5px;
+        transform: translateY(0);
+        //bottom: 5px;
     }
 }
 
 @keyframes imageThird {
     0%{
         opacity: 0;
-        bottom: 30px;
+        transform: translateY(-30px);
+        //bottom: 30px;
     }
 
     100%{
         opacity: 1;
-        bottom: 20px;
+        transform: translateY(0);
+        //bottom: 20px;
     }
 }
