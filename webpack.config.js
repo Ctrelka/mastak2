@@ -30,6 +30,7 @@ let entries = {
     contact: './contact.js',
     team: './team.js',
     teamAll: './teamAll.js',
+    homeWeb: './homeWeb.js',
 };
 
 let pugs = {
@@ -50,6 +51,9 @@ let pugs = {
     },
     teamAll: {
         title: "teamAll title"
+    },
+    homeWeb: {
+        title: "homeWeb title"
     },
 };
 

@@ -1,0 +1,228 @@
+@import "./../../common/constants";
+
+.homeWeb{
+
+    &__inner{
+        margin-top: 2rem;
+        padding-bottom: 8rem;
+    }
+
+    &__inner-title{
+
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #4B5661;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__inner-text{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        color: #4A4A4A;
+        margin-bottom: 3rem;
+    }
+
+    &__inner-preview{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #4B5661;
+    }
+
+    &__inner-items{
+        @include sm{
+            margin-top: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include lg{
+            justify-content: space-between;
+            padding-left: 0rem;
+            padding-right: 0rem;
+        }
+
+        @include hd{
+            justify-content: space-between;
+            padding-left: 11rem;
+            padding-right: 11rem;
+        }
+    }
+
+    &__inner-items-content{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        @include sm{
+            max-width: 284px;
+
+            &:nth-child(2n+1){
+                margin-right: 3rem;
+                margin-top: 4rem;
+            }
+            &:nth-child(2n){
+                margin-left: 3rem;
+            }
+            &:last-of-type{
+                margin-right: 0rem;
+                margin-left: 0rem;
+            }
+        }
+
+        @include md{
+            max-width: 387px;
+        }
+
+        @include lg{
+
+            max-width: 32%;
+
+            &:nth-child(2n+1){
+                margin-right: 0rem;
+                margin-top: 0rem;
+            }
+
+            &:nth-child(2n){
+                margin-left: 0rem;
+            }
+
+            &:nth-child(3n+1){
+                margin-top: 4rem;
+            }
+
+            &:nth-child(3n+2){
+                margin-top: 0rem;
+            }
+
+            &:nth-child(3n+3){
+                margin-top: 6rem;
+            }
+
+            &:last-of-type{
+                margin-right: 0rem;
+                margin-left: 0rem;
+            }
+        }
+
+        @include hd{
+            max-width: 387px;
+        }
+    }
+
+    &__inner-items-content-image-number{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 80px;
+        line-height: 80px;
+        text-transform: uppercase;
+        color: rgba(205, 214, 222, 0.3);
+        margin-top: 2rem;
+    }
+
+    &__inner-items-content-image{
+        display : flex;
+        align-items: flex-start;
+    }
+
+    &__inner-items-content-image-container{
+        max-width: 85px;
+        height : auto;
+        margin-left: 2rem;
+    }
+
+    &__inner-items-content-image-item{
+        width: 100%;
+        height : auto;
+    }
+
+    &__inner-items-content-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #D0021B;
+        margin-top: .5rem;
+        @include md{
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+
+    &__inner-items-content-text{
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #565656;
+        margin-top: 1rem;
+    }
+
+    &__inner-text-title{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 24px;
+        color: #4A4A4A;
+        margin-top: 4rem;
+    }
+
+    &__inner-text-preview{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #565656;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+
+        @include sm{
+            margin-top: 2rem;
+        }
+    }
+
+    &__inner-text-end{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #4B5661;
+        margin-top: 4rem;
+
+        @include lg{
+            max-width: 708px;
+        }
+    }
+
+    &__inner-container{
+        display : flex;
+
+        @include hd{
+            padding-left: 11rem;
+            padding-right: 11rem;
+        }
+    }
+
+    &__inner-text-content{
+        max-width: 45%;
+    }
+
+}
