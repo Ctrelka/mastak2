@@ -338,10 +338,13 @@
     }
 
     &__sharing-inner-items-content {
-        display         : flex;
-        justify-content : space-between;
-        margin-left     : 2rem;
-        margin-right    : 2rem;
+
+        @include sm{
+            display         : flex;
+            justify-content : space-between;
+            margin-left     : 2rem;
+            margin-right    : 2rem;
+        }
 
         @include md {
             margin-left  : 0rem;
