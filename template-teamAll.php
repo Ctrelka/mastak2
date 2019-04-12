@@ -3,8 +3,20 @@
 	 * Template Name: Team All Template
 	 */
 	get_header( "greyLight" );
-	$text = carbon_get_post_meta(get_the_ID(), "crb_text");
-	$button_link = carbon_get_post_meta(get_the_ID(), "crb_button_link");
+	$first_s_img          = carbon_get_post_meta( get_the_ID(), "first_s_img" );
+	$first_s_title_left   = carbon_get_post_meta( get_the_ID(), "first_s_title_left" );
+	$first_s_text_left    = carbon_get_post_meta( get_the_ID(), "first_s_text_left" );
+	$first_s_title_center = carbon_get_post_meta( get_the_ID(), "first_s_title_center" );
+	$first_s_text_center  = carbon_get_post_meta( get_the_ID(), "first_s_text_center" );
+	$first_s_title_right  = carbon_get_post_meta( get_the_ID(), "first_s_title_right" );
+	$first_s_text_right   = carbon_get_post_meta( get_the_ID(), "first_s_text_right" );
+	$second_s_img         = carbon_get_post_meta( get_the_ID(), "second_s_img" );
+	$second_s_title_left  = carbon_get_post_meta( get_the_ID(), "second_s_title_left" );
+	$second_s_text_left   = carbon_get_post_meta( get_the_ID(), "second_s_text_left" );
+	$second_s_title_right = carbon_get_post_meta( get_the_ID(), "second_s_title_right" );
+	$second_s_text_right  = carbon_get_post_meta( get_the_ID(), "second_s_text_right" );
+	$third_s_img          = carbon_get_post_meta( get_the_ID(), "third_s_img" );
+	$third_s_text         = carbon_get_post_meta( get_the_ID(), "third_s_text" );
 
 	get_template_part( '/core/views/headerView' ); ?>
     <main class="main">
@@ -12,49 +24,61 @@
             <div class="container">
                 <div class="teamAll__inner">
                     <div class="titleMedium">
-                        <h1 class="titleMedium__text text">Our approach
-                        </h1>
+                        <h1 class="titleMedium__text text"><?= get_the_title(); ?></h1>
                     </div>
                     <div class="teamAll__core-inner">
-                        <div class="teamAll__core-inner-item"><img class="teamAll__core-inner-item-image" src="/wp-content/themes/mastak2/src/icons/core.ddc989.png" alt="Core" title=""/>
+                        <div class="teamAll__core-inner-item">
+                            <img class="teamAll__core-inner-item-image"
+                                 src="<?= $first_s_img; ?>" alt="Core" title=""/>
                         </div>
-                        <div class="teamAll__core-inner-content">
-                            <div class="teamAll__core-inner-content-title">Professional approach
+                        <div class="teamAll__core-inner-items">
+                            <div class="teamAll__core-inner-items-content-first">
+                                <div class="teamAll__core-inner-content">
+                                    <p class="teamAll__core-inner-content-title"><?= $first_s_title_left; ?></p>
+                                    <p class="teamAll__core-inner-content-text"><?= $first_s_text_left;?></p>
+                                </div>
+                                <div class="teamAll__core-inner-content">
+                                    <p class="teamAll__core-inner-content-title"><?= $first_s_title_center;?></p>
+                                    <p class="teamAll__core-inner-content-text"><?= $first_s_text_center;?></p>
+                                </div>
                             </div>
-                            <div class="teamAll__core-inner-content-text">Attentive attitude to customers, partners and colleagues. The team keeps to a professional approach in every aspect - from the manner of communicating with the client to meeting deadlines. We have great experience and modern tools to solve any complex problems of customers.
-                            </div>
-                        </div>
-                        <div class="teamAll__core-inner-content">
-                            <div class="teamAll__core-inner-content-title">Mutual responsibility
-                            </div>
-                            <div class="teamAll__core-inner-content-text">And attention to details. Mutual respect and responsibility in relations with partners, compliance with requirements and wishes is the foundation of our work. In order to take into account all the mutual interests, it is necessary to consider every detail.
-                            </div>
-                        </div>
-                        <div class="teamAll__core-inner-content">
-                            <div class="teamAll__core-inner-content-title">Creativity
-                            </div>
-                            <div class="teamAll__core-inner-content-text">The ability to find new ways and have abroad vision of the world is the basis of our work. For this reason, the team is supported by a new look and outstanding ideas. We accurately find the best solutions on any of the given tasks.
+                            <div class="teamAll__core-inner-items-content-second">
+                                <div class="teamAll__core-inner-content">
+                                    <p class="teamAll__core-inner-content-title"><?= $first_s_title_right;?></p>
+                                    <p class="teamAll__core-inner-content-text"><?= $first_s_text_right;?></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="teamAll__sharing-inner">
-                        <div class="teamAll__sharing-inner-item"><img class="teamAll__sharing-inner-item-image" src="/wp-content/themes/mastak2/src/icons/sharing.91973f.png" alt="Core" title=""/>
+                        <div class="teamAll__sharing-inner-container">
+                            <p class="teamAll__sharing-inner-text">Also we know and we are able:</p>
+                            <div class="teamAll__sharing-inner-item">
+                                <img class="teamAll__sharing-inner-item-image"
+                                     src="<?= $second_s_img;?>" alt="Sharing" title=""/>
+                            </div>
                         </div>
-                        <div class="teamAll__sharing-inner-content">
-                            <div class="teamAll__sharing-inner-content-title">Economy
+                        <div class="teamAll__sharing-inner-items-content">
+                            <div class="teamAll__sharing-inner-content">
+                                <p class="teamAll__sharing-inner-content-title"><?= $second_s_title_left;?></p>
+                                <p class="teamAll__sharing-inner-content-text"><?= $second_s_text_left;?></p>
                             </div>
-                            <div class="teamAll__sharing-inner-content-text">Nowadays, more and more people are opting for online services that are based on innovative sharing economy and collaborative consumption business models.
+                            <div class="teamAll__sharing-inner-content">
+                                <p class="teamAll__sharing-inner-content-title"><?=$second_s_title_right; ?></p>
+                                <p class="teamAll__sharing-inner-content-text"><?= $second_s_text_right; ?></p>
                             </div>
                         </div>
-                        <div class="teamAll__sharing-inner-content">
-                            <div class="teamAll__sharing-inner-content-item">
-                                <div class="teamAll__sharing-inner-content-title">&
-                                </div>
-                                <div class="teamAll__sharing-inner-content-title">Services
-                                </div>
+                    </div>
+                    <div class="teamAll__ecom-inner">
+                        <div class="teamAll__ecom-inner-container">
+                            <p class="teamAll__ecom-inner-text">Also we know and we are able:</p>
+                            <div class="teamAll__ecom-inner-item">
+                                <img class="teamAll__ecom-inner-item-image"
+                                     src="<?= $third_s_img;?>" alt="Ecommerce" title=""/>
                             </div>
-                            <div class="teamAll__sharing-inner-content-text">And attention to details. Mutual respect and responsibility in relations with partners, compliance with requirements and wishes is the foundation of our work. In order to take into account all the mutual interests, it is necessary to consider every detail.
-                            </div>
+                        </div>
+                        <div class="teamAll__ecom-inner-content">
+                            <p class="teamAll__ecom-inner-content-text"><?= $third_s_text; ?></p>
                         </div>
                     </div>
                 </div>
@@ -62,6 +86,6 @@
         </div>
     </main>
 <?php
-	get_template_part( '/core/views/footerView' );
+	get_template_part( '/core/views/footerView', 'RedLine' );
 	get_footer();
 ?>

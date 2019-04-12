@@ -21,6 +21,8 @@
                 wp_enqueue_style('cookie', Assets::getCss('cookie'), false, null);
             }if (is_page_template('template-contacts.php')) {
 		        wp_enqueue_style('contact', Assets::getCss('contact'), false, null);
+	        }if (is_page_template('template-teamAll.php')) {
+		        wp_enqueue_style('teamAll', Assets::getCss('teamAll'), false, null);
 	        } else if (is_404()) {
                 wp_enqueue_style('p404', Assets::getCss('p404'), false, null);
             } else {

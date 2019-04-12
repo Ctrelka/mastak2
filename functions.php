@@ -37,6 +37,7 @@
     require_once __DIR__ . '/core/carbon/optionPage.php';
     require_once __DIR__ . '/core/carbon/contactPage.php';
 	require_once  __DIR__ . '/core/carbon/teamPage.php';
+	require_once  __DIR__ . '/core/carbon/teamAllPage.php';
     //	require_once  __DIR__ . '/core/carbon/homePage.php';
     //	require_once  __DIR__ . '/core/carbon/productMeta.php';
     //	require_once  __DIR__ . '/core/carbon/productCatMeta.php';
