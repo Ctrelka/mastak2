@@ -7,8 +7,38 @@ $RED : #D0021B;
 .welcome {
     overflow : hidden;
 
+    @include sm {
+        padding-bottom : 6rem;
+    }
+
+    @include md {
+        padding-bottom : initial;
+    }
+
+    &__tabs {
+        position : relative;
+        height   : 642px;
+
+        @include sm {
+            height : 568px;
+        }
+
+        @include md {
+            height : 490px;
+        }
+
+        @include lg {
+            height : 468px;
+        }
+
+        @include hd {
+            height : 626px;
+        }
+    }
+
     &__tab {
-        display : none;
+        position : absolute;
+        display  : block;
 
         &_active {
             display : block;
@@ -47,7 +77,18 @@ $RED : #D0021B;
     }
 
     &__img {
-        width : 100%;
+        width   : 100%;
+        opacity : 0;
+
+        &_in {
+            animation           : animDescriptionIn 1s 1s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out {
+            animation           : animDescriptionOut 1s;
+            animation-fill-mode : backwards;
+        }
     }
 
     &__content {
@@ -77,7 +118,24 @@ $RED : #D0021B;
         }
     }
 
+    &__title {
+        transform : translateX(-100%);
+        opacity   : 0;
+
+        &_in {
+            animation           : animTitleIn 1s .3s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out {
+            animation           : animTitleOut 1s;
+            animation-fill-mode : forwards;
+        }
+    }
+
     &__subtitle {
+        transform      : translateX(-100%);
+        opacity        : 0;
         font-family    : 'Gilroy', sans-serif;
         font-size      : 36px;
         font-weight    : 800;
@@ -101,6 +159,16 @@ $RED : #D0021B;
         @include hd {
             margin-bottom : 6rem;
         }
+
+        &_in {
+            animation           : animTitleIn 1s .5s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out {
+            animation           : animSubtitleOut 1s .15s;
+            animation-fill-mode : backwards;
+        }
     }
 
     &__description {
@@ -108,10 +176,22 @@ $RED : #D0021B;
         font-family : 'Open Sans', sans-serif;
         font-size   : 16px;
         line-height : 24px;
+        opacity     : 0;
+
+        &_in {
+            animation           : animDescriptionIn 1s 1s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out {
+            animation           : animDescriptionOut 1s;
+            animation-fill-mode : backwards;
+        }
     }
 
     &__envelope {
         margin-top : 5.25rem;
+        display    : none;
 
         @include sm {
             margin-top : 6.75rem;
@@ -124,11 +204,18 @@ $RED : #D0021B;
         @include lg {
             margin-top : 2rem;
         }
+
+        &_in {
+            display : block;
+        }
     }
 
-
     &__items {
-        margin-top : 2rem;
+        display     : flex;
+        align-items : center;
+        position    : relative;
+        height      : 48px;
+        margin-top  : 2rem;
 
         @include sm {
             margin-top : 4rem;
@@ -138,16 +225,13 @@ $RED : #D0021B;
             margin-top : 1rem;
         }
 
+        @include lg {
+            margin-top : -0.75rem;
+        }
+
         @include hd {
             margin-top : 2rem;
         }
-    }
-
-    &__items {
-        display     : flex;
-        align-items : center;
-        position    : relative;
-        height      : 48px;
     }
 
     &__line {
@@ -169,7 +253,6 @@ $RED : #D0021B;
             height           : 100%;
             transition       : all .5s ease;
             transform        : translateX(-50px);
-
         }
 
         &_active {
@@ -186,7 +269,6 @@ $RED : #D0021B;
                 //для увеличения времени показа изменить здесь
                 animation           : animLineReverse 7s;
                 animation-fill-mode : forwards;
-
             }
         }
     }
@@ -210,20 +292,115 @@ $RED : #D0021B;
         }
 
         &_active {
-            color     : $RED;
-            font-size : 48px;
+            color       : $RED;
+            font-size   : 48px;
+            line-height : 48px;
         }
     }
 
     &__navigation {
+        display        : flex;
+        flex-direction : column;
+        margin-top     : 2.5rem;
+        margin-bottom  : 9rem;
 
+        @include sm {
+            position      : absolute;
+            margin-top    : -5rem;
+            margin-bottom : 0;
+            right         : 14%;
+        }
+
+        @include md {
+            margin-top : -13.5rem;
+            right      : 11%;
+        }
+
+        @include lg {
+            margin-top : -11rem;
+        }
+
+        @include hd {
+            margin-top : -15rem;
+            right      : 6%;
+        }
+    }
+
+    &__nav {
+        font-family    : 'Gilroy', sans-serif;
+        font-size      : 28px;
+        line-height    : 28px;
+        font-weight    : 800;
+        text-transform : uppercase;
+        color          : $GREY_LIGHT;
+        position       : relative;
+
+        @include sm {
+            font-size   : 38px;
+            line-height : 38px;
+        }
+
+        @include hd {
+            font-size   : 46px;
+            line-height : 46px;
+        }
+
+        &:first-child {
+            margin-bottom : 1rem;
+        }
+
+        &:hover:first-child:before {
+            animation : animPortfolioNav 1s infinite;
+        }
+
+        &:first-child:before {
+            content          : '';
+            width            : 67px;
+            height           : 22px;
+            position         : absolute;
+            left             : 53%;
+            top              : 6%;
+            background-size  : cover;
+            background-image : url("./../../images/arrow.svg");
+
+            @include sm {
+                left : 14rem;
+                top  : 18%;
+            }
+
+            @include lg {
+                top : 20%;
+            }
+
+            @include hd {
+                left : 17rem;
+                top  : 26%;
+            }
+        }
+
+        &:last-child:before {
+            content          : '';
+            width            : 67px;
+            height           : 22px;
+            position         : absolute;
+            left             : 0%;
+            bottom           : -3.5rem;
+            background-size  : cover;
+            transform        : rotate(90deg);
+            background-image : url("./../../images/arrow.svg");
+
+            @include sm {
+                left : 8%;
+            }
+        }
+
+        &:hover:last-child:before {
+            animation : animTeamNav 1s infinite;
+        }
     }
 }
 
 @keyframes animLine {
-    0% {
-
-    }
     95% {
         transform : translateX(0);
     }
@@ -231,7 +408,6 @@ $RED : #D0021B;
         transform : translateX(50px);
     }
 }
-
 
 @keyframes animLineReverse {
     0% {
@@ -242,5 +418,82 @@ $RED : #D0021B;
     }
     100% {
         transform : translateX(-50px);
+    }
+}
+
+@keyframes animTitleIn {
+    100% {
+        opacity   : 1;
+        transform : translateX(0);
+    }
+}
+
+@keyframes animTitleOut {
+    0% {
+        opacity   : 1;
+        transform : translateX(0);
+    }
+    10% {
+        transform : translateX(-5%);
+    }
+
+    100% {
+        opacity   : 0;
+        transform : translateX(100%);
+    }
+}
+
+@keyframes animSubtitleOut {
+    0% {
+        opacity   : 1;
+        transform : translateX(0);
+    }
+
+    100% {
+        opacity   : 0;
+        transform : translateX(100%);
+    }
+}
+
+@keyframes animDescriptionIn {
+    100% {
+        opacity : 1;
+    }
+}
+
+@keyframes animDescriptionOut {
+    0% {
+        opacity : 1;
+    }
+    100% {
+        opacity : 0;
+    }
+}
+
+@keyframes animPortfolioNav {
+    0% {
+        transform : translateX(0);
+    }
+
+    50% {
+        transform : translateX(6px);
+    }
+
+    100% {
+        transform : translateX(0);
+    }
+}
+
+@keyframes animTeamNav {
+    0% {
+        transform : translateY(0) rotate(90deg);
+    }
+
+    50% {
+        transform : translateY(6px) rotate(90deg);
+    }
+
+    100% {
+        transform : translateY(0) rotate(90deg);
     }
 }

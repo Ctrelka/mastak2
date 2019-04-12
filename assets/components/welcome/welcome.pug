@@ -2,32 +2,32 @@ mixin welcome()
     +b.welcome
         .container
             +e.tabs
-                +e.tab._active
+                +e.tab._first._active
                     +e.inner
                         +e.wrapper
-                            +e.img(src=require("./../images/welcome.svg"), alt="welcome")
+                            +e.img._first._in(src=require("./../images/welcome.svg"), alt="welcome")
                         +e.content
-                            +e.title
+                            +e.title._first._in
                                 +titleBig('web','titleBig__color_red')
-                            +e.subtitle development
-                            +e.description Get a tailored, handcrafted software for your business, not an «out of the box» readymade template. We use the industry’s best practices to automate processes for any expansion of our business.
-                    +e.envelope
+                            +e.subtitle._first._in development
+                            +e.description._first._in Get a tailored, handcrafted software for your business, not an «out of the box» readymade template. We use the industry’s best practices to automate processes for any expansion of our business.
+                    +e.envelope._first._in
                         +button('more','button__color_red')
-                +e.tab
+                +e.tab._second
                     +e.inner
                         +e.wrapper
-                            +e.img(src=require("./../images/welcome.svg"), alt="welcome")
+                            +e.img._second(src=require("./../images/welcome.svg"), alt="welcome")
                         +e.content
-                            +e.title
+                            +e.title._second
                                 +titleBig('DESIGN','titleBig__color_grey')
-                            +e.subtitle & dranding
-                            +e.description Get a tailored, handcrafted software for your business, not an «out of the box» readymade template. We use the industry’s best practices to automate processes for any expansion of our business.
-
-                            //+e.description Experts in the field of customer behavior in B2B/ B2C and visual designers work closely with each other to create useful, attractive messages and visuals for your customers from different business areas, whether it is Internet sales, sales of technological products, or advertising campaigns for banks.
-                    +e.envelope
+                            +e.subtitle._second & dranding
+                            +e.description._second Get a tailored, handcrafted software for your business, not an «out of the box» readymade template. We use the industry’s best practices to automate processes for any expansion of our business.
+                    +e.envelope._second
                         +button('more','button__color_grey')
             +e.UL.items
                 +e.LI.item._first._active 1
                 +e.LI.item._second 2
                 +e.line
             +e.navigation
+                +e.nav(href="#") portfolio
+                +e.nav(href="#") team
