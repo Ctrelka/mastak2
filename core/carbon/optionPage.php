@@ -15,15 +15,22 @@
                     ->set_value_type('url')
                     ->set_width(50),
 //------------------------------------------Контактная информаця
-                Field::make('separator', 'crb_contact_data_op_sep', __('Контактная информаця')),
+                Field::make('separator', 'crb_pages_op_sep', __('Страницы')),
                 Field::make('select', 'crb_contact_us_link', 'Страница контактов')
-                    ->add_options('page_selecting'),
-                Field::make('text', 'crb_fb', 'Ссылка facebook'),
-                Field::make('text', 'crb_insta', 'Ссылка instagram'),
-
-//------------------------------------------Страница cookie
+                    ->add_options('page_selecting')
+                    ->set_width(50),
+                //------------------------------------------Страница cookie
                 Field::make('select', 'wsb_cookie_policy', 'Страница cookie')
-                    ->add_options('page_selecting'),
+                     ->add_options('page_selecting')
+                     ->set_width(50),
+                Field::make('separator', 'crb_contact_data_op_sep', __('Социальные ссылки')),
+                Field::make('text', 'crb_fb', 'Ссылка facebook')
+                     ->set_width(50),
+                Field::make('text', 'crb_insta', 'Ссылка instagram')
+                     ->set_width(50),
+
+                Field::make('separator', 'crb_mail_op_sep', __('Email для контактной формы')),
+                Field::make('text', 'crb_form_mail', 'Email'),
                 //				Field::make( 'text', 'crb_phone_vel', 'Номер телефон(velcom)' )
                 //					->set_width( 50 ),
                 //				Field::make( 'text', 'crb_phone_mts', 'Номер телефон(МТС)' )

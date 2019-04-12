@@ -29,7 +29,7 @@
     require_once __DIR__ . '/core/styles.php';
     require_once __DIR__ . '/core/scripts.php';
     //	require_once __DIR__ . '/core/hooks.php';
-    //	require_once __DIR__ . '/core/ajax.php';
+    require_once __DIR__ . '/core/ajax.php';
 
     //	require_once __DIR__ . '/core/cmb2/index.php';
     //	require_once __DIR__ . '/core/cmb2/themeSettings.php';

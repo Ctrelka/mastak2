@@ -27,8 +27,12 @@
                     Field::make( 'separator', 'crb_contact_info_op_sep', 'Контактная информаия'),
                     Field::make( 'complex', 'contact_information', 'Контакты' )
                         ->add_fields( 'contact_person', [
-                                Field::make( 'text', 'country', 'Страна' ),
-                                Field::make( 'text', 'address', 'Адресс' )
+                                Field::make( 'text', 'country', 'Страна' )
+                                     ->set_width( 20 ),
+                                Field::make( 'textarea', 'address', 'Адресс' )
+                                     ->set_width( 40 ),
+                                Field::make( 'text', 'phone', 'Телефон' )
+                                     ->set_width( 40 )
                             ]
                         ),
                 ]

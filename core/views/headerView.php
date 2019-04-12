@@ -23,35 +23,6 @@
     <nav class="header__menu">
         <div class="container">
             <div class="header__menu-title">MENU
-
-<!--                <ul class="header__menu-list">-->
-<!--                    <li class="header__menu-list-item">-->
-<!--                        <a href="#">-->
-<!--                            web-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="header__menu-list-item">-->
-<!--                        <a href="#">-->
-<!--                            design-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="header__menu-list-item header__menu-list-item_active menu-list-item menu-list-item_active-link-load">-->
-<!--                        <a href="#">-->
-<!--                            portfolio-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="header__menu-list-item">-->
-<!--                        <a href="#">-->
-<!--                            team-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class="header__menu-list-item">-->
-<!--                        <a href="#">-->
-<!--                            contact-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-
                 <?php get_template_part( "/core/views/mainMenu" ); ?>
                 <div class="header__menu-soc">
                     <a class="header__menu-soc-item-link" href="<?= esc_url($fb); ?>">

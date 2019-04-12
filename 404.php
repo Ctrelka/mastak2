@@ -1,15 +1,8 @@
 <?php
     get_header();
-    ?>
 
-<header class="header">
-    <div class="container">
-        <div class="header__inner"><a class="header__logo" href="#"><img class="header__logo-img" src="/wp-content/themes/mastak2/src/icons/logo.ee3ce5.png" alt="Mastak" title=""/></a>
-            <div class="header__link"><a class="header__link-text" href="#">contact us</a><a class="header__burger" href="#"><span class="header__burger-line"></span><span class="header__burger-line"></span></a>
-            </div>
-        </div>
-    </div>
-</header>
+	get_template_part('/core/views/headerView');
+?>
 <main class="main main__h_100vh">
     <div class="page404">
         <div class="container">
