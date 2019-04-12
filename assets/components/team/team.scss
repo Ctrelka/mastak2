@@ -195,7 +195,8 @@ $MAX-WIDTH_HD : 1728px;
         }
 
         @include lg{
-            right: 0%;
+            width: 45%;
+            right: 5%;
         }
 
         @include hd{
