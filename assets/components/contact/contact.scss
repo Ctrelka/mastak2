@@ -35,6 +35,10 @@
 
     &__person {
 
+        &:nth-child(2){
+            margin-top: 1rem;
+        }
+
         @include md {
             margin-top : -7rem;
 
