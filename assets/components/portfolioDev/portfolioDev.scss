@@ -1,0 +1,96 @@
+@import "./../../common/constants";
+
+.portfolioDev{
+
+    &__inner{
+        margin-top: 2rem;
+    }
+
+    &__inner-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #4B5661;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__inner-logo{
+        display: flex;
+        align-items : center;
+        margin-bottom: 2rem;
+    }
+
+    &__inner-image-item{
+        width: 100%;
+        height : auto;
+    }
+
+    &__inner-image{
+        max-width: 50px;
+        height: auto;
+    }
+
+    &__inner-name{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #565656;
+        margin-left: 1rem;
+    }
+
+    &__inner-content-item-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #D0021B;
+    }
+
+    &__inner-content-item-text{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #626262;
+        margin-top: 2rem;
+    }
+
+    &__inner-content-item{
+        margin-bottom: 4rem;
+    }
+
+    &__inner-content-item-list{
+        margin-top: 2rem;
+        display : flex;
+        flex-direction: column;
+        list-style-type: none;
+
+    }
+
+    &__inner-content-item-list-text{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #626262;
+        margin-bottom: .5rem;
+
+        &:before{
+            content : '•';
+            width: 4px;
+            height: 4px;
+            display: inline-block;
+            margin-right: .5rem;
+        }
+    }
+
+}
