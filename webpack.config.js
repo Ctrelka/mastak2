@@ -28,6 +28,8 @@ let entries = {
     p404: './p404.js',
     cookie: './cookie.js',
     contact: './contact.js',
+    team: './team.js',
+    teamAll: './teamAll.js',
 };
 
 let pugs = {
@@ -42,6 +44,12 @@ let pugs = {
     },
     contact: {
         title: "contact title"
+    },
+    team: {
+        title: "team title"
+    },
+    teamAll: {
+        title: "teamAll title"
     },
 };
 

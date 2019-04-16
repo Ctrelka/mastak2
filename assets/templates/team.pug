@@ -1,0 +1,12 @@
+include ./../mixins
+doctype html
+html
+    +head()
+    body(class="body_overflow_hidden app app__bg_color-red")
+        +loader('loader__spinner_egg')
+        +header()
+        main.main
+            +team()
+        footer
+            .container
+                +footer("footer__pos_a")

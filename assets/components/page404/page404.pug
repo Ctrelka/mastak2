@@ -1,10 +1,10 @@
 mixin page404()
-    .page404
+    +b.page404
         .container
-            .page404__inner
-                .page404__404 404
-                .page404__wrapper
-                    .page404__text Page not found
-                    .page404__desription We’re sorry, the page you have looked for does not exist in our database! Maybe go to our home page
-            img.page404__image(src=require("./../images/maks.png"), alt="maks")
-            img.page404__image-eyes(src=require("./../images/maks2.png"), alt="maks")
+            +e.inner
+                +e.text404 404
+                +e.wrapper
+                    +e.text Page not found
+                    +e.desription We’re sorry, the page you have looked for does not exist in our database! Maybe go to our home page
+            +e.image(src=require("./../images/maks.png"), alt="maks")
+            +e.image-eyes(src=require("./../images/maks2.png"), alt="maks")

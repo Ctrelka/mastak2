@@ -1,6 +1,9 @@
 @import "./../../common/constants";
 
 $GREY_LIGHT : #CDD6DE;
+$GREY_DARK : #4B5661;
+$RED : #D0021B;
+$WHITE : #fff;
 
 .titleLittle {
     &__text {
@@ -44,6 +47,8 @@ $GREY_LIGHT : #CDD6DE;
             font-size   : 80px;
             line-height : 80px;
         }
+
+
     }
 }
 
@@ -67,6 +72,20 @@ $GREY_LIGHT : #CDD6DE;
             font-size   : 172px;
             line-height : 172px;
         }
+    }
+
+    &__color_red {
+        color : $RED;
+    }
+
+    &__color_grey {
+        color : $GREY_DARK;
+    }
+
+    &__color_white {
+        color : $WHITE;
+        opacity: 0.38;
+        mix-blend-mode: normal;
     }
 }
 
