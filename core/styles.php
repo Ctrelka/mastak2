@@ -23,6 +23,8 @@
 		        wp_enqueue_style('contact', Assets::getCss('contact'), false, null);
 	        }if (is_page_template('template-teamAll.php')) {
 		        wp_enqueue_style('teamAll', Assets::getCss('teamAll'), false, null);
+	        }if (is_page_template('template-web.php')) {
+		        wp_enqueue_style('homeWeb', Assets::getCss('homeWeb'), false, null);
 	        } else if (is_404()) {
                 wp_enqueue_style('p404', Assets::getCss('p404'), false, null);
             } else {

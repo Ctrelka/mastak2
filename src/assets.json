@@ -1,35 +1,40 @@
 {
     "common": {
-        "js": "/src/js/common.2cbb67871c888608bcda.min.js",
-        "css": "/src/css/common.2cbb67871c888608bcda.min.css"
+        "js": "/src/js/common.266c9f3affcf913adc3e.min.js",
+        "css": "/src/css/common.266c9f3affcf913adc3e.min.css"
     },
     "contact": {
-        "js": "/src/js/contact.2cbb67871c888608bcda.min.js"
+        "js": "/src/js/contact.266c9f3affcf913adc3e.min.js"
     },
     "cookie": {
-        "js": "/src/js/cookie.2cbb67871c888608bcda.min.js",
-        "css": "/src/css/cookie.2cbb67871c888608bcda.min.css"
+        "js": "/src/js/cookie.266c9f3affcf913adc3e.min.js",
+        "css": "/src/css/cookie.266c9f3affcf913adc3e.min.css"
     },
     "home": {
-        "js": "/src/js/home.2cbb67871c888608bcda.min.js",
-        "css": "/src/css/home.2cbb67871c888608bcda.min.css"
+        "js": "/src/js/home.266c9f3affcf913adc3e.min.js",
+        "css": "/src/css/home.266c9f3affcf913adc3e.min.css"
+    },
+    "homeWeb": {
+        "js": "/src/js/homeWeb.266c9f3affcf913adc3e.min.js",
+        "css": "/src/css/homeWeb.266c9f3affcf913adc3e.min.css"
     },
     "p404": {
-        "js": "/src/js/p404.2cbb67871c888608bcda.min.js",
-        "css": "/src/css/p404.2cbb67871c888608bcda.min.css"
+        "js": "/src/js/p404.266c9f3affcf913adc3e.min.js",
+        "css": "/src/css/p404.266c9f3affcf913adc3e.min.css"
     },
     "team": {
-        "js": "/src/js/team.2cbb67871c888608bcda.min.js"
+        "js": "/src/js/team.266c9f3affcf913adc3e.min.js"
     },
     "teamAll": {
-        "js": "/src/js/teamAll.2cbb67871c888608bcda.min.js",
-        "css": "/src/css/teamAll.2cbb67871c888608bcda.min.css"
+        "js": "/src/js/teamAll.266c9f3affcf913adc3e.min.js",
+        "css": "/src/css/teamAll.266c9f3affcf913adc3e.min.css"
     },
     "": {
         "html": [
             "/src/contact.html",
             "/src/cookie.html",
             "/src/home.html",
+            "/src/homeWeb.html",
             "/src/p404.html",
             "/src/team.html",
             "/src/teamAll.html"
@@ -61,6 +66,15 @@
             "/src/icons/ecom.76679a.png",
             "/src/icons/fb.b49aa1.png",
             "/src/icons/inst.0453d7.png",
+            "/src/icons/item1.a7cbd2.png",
+            "/src/icons/item2.6b4c16.png",
+            "/src/icons/item3.6b0b94.png",
+            "/src/icons/item4.e8c67b.png",
+            "/src/icons/item5.fbb552.png",
+            "/src/icons/item6.f389df.png",
+            "/src/icons/item7.7aed52.png",
+            "/src/icons/item8.1fca7b.png",
+            "/src/icons/item9.f19a4a.png",
             "/src/icons/logo.ee3ce5.png",
             "/src/icons/maks.1581d2.png",
             "/src/icons/maks2.e004f3.png",
