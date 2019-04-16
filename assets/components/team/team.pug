@@ -1,0 +1,15 @@
+mixin team()
+    +b.team
+        +e.inner
+            +titleBig('team','titleBig__color_white')
+            +e.inner-container
+                +e.text-container
+                    +e.P.text We are an independent and creative advertising agency that builds strong and long-lasting relationships with companies and their end customers. We believe that we should always start with a good idea, and only then choose where, in what way and in what area to express it. We believe that the power of marketing, design and analytics helps brands and companies grow. Our global vision is expressed in our works and in the culture of our team.
+                    +button('more','button__color_white')
+                +e.image-container
+                    +e.image-container-team-first
+                        +e.image-container-team-first-image(src=require("./../images/team1.png"), alt='Team 1')
+                    +e.image-container-team-second
+                        +e.image-container-team-second-image(src=require("./../images/team2.png"), alt='Team 2')
+                    +e.image-container-team-third
+                        +e.image-container-team-third-image(src=require("./../images/team3.png"), alt='Team 3')

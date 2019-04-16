@@ -1,6 +1,8 @@
 @import "./../../common/constants";
 
 $RED : #D0021B;
+$GREY : #4B5661;
+$DARK_GREY : #6A747D;
 
 .button {
     font-family : 'Open Sans', sans-serif;
@@ -13,14 +15,68 @@ $RED : #D0021B;
     transform   : skewX(-30deg);
     display     : inline-block;
     width       : 120px;
+    transition  : all .3s ease;
+    outline     : none;
+    position    : relative;
+
+    &:before {
+        content    : '';
+        position   : absolute;
+        top        : 0;
+        left       : 0;
+        width      : 0;
+        height     : 100%;
+        transition : all .4s ease;
+    }
+
+    &:hover:before {
+        width : 100%;
+    }
+
 
     &__text {
         transform : skewX(30deg);
         display   : inline-block;
-        padding   : .25rem;
+        padding   : 1px 0 0.25rem;
     }
 
     &__color_red {
-        background-color : $RED;
+        color  : $RED;
+        border : 1px solid $RED;
+
+        &:before {
+            background : $RED;
+        }
+
+        &:hover {
+            color : $WHITE;
+        }
+    }
+
+    &__color_grey {
+        color  : $GREY;
+        border : 1px solid $GREY;
+
+        &:before {
+            background : $GREY;
+        }
+
+        &:hover {
+            color : $WHITE;
+        }
+    }
+
+    &__color_white {
+        color  : $DARK_GREY;
+        border : none;
+        background-color: $WHITE;
+
+        &:before {
+            background : $DARK_GREY;
+        }
+
+        &:hover {
+            color : $WHITE;
+        }
     }
 }

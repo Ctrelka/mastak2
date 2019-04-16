@@ -1,7 +1,7 @@
 import './page404.scss';
 import $ from 'jquery';
 
-$(window).on('resize', paddingResize);
+$(window).on('resize load', paddingResize);
 
 function paddingResize() {
     let pt = $('.header').outerHeight();
