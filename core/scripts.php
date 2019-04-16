@@ -26,6 +26,8 @@
 		        wp_enqueue_script('team', Assets::getJs('team'), false, null, true);
 	        }if (is_page_template('template-teamAll.php')) {
 		        wp_enqueue_script('teamAll', Assets::getJs('teamAll'), false, null, true);
+	        }if (is_page_template('template-web.php')) {
+		        wp_enqueue_script('homeWeb', Assets::getJs('homeWeb'), false, null, true);
 	        } else if (is_404()) {
                 wp_enqueue_script('p404', Assets::getJs('p404'), false, null, true);
             } else {
