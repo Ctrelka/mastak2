@@ -12,3 +12,4 @@ import '../components/cookie/cookie';
 import '../components/form/form';
 import '../components/preloader/preloader';
 import '../components/portfolioDev/portfolioDev';
+import '../components/technology/technology';
