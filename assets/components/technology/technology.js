@@ -60,20 +60,39 @@ function interpolateColors(color1, color2, steps) {
 
 $(window).on("scroll", function () {
 
+    let sizeTop = 0;
+    let technologies = $(".technologies").offset().top;
+    let technologiesH = $(window).scrollTop();
+    let technologiesHe = $(".technologies").outerHeight();
+    console.log("Size: " + technologies);
+    console.log("Height: " + technologiesH);
+    console.log("Height2: " + technologiesHe);
+
+    if ($(window).width() >= 320) {
+        sizeTop = 500;
+    }
+
+    if ($(window).width() >= 768) {
+        sizeTop = 800;
+    }
+
     let top = $(window).scrollTop();
     let technologiesTop = $(".technologies").offset().top;
     let technologiesHeight = $(".technologies").outerHeight();
-    if (top > (technologiesTop - 10 * technologiesHeight) && (top < (technologiesTop + 1 * technologiesHeight))) {
+    if (top > (technologiesTop - sizeTop)) {
         $(".technologies__list").addClass('technologies__list_anim_list');
         $(".technologies__item").addClass('technologies__item_anim_item');
         $(".technologies__item").removeClass('technologies__item_anim_itemReverse');
         $(".technologies__list").removeClass('technologies__list_anim_listReverse');
-    } else {
+    }
+
+    else {
         $(".technologies__item").addClass('technologies__item_anim_itemReverse');
         $(".technologies__list").addClass('technologies__list_anim_listReverse');
         $(".technologies__list").removeClass('technologies__list_anim_list');
         $(".technologies__item").removeClass('technologies__item_anim_item');
     }
+
 });
 
 
