@@ -64,9 +64,6 @@ $(window).on("scroll", function () {
     let technologies = $(".technologies").offset().top;
     let technologiesH = $(window).scrollTop();
     let technologiesHe = $(".technologies").outerHeight();
-    console.log("Size: " + technologies);
-    console.log("Height: " + technologiesH);
-    console.log("Height2: " + technologiesHe);
 
     if ($(window).width() >= 320) {
         sizeTop = 500;
@@ -85,14 +82,6 @@ $(window).on("scroll", function () {
         $(".technologies__item").removeClass('technologies__item_anim_itemReverse');
         $(".technologies__list").removeClass('technologies__list_anim_listReverse');
     }
-
-    else {
-        $(".technologies__item").addClass('technologies__item_anim_itemReverse');
-        $(".technologies__list").addClass('technologies__list_anim_listReverse');
-        $(".technologies__list").removeClass('technologies__list_anim_list');
-        $(".technologies__item").removeClass('technologies__item_anim_item');
-    }
-
 });
 
 

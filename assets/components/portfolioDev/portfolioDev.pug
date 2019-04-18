@@ -1,5 +1,6 @@
-mixin portfolioDev()
-    +b.portfolioDev
+mixin portfolioDev(colorMod)
+    - var titleColorMod = colorMod ? colorMod : ''
+    +b.portfolioDev(class = `${titleColorMod}`)
         .container
             +e.inner
             +titleMedium("About project")
@@ -32,3 +33,5 @@ mixin portfolioDev()
                         +e.LI.inner-content-item-list-text создать административную панель для работы с базой данных.
                 +e.inner-content-item
                     +e.SPAN.inner-content-item-title Technologies
+            +technology()
+            +portfolio-image()

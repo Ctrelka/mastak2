@@ -9,20 +9,11 @@ $(window).on("scroll", function () {
     let technologiesTop = null;
     let technologiesHeight = null;
     let sizeTop = 0;
-    let technologies = $(".technologies").offset().top;
-    let technologiesH = $(window).scrollTop();
-    let technologiesHe = $(".technologies").outerHeight();
-    console.log("Size: " + technologies);
-    console.log("Height: " + technologiesH);
-    console.log("Height2: " + technologiesHe);
 
      if ($(window).width() >= 320) {
         sizeTop = 0;
         technologiesTop = $(".technologies").offset().top;
         technologiesHeight = $(".technologies").outerHeight();
-        console.log("Size: " + sizeTop);
-         console.log("technologiesTop: " + technologiesTop);
-        console.log("technologiesHeight: " + technologiesHeight);
      }
 
     if ($(window).width() >= 768) {
