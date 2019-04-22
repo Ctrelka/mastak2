@@ -3,7 +3,6 @@
 .portfolio-image {
 
     margin-top: 4rem;
-    margin-bottom: 4rem;
 
     @include sm{
         margin-top: 14rem;
@@ -224,6 +223,19 @@
 
         @include lg{
             bottom: -20px;
+        }
+
+    }
+
+    &__shadow-iphone {
+        position: absolute;
+        bottom: 4px;
+        left: 7.5%;
+        width: 85%;
+
+        &_active{
+            animation: animationShadow 2s;
+            animation-fill-mode: forwards;
         }
 
     }

@@ -2,9 +2,15 @@
 
 .portfolioDev{
 
+    overflow: hidden;
+
+    &_active{
+        overflow: auto;
+    }
+
 
     &__inner{
-        margin-top: 2rem;
+        padding-top: 2rem;
     }
 
     &__inner-title{
@@ -23,6 +29,7 @@
         display: flex;
         align-items : center;
         margin-bottom: 2rem;
+        position: relative;
     }
 
     &__inner-image-item{
@@ -31,7 +38,7 @@
     }
 
     &__inner-image{
-        max-width: 50px;
+        max-width: 114px;
         height: auto;
     }
 
@@ -94,4 +101,196 @@
         }
     }
 
+    &__content{
+        box-shadow: 0 0 50px rgba(0,0,0,.2);
+        opacity: 0;
+
+        &_active{
+            opacity: 1;
+            position: relative;
+            animation: animItem 1s;
+            animation-fill-mode: forwards;
+
+            @include m-land{
+                animation: animItemLand 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include sm{
+                animation: animItemSm 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include md{
+                animation: animItemMd 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include lg{
+                animation: animItemLg 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include hd{
+                animation: animItemHd 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include xhd{
+                animation: animItemXhd 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &_end{
+            animation: animEnd 1s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &__image-background{
+        height: 100vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__image{
+        position: absolute;
+        top : 0;
+
+        &_active{
+            position: fixed;
+        }
+    }
+
+    &__image-content{
+        position: relative;
+        bottom: 0;
+        height: 100vh;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 9rem;
+
+        &_active{
+            opacity: 0;
+        }
+
+        @include m-land{
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__image-content-item{
+        max-width: 114px;
+        margin-top: 1rem;
+    }
+
+    &__image-content-item-text{
+        width: 100%;
+        height : auto;
+    }
+
+    &__image-content-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 24px;
+        color: #565656;
+        max-width: 272px;
+
+        @include md{
+            font-size: 26px;
+            max-width: 370px;
+        }
+
+        @include lg{
+            font-size: 30px;
+        }
+    }
+
+    &__button{
+        margin-bottom: 1rem;
+    }
+
+
+    &__color_white{
+
+        li{
+            color: #fff;
+        }
+
+        p{
+            color: #fff;
+        }
+    }
+
+
+}
+
+@keyframes animItem {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(68vh);
+    }
+}
+
+@keyframes animItemLand {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(60vh);
+    }
+}
+
+@keyframes animItemSm {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(83vh);
+    }
+}
+
+@keyframes animItemMd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(75vh);
+    }
+}
+
+@keyframes animItemLg {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(70vh);
+    }
+}
+
+@keyframes animItemHd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(75vh);
+    }
+}
+
+@keyframes animItemXhd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(81vh);
+    }
 }

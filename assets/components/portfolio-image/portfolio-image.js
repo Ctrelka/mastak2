@@ -39,6 +39,7 @@ $(window).on("scroll", function () {
         $(".portfolio-image__main-notebook-image").addClass("portfolio-image__main-notebook-image_active");
         $(".portfolio-image__phone-image").addClass("portfolio-image__phone-image_active");
         $(".portfolio-image__shadow").addClass("portfolio-image__shadow_active");
+        $(".portfolio-image__shadow-iphone").addClass("portfolio-image__shadow-iphone_active");
         $(".portfolio-image__phone").addClass("portfolio-image__phone_active");
         $(".portfolio-image__main-iphone-image").addClass("portfolio-image__main-iphone-image_active");
     }

@@ -3,7 +3,8 @@ import $ from 'jquery';
 
 let countItem = $(".technologies__item").length;
 let oneItem = $(".technologies__list").width() / countItem;
-
+let itemsLine = $(".technologies__list").width();
+console.log("item " + oneItem + "count " + countItem + "itemsLine " + itemsLine);
 if ($(window).width() > 767) {
     $(".technologies__item").css("width", oneItem);
 }

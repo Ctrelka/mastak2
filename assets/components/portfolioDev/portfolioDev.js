@@ -10,3 +10,21 @@ function paddingResize() {
         'padding-top': pt
     });
 }
+
+$( document ).ready(function() {
+    setTimeout(function () {
+        $(".portfolioDev__image").addClass("portfolioDev__image_active");
+        $(".portfolioDev__content").addClass("portfolioDev__content_active");
+        $(".header__burger").addClass("header__burger_close");
+        $(".header__close").addClass("header__close_active");
+        $(".portfolioDev").addClass("portfolioDev_active");
+        $(".portfolioDev__image-content").addClass("portfolioDev__image-content_active");
+
+    }, 1000);
+});
+
+$(window).on("scroll", function () {
+
+
+
+});

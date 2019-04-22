@@ -1,37 +1,54 @@
+mixin colorItem(color)
+    .portfolioDev__content(style=`background: ${color}`)
+        .container
+            .portfolioDev__inner
+                +titleMedium("About project")
+                P.portfolioDev__inner-title e-commerce site
+                .portfolioDev__inner-logo
+                    .portfolioDev__inner-image
+                        IMG.portfolioDev__inner-image-item(src=require("./../images/rebox-logo.png"), alt='Sushi')
+                    SPAN.portfolioDev__inner-name
+                .portfolioDev__inner-content
+                    .portfolioDev__inner-content-item
+                        SPAN.portfolioDev__inner-content-item-title Client
+                        P.portfolioDev__inner-content-item-text JSC “MTBank” is a modern commercial bank, providing full variety of services to corporate and individual clients.
+                    .portfolioDev__inner-content-item
+                        SPAN.portfolioDev__inner-content-item-title Tasks
+                        UL.portfolioDev__inner-content-item-list
+                            LI.portfolioDev__inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
+                            LI.portfolioDev__inner-content-item-list-text возможность пополнения базы любым пользователем;
+                            LI.portfolioDev__inner-content-item-list-text создать административную панель для работы с базой данных.
+                            LI.portfolioDev__inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
+                            LI.portfolioDev__inner-content-item-list-text возможность пополнения базы любым пользователем;
+                            LI.portfolioDev__inner-content-item-list-text создать административную панель для работы с базой данных.
+                    .portfolioDev__inner-content-item
+                        SPAN.portfolioDev__inner-content-item-title Realisation
+                        UL.portfolioDev__inner-content-item-list
+                            LI.portfolioDev__inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
+                            LI.portfolioDev__inner-content-item-list-text возможность пополнения базы любым пользователем;
+                            LI.portfolioDev__inner-content-item-list-text создать административную панель для работы с базой данных.
+                            LI.portfolioDev__inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
+                            LI.portfolioDev__inner-content-item-list-text возможность пополнения базы любым пользователем;
+                            LI.portfolioDev__inner-content-item-list-text создать административную панель для работы с базой данных.
+                    .portfolioDev__inner-content-item
+                        SPAN.portfolioDev__inner-content-item-title Technologies
+                +technology()
+                +portfolio-image()
+
+mixin colorTitle(colorTitle)
+    .P.portfolioDev__inner-title(style=`color: ${colorTitle}`)
+
 mixin portfolioDev(colorMod)
     - var titleColorMod = colorMod ? colorMod : ''
     +b.portfolioDev(class = `${titleColorMod}`)
-        .container
-            +e.inner
-            +titleMedium("About project")
-            +e.P.inner-title e-commerce site
-            +e.inner-logo
-                +e.inner-image
-                    +e.inner-image-item(src=require("./../images/sushi.png"), alt='Sushi')
-                +e.SPAN.inner-name ProSushi
-            +e.inner-content
-                +e.inner-content-item
-                    +e.SPAN.inner-content-item-title Client
-                    +e.P.inner-content-item-text JSC “MTBank” is a modern commercial bank, providing full variety of services to corporate and individual clients.
-                +e.inner-content-item
-                    +e.SPAN.inner-content-item-title Tasks
-                    +e.UL.inner-content-item-list
-                        +e.LI.inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
-                        +e.LI.inner-content-item-list-text возможность пополнения базы любым пользователем;
-                        +e.LI.inner-content-item-list-text создать административную панель для работы с базой данных.
-                        +e.LI.inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
-                        +e.LI.inner-content-item-list-text возможность пополнения базы любым пользователем;
-                        +e.LI.inner-content-item-list-text создать административную панель для работы с базой данных.
-                +e.inner-content-item
-                    +e.SPAN.inner-content-item-title Realisation
-                    +e.UL.inner-content-item-list
-                        +e.LI.inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
-                        +e.LI.inner-content-item-list-text возможность пополнения базы любым пользователем;
-                        +e.LI.inner-content-item-list-text создать административную панель для работы с базой данных.
-                        +e.LI.inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
-                        +e.LI.inner-content-item-list-text возможность пополнения базы любым пользователем;
-                        +e.LI.inner-content-item-list-text создать административную панель для работы с базой данных.
-                +e.inner-content-item
-                    +e.SPAN.inner-content-item-title Technologies
-            +technology()
-            +portfolio-image()
+        +e.image
+            +e.image-background(style=`background-image:url(${require("./../images/rebox.png")})`)
+                .container
+                    +e.image-content
+                        +e.button
+                            +button('web','button__color_red')
+                        +e.SPAN.image-content-title Site for the service Rebox for the delivery of products
+                        +e.image-content-item
+                            +e.image-content-item-text(src=require("./../images/rebox-logo.png"), alt='Rebox')
+        +colorItem("#fff")
+
