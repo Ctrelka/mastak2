@@ -8,8 +8,12 @@ mixin portfolio-image()
                     img.portfolio-image__main-notebook-image(src=require('./../images/main-notebook.png'))
                 .portfolio-image__phone
                     img.portfolio-image__phone-image(src=require('./../images/iphone-kg.png'))
+                    img.portfolio-image__shadow-iphone(src=require('./../images/shadow.svg'))
                     .portfolio-image__main-iphone
                         img.portfolio-image__main-iphone-image(src=require('./../images/main-iphone.png'))
                 img.portfolio-image__shadow(src=require('./../images/shadow.svg'))
         img.portfolio-image_full(src=require('./../images/prosushi.jpg'))
+        footer
+            .container
+                +footer-line("footer__pos_a")
 
