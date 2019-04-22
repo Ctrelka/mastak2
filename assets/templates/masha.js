@@ -12,5 +12,6 @@ import '../components/cookie/cookie';
 import '../components/form/form';
 import '../components/preloader/preloader';
 import '../components/portfolioDev/portfolioDev';
+import '../components/portfolioDesign/portfolioDesign';
 import '../components/technology/technology';
 import '../components/portfolio-image/portfolio-image';
