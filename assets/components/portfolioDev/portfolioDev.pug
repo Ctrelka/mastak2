@@ -1,4 +1,4 @@
-mixin colorItem(color)
+mixin colorItemDev(color)
     .portfolioDev__content(style=`background: ${color}`)
         .container
             .portfolioDev__inner
@@ -50,5 +50,5 @@ mixin portfolioDev(colorMod)
                         +e.SPAN.image-content-title Site for the service Rebox for the delivery of products
                         +e.image-content-item
                             +e.image-content-item-text(src=require("./../images/rebox-logo.png"), alt='Rebox')
-        +colorItem("#fff")
+        +colorItemDev("#fff")
 
