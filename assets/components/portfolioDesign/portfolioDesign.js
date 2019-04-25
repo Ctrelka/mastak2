@@ -1,5 +1,6 @@
 import './portfolioDesign.scss';
 import $ from 'jquery';
+import mixitup from 'mixitup';
 
 $(window).on('resize load', paddingResize);
 
@@ -18,13 +19,6 @@ $( document ).ready(function() {
         $(".header__burger").addClass("header__burger_close");
         $(".header__close").addClass("header__close_active");
         $(".portfolioDesign").addClass("portfolioDesign_active");
-        $(".portfolioDesign__image-content").addClass("portfolioDesign__image-content_active");
 
     }, 1000);
-});
-
-$(window).on("scroll", function () {
-
-
-
 });

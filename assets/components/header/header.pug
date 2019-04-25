@@ -1,5 +1,5 @@
-mixin header()
-    +b.HEADER.header
+mixin header(mod)
+    +b.HEADER.header(class=`${mod}`)
         .container
             +e.inner
                 +e.logo(href='#')
