@@ -3,12 +3,6 @@ import $ from 'jquery';
 
 $(window).on('resize load', paddingResize);
 
-function paddingResize() {
-    let pt = $('.header').outerHeight();
-    $('.process').css({
-        'padding-top': pt
-    });
-}
 // $('.process__item').each(function (index) {
 //
 //     setTimeout(function(){

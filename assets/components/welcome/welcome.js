@@ -8,12 +8,26 @@ function paddingResize() {
     $('.welcome').css({
         'padding-top': pt
     });
+
+    $('.welcome__inner-class_active').css({
+        'padding-top': pt
+    });
 }
 
 let intervalSecond;
 let intervalFirst;
 let timeoutFirst;
 let timeoutSecond;
+
+
+$( document ).ready(function() {
+
+    $('.button__color_red').click(function () {
+        $(".welcome__inner-class").addClass("welcome__inner-class_active");
+        $(".welcome-dev").addClass("welcome-dev_active");
+        }
+    )
+});
 
 $('.welcome__item').click(function () {
         intervalSecond = clearInterval(intervalSecond);
