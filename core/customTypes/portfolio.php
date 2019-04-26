@@ -4,7 +4,7 @@
 	function register_post_type_portfolio(){
 		register_post_type('portfolio', array(
 			'label'  => null,
-			'labels' => array(
+			'labels' => [
 				'name'               => 'Портфолио', // основное название для типа записи
 				'singular_name'      => 'проект', // название для одной записи этого типа
 				'add_new'            => 'Добавить проект', // для добавления новой записи
@@ -17,7 +17,7 @@
 				'not_found_in_trash' => 'Not Found in trash', // если не было найдено в корзине
 				'parent_item_colon'  => '', // для родителей (у древовидных типов)
 				'menu_name'          => 'Портфолио', // название меню
-			),
+			],
 			'description'         => '',
 			'public'              => true,
 			'publicly_queryable'  => null, // зависит от public
@@ -39,5 +39,6 @@
 			'has_archive'         => true,
 			'rewrite'             => true,
 			'query_var'           => true,
+			'taxonomies'          => [ 'type' ],
 		) );
 	}

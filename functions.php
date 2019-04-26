@@ -40,11 +40,7 @@
     require_once __DIR__ . '/vendor/autoload.php';
 
 	require_once __DIR__ . '/core/customTypes/portfolio.php';
+	require_once __DIR__ . '/core/customTypes/portfolioTax.php';
+
 	require_once __DIR__ . '/core/carbon/portfolioMeta.php';
-    //
-    //	require_once __DIR__ . '/core/addProductVarioatetionField.php';
-    //	require_once __DIR__ . '/core/myAjax/createOrder.php';
-    //	require_once __DIR__ . '/core/myAjax/becomePartner.php';
-    //	require_once __DIR__ . '/core/myAjax/askAQuestion.php';
-    //	require_once __DIR__ . '/core/webpayRespons.php';
-	
+

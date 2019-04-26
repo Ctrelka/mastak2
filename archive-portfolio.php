@@ -9,8 +9,7 @@
                 <div class="portfolio__slide-menu">
                     <div class="portfolio__title">
                         <div class="titleLittle">
-                            <h1 class="titleLittle__text text">portfolio
-                            </h1>
+                            <h1 class="titleLittle__text text">portfolio</h1>
                         </div>
                     </div>
                     <ul class="portfolio__slide-menu-list controls">
