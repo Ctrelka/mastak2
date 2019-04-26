@@ -610,3 +610,638 @@ $DARK_GREY : #6A747D;
         background : unset;
     }
 }
+
+
+
+.portfolioDesign{
+
+    overflow: hidden;
+
+    &_active{
+        overflow: auto;
+    }
+
+
+    &__inner{
+        padding-top: 2rem;
+    }
+
+    &__inner-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #4B5661;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__inner-logo{
+        display: flex;
+        align-items : center;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    &__inner-image-item{
+        width: 100%;
+        height : auto;
+    }
+
+    &__inner-image{
+        max-width: 114px;
+        height: auto;
+    }
+
+    &__inner-name{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #565656;
+        margin-left: 1rem;
+    }
+
+    &__inner-content-item-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #D0021B;
+    }
+
+    &__inner-content-item-text{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #626262;
+        margin-top: 2rem;
+    }
+
+    &__inner-content-item{
+        margin-bottom: 4rem;
+    }
+
+    &__inner-content-item-list{
+        margin-top: 2rem;
+        display : flex;
+        flex-direction: column;
+        list-style-type: none;
+
+    }
+
+    &__inner-content-item-list-text{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #626262;
+        margin-bottom: .5rem;
+
+        &:before{
+            content : '•';
+            width: 4px;
+            height: 4px;
+            display: inline-block;
+            margin-right: .5rem;
+        }
+    }
+
+    &__content{
+        box-shadow: 0 0 50px rgba(0,0,0,.2);
+        opacity: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &_active{
+            opacity: 1;
+            position: relative;
+            animation: animItem 1s;
+            animation-fill-mode: forwards;
+
+            @include m-land{
+                animation: animItemLand 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include sm{
+                animation: animItemSm 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include md{
+                animation: animItemMd 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include lg{
+                animation: animItemLg 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include hd{
+                animation: animItemHd 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include xhd{
+                animation: animItemXhd 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &_end{
+            animation: animEnd 1s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &__image-background{
+        height: 100vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__image{
+        position: absolute;
+        top : 0;
+
+        &_active{
+            position: fixed;
+        }
+    }
+
+    &__image-content{
+        position: relative;
+        bottom: 0;
+        height: 100vh;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 9rem;
+
+        &_active{
+            opacity: 0;
+        }
+
+        @include m-land{
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__image-content-item{
+        max-width: 114px;
+        margin-top: 1rem;
+    }
+
+    &__image-content-item-text{
+        width: 100%;
+        height : auto;
+    }
+
+    &__image-content-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 24px;
+        color: #565656;
+        max-width: 272px;
+
+        @include md{
+            font-size: 26px;
+            max-width: 370px;
+        }
+
+        @include lg{
+            font-size: 30px;
+        }
+    }
+
+    &__button{
+        margin-bottom: 1rem;
+    }
+
+
+    &__color_white{
+
+        color: #fff;
+
+        li{
+            color: #fff;
+        }
+
+        p{
+            color: #fff;
+        }
+    }
+
+    &_full{
+        width: 100%;
+        margin-top: 4rem;
+        box-shadow: 0 0 50px rgba(0,0,0,0.2);
+
+        @include lg{
+            margin-top: 10rem;
+        }
+    }
+
+
+}
+
+@keyframes animItem {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(68vh);
+    }
+}
+
+@keyframes animItemLand {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(60vh);
+    }
+}
+
+@keyframes animItemSm {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(83vh);
+    }
+}
+
+@keyframes animItemMd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(75vh);
+    }
+}
+
+@keyframes animItemLg {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(70vh);
+    }
+}
+
+@keyframes animItemHd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(75vh);
+    }
+}
+
+@keyframes animItemXhd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(81vh);
+    }
+}
+
+
+
+.portfolioDev{
+
+    overflow: hidden;
+
+    &_active{
+        overflow: auto;
+    }
+
+
+    &__inner{
+        padding-top: 2rem;
+    }
+
+    &__inner-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #4B5661;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__inner-logo{
+        display: flex;
+        align-items : center;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    &__inner-image-item{
+        width: 100%;
+        height : auto;
+    }
+
+    &__inner-image{
+        max-width: 114px;
+        height: auto;
+    }
+
+    &__inner-name{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #565656;
+        margin-left: 1rem;
+    }
+
+    &__inner-content-item-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #D0021B;
+    }
+
+    &__inner-content-item-text{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #626262;
+        margin-top: 2rem;
+    }
+
+    &__inner-content-item{
+        margin-bottom: 4rem;
+    }
+
+    &__inner-content-item-list{
+        margin-top: 2rem;
+        display : flex;
+        flex-direction: column;
+        list-style-type: none;
+
+    }
+
+    &__inner-content-item-list-text{
+        font-family: Open Sans, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #626262;
+        margin-bottom: .5rem;
+
+        &:before{
+            content : '•';
+            width: 4px;
+            height: 4px;
+            display: inline-block;
+            margin-right: .5rem;
+        }
+    }
+
+    &__content{
+        box-shadow: 0 0 50px rgba(0,0,0,.2);
+        opacity: 0;
+
+        &_active{
+            opacity: 1;
+            position: relative;
+            animation: animItem 1s;
+            animation-fill-mode: forwards;
+
+            @include m-land{
+                animation: animItemLand 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include sm{
+                animation: animItemSm 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include md{
+                animation: animItemMd 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include lg{
+                animation: animItemLg 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include hd{
+                animation: animItemHd 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @include xhd{
+                animation: animItemXhd 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &_end{
+            animation: animEnd 1s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &__image-background{
+        height: 100vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__image{
+        position: absolute;
+        top : 0;
+
+        &_active{
+            position: fixed;
+        }
+    }
+
+    &__image-content{
+        position: relative;
+        bottom: 0;
+        height: 100vh;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 9rem;
+
+        &_active{
+            opacity: 0;
+        }
+
+        @include m-land{
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__image-content-item{
+        max-width: 114px;
+        margin-top: 1rem;
+    }
+
+    &__image-content-item-text{
+        width: 100%;
+        height : auto;
+    }
+
+    &__image-content-title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 24px;
+        color: #565656;
+        max-width: 272px;
+
+        @include md{
+            font-size: 26px;
+            max-width: 370px;
+        }
+
+        @include lg{
+            font-size: 30px;
+        }
+    }
+
+    &__button{
+        margin-bottom: 1rem;
+    }
+
+
+    &__color_white{
+
+        li{
+            color: #fff;
+        }
+
+        p{
+            color: #fff;
+        }
+    }
+
+
+}
+
+@keyframes animItem {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(68vh);
+    }
+}
+
+@keyframes animItemLand {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(60vh);
+    }
+}
+
+@keyframes animItemSm {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(83vh);
+    }
+}
+
+@keyframes animItemMd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(75vh);
+    }
+}
+
+@keyframes animItemLg {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(70vh);
+    }
+}
+
+@keyframes animItemHd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(75vh);
+    }
+}
+
+@keyframes animItemXhd {
+    0%{
+        transform: translateY(100vh);
+    }
+    100%{
+        transform: translateY(81vh);
+    }
+}
+
+
+.testDiva{
+
+    opacity: 0;
+
+    top: 0;
+    z-index: 998;
+
+    &_active{
+        animation: 1s ease-out openDiv;
+        animation-fill-mode: forwards;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #fff;
+    }
+
+}
+
+
+@keyframes openDiv {
+    100%{
+        opacity: 1;
+    }
+}

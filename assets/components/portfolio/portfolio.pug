@@ -1,5 +1,4 @@
 mixin portfolio()
-    link(href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" rel="stylesheet")
     +b.portfolio
         +e.inner
             +e.slide-menu
@@ -17,7 +16,7 @@ mixin portfolio()
                         +e.SPAN.slide-menu-desc design
             +e.portfolio-container.swiper-container
                 .swiper-wrapper.portfolio-wrapper
-                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/sl1.png")})`)
+                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/sl1.png")})` data-id='1')
                         +e.portfolio-item-container
                             +e.image-content
                                 +e.button
@@ -26,7 +25,7 @@ mixin portfolio()
                                 +e.SPAN.image-content-title.portfolio__color_white Site for the service Rebox for the delivery of products
                                 +e.image-content-item
                                     +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
-                    +e.portfolio-item.swiper-slide.mix.design(style=`background-image:url(${require("./../images/sl2.png")})`)
+                    +e.portfolio-item.swiper-slide.mix.design(style=`background-image:url(${require("./../images/sl2.png")})` data-id='2')
                         +e.portfolio-item-container
                             +e.image-content
                                 +e.button
@@ -35,7 +34,7 @@ mixin portfolio()
                                 +e.SPAN.image-content-title.portfolio__color_white Site for the service Rebox for the delivery of products
                                 +e.image-content-item
                                     +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
-                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/sl3.png")})`)
+                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/sl3.png")})` data-id='3')
                         +e.portfolio-item-container
                             +e.image-content
                                 +e.button
@@ -44,7 +43,7 @@ mixin portfolio()
                                 +e.SPAN.image-content-title Site for the service Rebox for the delivery of products
                                 +e.image-content-item
                                     +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
-                    +e.portfolio-item.swiper-slide.mix.design(style=`background-image:url(${require("./../images/sl4.png")})`)
+                    +e.portfolio-item.swiper-slide.mix.design(style=`background-image:url(${require("./../images/sl4.png")})` data-id='4')
                         +e.portfolio-item-container
                             +e.image-content
                                 +e.button
@@ -53,7 +52,7 @@ mixin portfolio()
                                 +e.SPAN.image-content-title.portfolio__color_white Site for the service Rebox for the delivery of products
                                 +e.image-content-item
                                     +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
-                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/sl5.png")})`)
+                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/sl5.png")})` data-id='5')
                         +e.portfolio-item-container
                             +e.image-content
                                 +e.button
@@ -61,12 +60,16 @@ mixin portfolio()
                                         +e.SPAN.button-tag-text web
                                 +e.SPAN.image-content-title.portfolio__color_white Site for the service Rebox for the delivery of products
                                 +e.image-content-item
-                                    +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
+                                    +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox' )
                     +e.portfolio-item.swiper-slide
                         +e.portfolio-item-container
                             +e.navigation-container
                                 +e.navigation
                                     +e.nav(href="#") SERVICES
                                     +e.nav(href="#") team
-    SCRIPT(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js")
+    .testDiva
+
+
+
+
 
