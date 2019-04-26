@@ -61,9 +61,14 @@
         }
     }
 
+    &__inner-items-content_down{
+        animation: 1s ease-out 0s normal animDown forwards;
+    }
+
     &__inner-items-content{
         margin-top: 2rem;
         margin-bottom: 2rem;
+        opacity: 0;
 
         @include sm{
             max-width: 284px;
@@ -225,4 +230,15 @@
         max-width: 45%;
     }
 
+}
+
+@keyframes animDown {
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

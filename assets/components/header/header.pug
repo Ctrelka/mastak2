@@ -1,5 +1,5 @@
-mixin header()
-    +b.HEADER.header
+mixin header(mod)
+    +b.HEADER.header(class=`${mod}`)
         .container
             +e.inner
                 +e.logo(href='#')
@@ -9,6 +9,9 @@ mixin header()
                     +e.burger(href="#")
                         +e.SPAN.burger-line
                         +e.SPAN.burger-line
+                    +e.close(href="#")
+                        +e.SPAN.burger-line.close-line
+                        +e.SPAN.burger-line.close-line
         +e.NAV.menu
             .container
                 +e.menu-title MENU

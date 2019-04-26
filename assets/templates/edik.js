@@ -8,3 +8,4 @@ import './../components/header/header';
 import './../components/footer/footer';
 import './../components/types/types';
 import './../components/process/process';
+import './../components/technology/technology';
