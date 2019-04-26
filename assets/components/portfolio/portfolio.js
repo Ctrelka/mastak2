@@ -36,17 +36,51 @@ swiper.on('slideChange', function () {
 
 
 swiper.on('click', function () {
-    $( ".portfolio__portfolio-item" ).click(function() {
+    $( ".portfolio__portfolio-item" ).click(function(e) {
+        e.preventDefault();
+
+        let portfolioId  = $(this).data("id");
+        console.log(portfolioId);
+
+        let data = {
+            'action': 'singlePortfolio',
+            'portfolioId': portfolioId,
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: mastakSendMail.url,
+            data: data,
+            success: function (response) {
+                console.log(response);
+                $(".testDiva").html(response);
+            },
+            error: function (x, y, z) {
+                console.log(x);
+                $('.testDiva').text('ОШИБКА!');
+            }
+        });
+
+
         $(".portfolio__portfolio-item").addClass("portfolio__portfolio-item_close");
         $(this).removeClass("portfolio__portfolio-item_close");
         $(this).addClass("portfolio__portfolio-item_active");
         $(".portfolio__slide-menu").addClass("portfolio__slide-menu_active-open");
         $(".portfolio__portfolio-container").addClass("portfolio__portfolio-container_active");
+        $(".testDiva").addClass("testDiva_active");
+        $(".header__burger").addClass("header__burger_close");
+        $(".header__close").addClass("header__close_active");
         swiper.params.slidesOffsetBefore =  0;
         swiper.update();
     });
 });
 
+
+$( ".header__close_active" ).click(function() {
+    $(".header__close").removeClass("header__close_active");
+    $(".header__burger").removeClass("header__burger_close");
+    $(".testDiva").removeClass("testDiva_active");
+});
 
 
 var containerEl = document.querySelector('.portfolio-wrapper');
@@ -59,4 +93,47 @@ if ($(window).width() >= 1024) {
     $(".portfolio__slide-menu").addClass("portfolio__slide-menu_click");
     $(".portfolio__title").addClass("portfolio__title_active");
 }
+
+
+
+
+
+
+
+
+
+$(window).on('resize load', paddingResize);
+
+function paddingResize() {
+    let pt = $('.header').outerHeight();
+    console.log(pt);
+    $('.portfolioDev').css({
+        'padding-top': pt
+    });
+    $('.portfolioDesign').css({
+        'padding-top': pt
+    });
+}
+
+$( document ).ready(function() {
+    setTimeout(function () {
+        $(".portfolioDev__image").addClass("portfolioDev__image_active");
+        $(".portfolioDev__content").addClass("portfolioDev__content_active");
+        $(".portfolioDev").addClass("portfolioDev_active");
+
+    }, 1000);
+});
+
+
+
+$( document ).ready(function() {
+    setTimeout(function () {
+        $(".portfolioDesign__image").addClass("portfolioDesign__image_active");
+        $(".portfolioDesign__content").addClass("portfolioDesign__content_active");
+        $(".portfolioDesign").addClass("portfolioDesign_active");
+
+    }, 1000);
+});
+
+
 
