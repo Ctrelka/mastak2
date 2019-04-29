@@ -31,6 +31,7 @@
                 wp_enqueue_style('p404', Assets::getCss('p404'), false, null);
             } else if (is_post_type_archive("portfolio")) {
 		        wp_enqueue_style('portfolio', Assets::getCss('portfolio'), false, null);
+		        wp_enqueue_style('portfolioDesign', Assets::getCss('portfolioDesign'), false, null);
 	        } else {
                 wp_enqueue_style('cookie', Assets::getCss('cookie'), false, null);
             }

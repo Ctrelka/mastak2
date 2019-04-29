@@ -24,7 +24,7 @@
                         <div class="portfolioDesign__image-content">
                             <div class="portfolioDesign__button">
                                 <a class="button button__color_grey" href="#">
-                                    <span class="button__text">web</span>
+                                    <span class="button__text">design</span>
                                 </a>
                             </div>
                             <span class="portfolioDesign__image-content-title portfolioDesign__color portfolioDesign__color_white">

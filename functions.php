@@ -13,10 +13,6 @@
     require_once __DIR__ . '/core/mastakFunctions.php';
 
     require_once __DIR__ . '/core/init_theme.php';
-    //	require_once __DIR__ . '/core/custom-types/index.php';
-    //	require_once __DIR__ . '/core/custom-types/partnerPostType.php';
-    //	require_once __DIR__ . '/core/carbon/partnerMeta.php';
-    //	require_once __DIR__ . '/core/carbon/shopOrderMeta.php';
 
 
     require_once __DIR__ . '/core/menu.php';
@@ -25,9 +21,6 @@
     //	require_once __DIR__ . '/core/hooks.php';
     require_once __DIR__ . '/core/ajax/ajax.php';
 	require_once __DIR__ . '/core/ajax/singlePortfolio.php';
-
-    //	require_once __DIR__ . '/core/cmb2/index.php';
-    //	require_once __DIR__ . '/core/cmb2/themeSettings.php';
 
     require_once __DIR__ . '/core/carbon/optionPage.php';
     require_once __DIR__ . '/core/carbon/contactPage.php';
@@ -40,7 +33,7 @@
     require_once __DIR__ . '/vendor/autoload.php';
 
 	require_once __DIR__ . '/core/customTypes/portfolio.php';
-	require_once __DIR__ . '/core/customTypes/portfolioTax.php';
-
 	require_once __DIR__ . '/core/carbon/portfolioMeta.php';
-
+	require_once __DIR__ . '/core/customTypes/portfolioTax.php';
+	require_once __DIR__ . '/core/carbon/portfolioTermMeta.php';
+	require_once __DIR__ . '/core/carbon/portfolioSettings.php';

@@ -1,8 +1,21 @@
 <?php
 	get_header( "noColor" );
 
-	get_template_part( "/core/views/headerView","portfolio" ); ?>
+	$terms = get_terms( [
+		'taxonomy'   => 'portfolio_type',
+		'hide_empty' => false,
+	] );
 
+//	portfolio_first_btn_text
+    $portfolio_first_btn_text = carbon_get_theme_option("portfolio_first_btn_text");
+//portfolio_first_btn_link
+	$portfolio_first_btn_link = carbon_get_theme_option("portfolio_first_btn_link");
+//portfolio_second_btn_text
+	$portfolio_second_btn_text = carbon_get_theme_option("portfolio_second_btn_text");
+//portfolio_second_btn_link
+	$portfolio_second_btn_link = carbon_get_theme_option("portfolio_second_btn_link");
+
+	get_template_part( "/core/views/headerView", "portfolio" ); ?>
     <main class="main">
         <div class="portfolio">
             <div class="portfolio__inner">
@@ -18,124 +31,39 @@
                             <a>All projects</a>
                             <span class="portfolio__slide-menu-desc">All projects</span>
                         </li>
-                        <li class="portfolio__slide-menu-list-item control" data-filter=".web">
-                            <a>web services</a>
-                            <span class="portfolio__slide-menu-desc">web services</span>
-                        </li>
-                        <li class="portfolio__slide-menu-list-item control" data-filter=".design">
-                            <a>design</a>
-                            <span class="portfolio__slide-menu-desc">design</span>
-                        </li>
+						<?php
+							/**
+							 * @var WP_Term $term
+							 */
+							foreach ( $terms as $term ) :
+								?>
+                                <li class="portfolio__slide-menu-list-item control" data-filter=".<?= $term->slug ?>">
+                                    <a><?= $term->name ?></a>
+                                    <span class="portfolio__slide-menu-desc"><?= $term->name ?></span>
+                                </li>
+							<?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="portfolio__portfolio-container swiper-container">
                     <div class="swiper-wrapper portfolio-wrapper">
-                        <div class="portfolio__portfolio-item swiper-slide mix web"
-                             style="background-image:url(/wp-content/themes/mastak2/src/icons/sl1.675772.png)"
-                             data-id="1">
-                            <div class="portfolio__portfolio-item-container">
-                                <div class="portfolio__image-content">
-                                    <div class="portfolio__button">
-                                        <a class="portfolio__button-tag portfolio__button-tag portfolio__button-tag_color-red"
-                                           href="#">
-                                            <span class="portfolio__button-tag-text">web</span>
-                                        </a>
-                                    </div>
-                                    <span class="portfolio__image-content-title portfolio__color portfolio__color_white">Site for the service Rebox for the delivery of products</span>
-                                    <div class="portfolio__image-content-item">
-                                        <img class="portfolio__image-content-item-text"
-                                             src="/wp-content/themes/mastak2/src/icons/b-logo.5104c4.png" alt="Rebox"
-                                             title=""/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio__portfolio-item swiper-slide mix design"
-                             style="background-image:url(/wp-content/themes/mastak2/src/icons/sl2.f4c041.png)"
-                             data-id="2">
-                            <div class="portfolio__portfolio-item-container">
-                                <div class="portfolio__image-content">
-                                    <div class="portfolio__button">
-                                        <a class="portfolio__button-tag portfolio__button-tag portfolio__button-tag_color-grey"
-                                           href="#">
-                                            <span class="portfolio__button-tag-text">design & branding</span>
-                                        </a>
-                                    </div>
-                                    <span class="portfolio__image-content-title portfolio__color portfolio__color_white">Site for the service Rebox for the delivery of products</span>
-                                    <div class="portfolio__image-content-item">
-                                        <img class="portfolio__image-content-item-text"
-                                             src="/wp-content/themes/mastak2/src/icons/b-logo.5104c4.png" alt="Rebox"
-                                             title=""/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio__portfolio-item swiper-slide mix web"
-                             style="background-image:url(/wp-content/themes/mastak2/src/icons/sl3.510d66.png)"
-                             data-id="3">
-                            <div class="portfolio__portfolio-item-container">
-                                <div class="portfolio__image-content">
-                                    <div class="portfolio__button">
-                                        <a class="portfolio__button-tag portfolio__button-tag portfolio__button-tag_color-red"
-                                           href="#">
-                                            <span class="portfolio__button-tag-text">web</span>
-                                        </a>
-                                    </div>
-                                    <span class="portfolio__image-content-title">Site for the service Rebox for the delivery of products</span>
-                                    <div class="portfolio__image-content-item">
-                                        <img class="portfolio__image-content-item-text"
-                                             src="/wp-content/themes/mastak2/src/icons/b-logo.5104c4.png" alt="Rebox"
-                                             title=""/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio__portfolio-item swiper-slide mix design"
-                             style="background-image:url(/wp-content/themes/mastak2/src/icons/sl4.637c9e.png)"
-                             data-id="4">
-                            <div class="portfolio__portfolio-item-container">
-                                <div class="portfolio__image-content">
-                                    <div class="portfolio__button">
-                                        <a class="portfolio__button-tag portfolio__button-tag portfolio__button-tag_color-grey"
-                                           href="#">
-                                            <span class="portfolio__button-tag-text">design & branding</span>
-                                        </a>
-                                    </div>
-                                    <span class="portfolio__image-content-title portfolio__color portfolio__color_white">Site for the service Rebox for the delivery of products</span>
-                                    <div class="portfolio__image-content-item">
-                                        <img class="portfolio__image-content-item-text"
-                                             src="/wp-content/themes/mastak2/src/icons/b-logo.5104c4.png" alt="Rebox"
-                                             title=""/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio__portfolio-item swiper-slide mix web"
-                             style="background-image:url(/wp-content/themes/mastak2/src/icons/sl5.3de6a9.png)"
-                             data-id="5">
-                            <div class="portfolio__portfolio-item-container">
-                                <div class="portfolio__image-content">
-                                    <div class="portfolio__button">
-                                        <a class="portfolio__button-tag portfolio__button-tag portfolio__button-tag_color-red"
-                                           href="#">
-                                            <span class="portfolio__button-tag-text">web</span>
-                                        </a>
-                                    </div>
-                                    <span class="portfolio__image-content-title portfolio__color portfolio__color_white">Site for the service Rebox for the delivery of products</span>
-                                    <div class="portfolio__image-content-item">
-                                        <img class="portfolio__image-content-item-text"
-                                             src="/wp-content/themes/mastak2/src/icons/b-logo.5104c4.png" alt="Rebox"
-                                             title=""/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+						<?php
+							if ( have_posts() ):
+								while ( have_posts() ):
+									the_post();
+									get_template_part( '/core/views/single_portfolio_arch' );
+								endwhile;
+							endif;
+						?>
                         <div class="portfolio__portfolio-item swiper-slide">
                             <div class="portfolio__portfolio-item-container">
                                 <div class="portfolio__navigation-container">
                                     <div class="portfolio__navigation">
-                                        <a class="portfolio__nav" href="#">SERVICES</a>
-                                        <a class="portfolio__nav" href="#">team</a>
+                                        <a class="portfolio__nav" href="<?= esc_url($portfolio_first_btn_link); ?>">
+                                            <?= $portfolio_first_btn_text; ?>
+                                        </a>
+                                        <a class="portfolio__nav" href="<?= esc_url($portfolio_second_btn_link)?>">
+	                                        <?= $portfolio_second_btn_text; ?>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
