@@ -28,9 +28,18 @@
 		        wp_enqueue_script('teamAll', Assets::getJs('teamAll'), false, null, true);
 	        }if (is_page_template('template-web.php')) {
 		        wp_enqueue_script('homeWeb', Assets::getJs('homeWeb'), false, null, true);
+	        }if (is_page_template('template-portfolioDesign.php')) {
+		        wp_enqueue_script('portfolioDesign', Assets::getJs('portfolioDesign'), false, null, true);
+	        }if (is_page_template('template-portfolioDev.php')) {
+		        wp_enqueue_script('portfolioDev', Assets::getJs('portfolioDev'), false, null, true);
 	        } else if (is_404()) {
                 wp_enqueue_script('p404', Assets::getJs('p404'), false, null, true);
-            } else {
+            } else if (is_post_type_archive("portfolio")) {
+		        wp_enqueue_script('portfolio', Assets::getJs('portfolio'), false, null, true);
+//		        wp_enqueue_script('portfolioDev', Assets::getJs('portfolioDev'), false, null, true);
+//		        wp_enqueue_script('portfolioDesign', Assets::getJs('portfolioDesign'), false, null, true);
+		       // wp_enqueue_script('getSiglePortfolio', BASE_URL."/core/ajax/aa.js", false, null, true);
+	        } else {
                 wp_enqueue_script('cookie', Assets::getJs('cookie'), false, null, true);
             }
         });

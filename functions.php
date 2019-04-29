@@ -1,10 +1,4 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: alexandrzanko
-     * Date: 12/4/18
-     * Time: 5:00 PM
-     */
 
     if (!defined('ABSPATH')) exit();
 
@@ -19,20 +13,14 @@
     require_once __DIR__ . '/core/mastakFunctions.php';
 
     require_once __DIR__ . '/core/init_theme.php';
-    //	require_once __DIR__ . '/core/custom-types/index.php';
-    //	require_once __DIR__ . '/core/custom-types/partnerPostType.php';
-    //	require_once __DIR__ . '/core/carbon/partnerMeta.php';
-    //	require_once __DIR__ . '/core/carbon/shopOrderMeta.php';
 
 
     require_once __DIR__ . '/core/menu.php';
     require_once __DIR__ . '/core/styles.php';
     require_once __DIR__ . '/core/scripts.php';
     //	require_once __DIR__ . '/core/hooks.php';
-    require_once __DIR__ . '/core/ajax.php';
-
-    //	require_once __DIR__ . '/core/cmb2/index.php';
-    //	require_once __DIR__ . '/core/cmb2/themeSettings.php';
+    require_once __DIR__ . '/core/ajax/ajax.php';
+	require_once __DIR__ . '/core/ajax/singlePortfolio.php';
 
     require_once __DIR__ . '/core/carbon/optionPage.php';
     require_once __DIR__ . '/core/carbon/contactPage.php';
@@ -40,12 +28,12 @@
 	require_once  __DIR__ . '/core/carbon/teamAllPage.php';
     require_once  __DIR__ . '/core/carbon/homePage.php';
     require_once  __DIR__ . '/core/carbon/webPage.php';
-    //	require_once  __DIR__ . '/core/carbon/productCatMeta.php';
+//	require_once  __DIR__ . '/core/carbon/portfolioDesign.php';
+
     require_once __DIR__ . '/vendor/autoload.php';
-    //
-    //	require_once __DIR__ . '/core/addProductVarioatetionField.php';
-    //	require_once __DIR__ . '/core/myAjax/createOrder.php';
-    //	require_once __DIR__ . '/core/myAjax/becomePartner.php';
-    //	require_once __DIR__ . '/core/myAjax/askAQuestion.php';
-    //	require_once __DIR__ . '/core/webpayRespons.php';
-	
+
+	require_once __DIR__ . '/core/customTypes/portfolio.php';
+	require_once __DIR__ . '/core/carbon/portfolioMeta.php';
+	require_once __DIR__ . '/core/customTypes/portfolioTax.php';
+	require_once __DIR__ . '/core/carbon/portfolioTermMeta.php';
+	require_once __DIR__ . '/core/carbon/portfolioSettings.php';

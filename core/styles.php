@@ -25,9 +25,14 @@
 		        wp_enqueue_style('teamAll', Assets::getCss('teamAll'), false, null);
 	        }if (is_page_template('template-web.php')) {
 		        wp_enqueue_style('homeWeb', Assets::getCss('homeWeb'), false, null);
+	        }if (is_page_template('template-portfolioDesign.php')) {
+		        wp_enqueue_style('portfolioDesign', Assets::getCss('portfolioDesign'), false, null);
 	        } else if (is_404()) {
                 wp_enqueue_style('p404', Assets::getCss('p404'), false, null);
-            } else {
+            } else if (is_post_type_archive("portfolio")) {
+		        wp_enqueue_style('portfolio', Assets::getCss('portfolio'), false, null);
+		        wp_enqueue_style('portfolioDesign', Assets::getCss('portfolioDesign'), false, null);
+	        } else {
                 wp_enqueue_style('cookie', Assets::getCss('cookie'), false, null);
             }
 
