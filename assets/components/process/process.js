@@ -41,9 +41,9 @@ $(window).scroll(function () {
         }
 
 
-        console.log("heaightcard " + heightCard);
-        console.log("pos item: " + cardItem + "index: " + $(this).index());
-        console.log("scroll " + scroll);
+        // console.log("heaightcard " + heightCard);
+        // console.log("pos item: " + cardItem + "index: " + $(this).index());
+        // console.log("scroll " + scroll);
     })
 });
 
