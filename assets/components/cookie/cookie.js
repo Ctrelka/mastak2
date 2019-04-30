@@ -12,6 +12,8 @@ function paddingResize() {
 }
 
 
+$( document ).ready(function() {
+
 
 
 if ( $(window).width() <= 3000 &&  $(window).width() > 1400) {
@@ -1307,3 +1309,5 @@ if ($(window).width() <= 740 ) {
 
     AnimateLine();
 }
+
+});
