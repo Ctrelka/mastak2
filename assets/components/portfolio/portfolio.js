@@ -9,6 +9,7 @@ var swiper = new Swiper('.portfolio__portfolio-container', {
     slidesPerView: 'auto',
     spaceBetween: 0,
     direction: 'horizontal',
+
     forceToAxis: 'true',
     paginationClickable: true,
     mousewheel: {
@@ -23,10 +24,9 @@ var swiper = new Swiper('.portfolio__portfolio-container', {
 });
 
 
-
 swiper.on('slideChange', function () {
     $(".portfolio__slide-menu").addClass("portfolio__slide-menu_active");
-    $(".portfolio__portfolio-item").addClass("portfolio__portfolio-item_width");
+    // $(".portfolio__portfolio-item").addClass("portfolio__portfolio-item_width");
     $(".portfolio__slide-menu-list-item").removeClass("portfolio__slide-menu-list-item_active-menu");
     $(".portfolio__slide-menu-list").removeClass("portfolio__slide-menu-list_active");
     $(".portfolio__slide-menu").removeClass("portfolio__slide-menu_click");
@@ -36,56 +36,73 @@ swiper.on('slideChange', function () {
 
 
 swiper.on('click', function () {
-    $( ".portfolio__portfolio-item" ).click(function(e) {
+    $(".portfolio__portfolio-item").click(function (e) {
         e.preventDefault();
-
-        let portfolioId  = $(this).data("id");
+        let portfolioId = $(this).data("id");
         console.log(portfolioId);
 
-        let data = {
-            'action': 'singlePortfolio',
-            'portfolioId': portfolioId,
-        };
+        $(this)
+            .addClass('portfolio__portfolio-item_activated')
+            .prevAll().addClass('portfolio__portfolio-item_deact')
 
-        $.ajax({
-            type: 'POST',
-            url: mastakSendMail.url,
-            data: data,
-            success: function (response) {
-                console.log(response);
-                $(".testDiva").html(response);
-            },
-            error: function (x, y, z) {
-                console.log(x);
-                $('.testDiva').text('ОШИБКА!');
-            }
-        });
-
-
-        $(".portfolio__portfolio-item").addClass("portfolio__portfolio-item_close");
-        $(this).removeClass("portfolio__portfolio-item_close");
-        $(this).addClass("portfolio__portfolio-item_active");
         $(".portfolio__slide-menu").addClass("portfolio__slide-menu_active-open");
         $(".portfolio__portfolio-container").addClass("portfolio__portfolio-container_active");
-        $(".testDiva").addClass("testDiva_active");
         $(".header__burger").addClass("header__burger_close");
         $(".header__close").addClass("header__close_active");
-        swiper.params.slidesOffsetBefore =  0;
+        swiper.params.slidesOffsetBefore = 0;
         swiper.update();
     });
 });
 
+// swiper.on('click', function () {
+//     $( ".portfolio__portfolio-item" ).click(function(e) {
+//         e.preventDefault();
+//
+//         let portfolioId  = $(this).data("id");
+//         console.log(portfolioId);
+//
+//         let data = {
+//             'action': 'singlePortfolio',
+//             'portfolioId': portfolioId,
+//         };
+//
+//         $.ajax({
+//             type: 'POST',
+//             url: mastakSendMail.url,
+//             data: data,
+//             success: function (response) {
+//                 console.log(response);
+//                 $(".testDiva").html(response);
+//             },
+//             error: function (x, y, z) {
+//                 console.log(x);
+//                 $('.testDiva').text('ОШИБКА!');
+//             }
+//         });
+//
+//
+//         $(".portfolio__portfolio-item").addClass("portfolio__portfolio-item_close");
+//         $(this).removeClass("portfolio__portfolio-item_close");
+//         $(this).addClass("portfolio__portfolio-item_active");
+//         $(".portfolio__slide-menu").addClass("portfolio__slide-menu_active-open");
+//         $(".portfolio__portfolio-container").addClass("portfolio__portfolio-container_active");
+//         $(".testDiva").addClass("testDiva_active");
+//         $(".header__burger").addClass("header__burger_close");
+//         $(".header__close").addClass("header__close_active");
+//         swiper.params.slidesOffsetBefore =  0;
+//         swiper.update();
+//     });
+// });
 
-$( ".header__close_active" ).click(function() {
+
+$(".header__close_active").click(function () {
     $(".header__close").removeClass("header__close_active");
     $(".header__burger").removeClass("header__burger_close");
     $(".testDiva").removeClass("testDiva_active");
 });
 
-
 var containerEl = document.querySelector('.portfolio-wrapper');
 var mixer = mixitup(containerEl);
-
 
 if ($(window).width() >= 1024) {
     $(".portfolio__slide-menu-list-item").addClass("portfolio__slide-menu-list-item_active-menu");
@@ -93,14 +110,6 @@ if ($(window).width() >= 1024) {
     $(".portfolio__slide-menu").addClass("portfolio__slide-menu_click");
     $(".portfolio__title").addClass("portfolio__title_active");
 }
-
-
-
-
-
-
-
-
 
 $(window).on('resize load', paddingResize);
 
@@ -115,7 +124,7 @@ function paddingResize() {
     });
 }
 
-$( document ).ready(function() {
+$(document).ready(function () {
     setTimeout(function () {
         $(".portfolioDev__image").addClass("portfolioDev__image_active");
         $(".portfolioDev__content").addClass("portfolioDev__content_active");
@@ -124,9 +133,7 @@ $( document ).ready(function() {
     }, 1000);
 });
 
-
-
-$( document ).ready(function() {
+$(document).ready(function () {
     setTimeout(function () {
         $(".portfolioDesign__image").addClass("portfolioDesign__image_active");
         $(".portfolioDesign__content").addClass("portfolioDesign__content_active");

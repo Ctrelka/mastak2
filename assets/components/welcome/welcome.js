@@ -1,6 +1,6 @@
 import './welcome.scss';
 import $ from 'jquery';
-
+import sticky from "jquery-sticky";
 $(window).on('resize load', paddingResize);
 
 function paddingResize() {
@@ -21,11 +21,12 @@ let timeoutSecond;
 
 
 $( document ).ready(function() {
-
     $('.button__color_red').click(function () {
-        $(".welcome__inner-class").addClass("welcome__inner-class_active");
         $(".welcome-dev").addClass("welcome-dev_active");
-        }
+        let pt = $('.header').outerHeight();
+        $(".welcome__inner-class").sticky({topSpacing:pt,getWidthFrom: '.welcome__inner-class'});
+
+    }
     )
 });
 

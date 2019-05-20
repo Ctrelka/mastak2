@@ -7,30 +7,12 @@ $RED : #D0021B;
 .welcome {
     overflow : hidden;
 
-    &_active{
-        overflow: auto;
-    }
-
-    @include sm {
-        padding-bottom : 6rem;
-    }
-
-    @include md {
-        padding-bottom : initial;
-    }
-
-    &__inner-class{
-
-        &_active{
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            left: 0;
+    &__inner-class {
+        &_active {
+            width  : 100%;
+            height : 100%;
         }
-
     }
-
-
 
     &__tabs {
         position : relative;
@@ -322,7 +304,8 @@ $RED : #D0021B;
         margin-bottom  : 9rem;
 
         @include sm {
-            position      : absolute;
+            //position      : absolute;
+            position      : fixed;
             margin-top    : -5rem;
             margin-bottom : 0;
             right         : 14%;
@@ -516,168 +499,198 @@ $RED : #D0021B;
 }
 
 
+.welcome-dev {
+    box-shadow       : 0 0 50px rgba(0, 0, 0, .2);
+    opacity          : 0;
+    position         : relative;
+    right            : 0;
+    left             : 0;
+    background-color : $WHITE;
+    height           : 0;
 
-.welcome-dev{
-    box-shadow: 0 0 50px rgba(0,0,0,.2);
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    left: 0;
+    &_active {
+        height              : 100%;
+        position            : absolute;
+        opacity             : 1;
+        animation           : animItem 1s;
+        animation-fill-mode : forwards;
 
-    &_active{
-        opacity: 1;
-        position: relative;
-        animation: animItem 1s;
-        animation-fill-mode: forwards;
-
-        @include m-land{
-            animation: animItemLand 1s;
-            animation-fill-mode: forwards;
+        @include m-land {
+            animation           : animItemLand 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include sm{
-            animation: animItemSm 1s;
-            animation-fill-mode: forwards;
+        @include sm {
+            animation           : animItemSm 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include md{
-            animation: animItemMd 1s;
-            animation-fill-mode: forwards;
+        @include md {
+            animation           : animItemMd 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include lg{
-            animation: animItemLg 1s;
-            animation-fill-mode: forwards;
+        @include lg {
+            animation           : animItemLg 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include hd{
-            animation: animItemHd 1s;
-            animation-fill-mode: forwards;
+        @include xl {
+            animation           : animItemXl 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include xhd{
-            animation: animItemXhd 1s;
-            animation-fill-mode: forwards;
+        @include xll {
+            animation           : animItemXll 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include hd {
+            animation           : animItemHd 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include xhd {
+            animation           : animItemXhd 1s;
+            animation-fill-mode : forwards;
         }
     }
 
-    &_end{
-        animation: animEnd 1s;
-        animation-fill-mode: forwards;
+    &_end {
+        animation           : animEnd 1s;
+        animation-fill-mode : forwards;
     }
 }
 
 
-.welcome-web{
-    box-shadow: 0 0 50px rgba(0,0,0,.2);
-    opacity: 0;
-    display: none;
-    z-index: 998;
+.welcome-web {
+    box-shadow : 0 0 50px rgba(0, 0, 0, .2);
+    opacity    : 0;
+    display    : none;
+    z-index    : 998;
 
-    &_active{
-        opacity: 1;
-        display: block;
-        position: relative;
-        animation: animItem 1s;
-        animation-fill-mode: forwards;
+    &_active {
+        opacity             : 1;
+        display             : block;
+        position            : relative;
+        animation           : animItem 1s;
+        animation-fill-mode : forwards;
 
-        @include m-land{
-            animation: animItemLand 1s;
-            animation-fill-mode: forwards;
+        @include m-land {
+            animation           : animItemLand 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include sm{
-            animation: animItemSm 1s;
-            animation-fill-mode: forwards;
+        @include sm {
+            animation           : animItemSm 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include md{
-            animation: animItemMd 1s;
-            animation-fill-mode: forwards;
+        @include md {
+            animation           : animItemMd 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include lg{
-            animation: animItemLg 1s;
-            animation-fill-mode: forwards;
+        @include lg {
+            animation           : animItemLg 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include hd{
-            animation: animItemHd 1s;
-            animation-fill-mode: forwards;
+        @include hd {
+            animation           : animItemHd 1s;
+            animation-fill-mode : forwards;
         }
 
-        @include xhd{
-            animation: animItemXhd 1s;
-            animation-fill-mode: forwards;
+        @include xhd {
+            animation           : animItemXhd 1s;
+            animation-fill-mode : forwards;
         }
     }
 
-    &_end{
-        animation: animEnd 1s;
-        animation-fill-mode: forwards;
+    &_end {
+        animation           : animEnd 1s;
+        animation-fill-mode : forwards;
     }
 }
 
 
 @keyframes animItem {
-    0%{
-        transform: translateY(100vh);
+    0% {
+        transform : translateY(100vh);
     }
-    100%{
-        transform: translateY(68vh);
+    100% {
+        transform : translateY(-78vh);
     }
 }
 
 @keyframes animItemLand {
-    0%{
-        transform: translateY(100vh);
+    0% {
+        transform : translateY(100vh);
     }
-    100%{
-        transform: translateY(60vh);
+    100% {
+        transform : translateY(-202vh);
     }
 }
 
 @keyframes animItemSm {
-    0%{
-        transform: translateY(100vh);
+    0% {
+        transform : translateY(100vh);
     }
-    100%{
-        transform: translateY(83vh);
+    100% {
+        transform : translateY(17vh);
     }
 }
 
 @keyframes animItemMd {
-    0%{
-        transform: translateY(100vh);
+    0% {
+        transform : translateY(100vh);
     }
-    100%{
-        transform: translateY(75vh);
+    100% {
+        transform : translateY(6vh);
     }
 }
 
 @keyframes animItemLg {
-    0%{
-        transform: translateY(100vh);
+    0% {
+        transform : translateY(100vh);
     }
-    100%{
-        transform: translateY(70vh);
+    100% {
+        transform : translateY(4vh);
+    }
+}
+
+@keyframes animItemXl {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(-8vh);
+    }
+}
+
+@keyframes animItemXll {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(23vh);
     }
 }
 
 @keyframes animItemHd {
-    0%{
-        transform: translateY(100vh);
+    0% {
+        transform : translateY(100vh);
     }
-    100%{
-        transform: translateY(75vh);
+    100% {
+        transform : translateY(15vh);
     }
 }
 
 @keyframes animItemXhd {
-    0%{
-        transform: translateY(100vh);
+    0% {
+        transform : translateY(100vh);
     }
-    100%{
-        transform: translateY(81vh);
+    100% {
+        transform : translateY(36vh);
     }
 }
