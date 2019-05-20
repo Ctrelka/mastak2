@@ -8,7 +8,6 @@ new Swiper('.swiperWe__container', {
         el: '.swiperWe__pagination',
         type: 'bullets',
         bulletActiveClass: 'swiperWe__pagination_active',
-
     },
 });
 
@@ -64,6 +63,4 @@ $(window).scroll(function () {
         animate();
         isFlag = true;
     }
-    console.log("cardItem " + cardItem);
-    console.log("scroll " + scroll);
 });

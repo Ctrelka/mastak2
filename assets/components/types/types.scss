@@ -5,7 +5,9 @@ $GREY_MIDDLE : #4A4A4A;
 $GREY_GRAFIT : #565656;
 
 .types {
-    overflow : hidden;
+    overflow         : hidden;
+    background-color : $WHITE;
+    margin-bottom    : -.25rem;
 
     &__inner {
         margin-top : 4rem;
@@ -148,7 +150,7 @@ $GREY_GRAFIT : #565656;
 @keyframes animTitle {
 
     100% {
-        opacity   : 1;
+        opacity : 1;
     }
 }
 

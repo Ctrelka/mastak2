@@ -1,8 +1,6 @@
 import './portfolio-image.scss';
 import $ from "jquery";
 
-
-
 $(window).on("scroll", function () {
 
     let top = $(window).scrollTop();
@@ -21,15 +19,6 @@ $(window).on("scroll", function () {
         technologiesTop = $(".portfolio-image").offset().top;
         technologiesHeight = $(".portfolio-image").outerHeight();
     }
-
-    // if ($(window).width() >= 1280) {
-    //     sizeTop = 8;
-    //     technologiesTop = $(".portfolio-image").offset().top;
-    //     technologiesHeight = $(".portfolio-image").outerHeight();
-    //     console.log("Size: " + sizeTop);
-    //     console.log("technologiesTop: " + technologiesTop);
-    //     console.log("technologiesHeight: " + technologiesHeight);
-    // }
 
     if (top > (technologiesTop - sizeTop) && (top < (technologiesTop + 1 * technologiesHeight))) {
         $(".portfolio-image__notebook").addClass("portfolio-image__notebook_active");

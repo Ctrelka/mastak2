@@ -5,7 +5,13 @@ $GREY_MIDDLE : #4B5661;
 $RED : #D0021B;
 
 .swiperWe {
-    overflow : hidden;
+    overflow         : hidden;
+    background-color : $WHITE;
+    padding-bottom   : 14rem;
+
+    @include sm {
+        padding-bottom : 16rem;
+    }
 
     &__content {
         display         : flex;

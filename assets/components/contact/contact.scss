@@ -1,9 +1,7 @@
 @import "./../../common/constants";
 
-
 .contactPage {
     background : radial-gradient(1234.98px at 25.37% 5.49%, #FFFFFF 0%, #FBFCFC 30.43%, #E1E6E8 100%);
-
 
     &__inner {
         margin-top : 2rem;
@@ -34,9 +32,8 @@
     }
 
     &__person {
-
-        &:nth-child(2){
-            margin-top: 1rem;
+        &:nth-child(2) {
+            margin-top : 1rem;
         }
 
         @include md {
@@ -60,16 +57,13 @@
         @include hd {
             margin-top : -6.5rem;
         }
-
     }
-
 
     &__person-item-first {
         display         : flex;
         justify-content : flex-end;
         position        : relative;
         margin-top      : 1rem;
-
 
         &:before {
             content    : "";
@@ -97,8 +91,6 @@
         @include md {
             margin-top : 0px;
         }
-
-
     }
 
     &__person-item-first-image {
@@ -140,7 +132,6 @@
     &__person-item-first-image-foto {
         width  : 100%;
         height : auto;
-
     }
 
     &__person-item-first-about {
@@ -149,13 +140,12 @@
         padding-bottom : 4rem;
 
         @include sm {
-            padding-bottom  : 0rem;
+            padding-bottom  : 1.5rem;
             justify-content : flex-end;
         }
 
         @include md {
-            padding-bottom : 1.5rem;
-            padding-left   : 0.5rem;
+            padding-left : 0.5rem;
         }
 
         @include hd {
@@ -186,8 +176,6 @@
             font-size   : 26px;
             line-height : 32px;
         }
-
-
     }
 
     &__person-item-first-about-text {
@@ -205,12 +193,8 @@
             font-size   : 16px;
             line-height : 24px;
             color       : #626262;
-
         }
-
-
     }
-
 
     &__person-item-second {
         display         : flex;
@@ -255,12 +239,12 @@
         justify-content : center;
         position        : absolute;
         right           : -0.5rem;
+
         @include m-land {
             right       : 0px;
             position    : relative;
             margin-left : 2rem;
         }
-
 
         @include sm {
             width        : 234px;
@@ -287,7 +271,6 @@
     &__person-item-second-image-foto {
         width  : 100%;
         height : auto;
-
     }
 
     &__person-item-second-about {
@@ -332,7 +315,6 @@
         @include md {
             text-align : left;
         }
-
     }
 
     &__person-item-second-about-text {
@@ -351,7 +333,6 @@
             line-height : 24px;
             color       : #626262;
             text-align  : right;
-
         }
 
         @include md {
@@ -377,7 +358,6 @@
         @include hd {
             margin-top : 6rem;
         }
-
     }
 
     &__info-adrress-content {
@@ -415,7 +395,6 @@
         }
     }
 
-
     &__info-adrress-content-link {
         font-family : "Gilroy";
         font-style  : normal;
@@ -451,16 +430,18 @@
         margin-bottom : 2rem;
     }
 
-
     &__info-message-input {
         display         : flex;
         justify-content : space-between;
-
     }
 
     &__info-message-textarea {
         margin-top : 1rem;
-        height     : 112px;
+        height     : 92px;
+
+        @include md {
+            height : 110px;
+        }
     }
 
     &__button {
@@ -490,5 +471,4 @@
         font-family : 'Open Sans', sans-serif;
         font-size   : 10px;
     }
-
 }

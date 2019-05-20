@@ -11,16 +11,6 @@ function paddingResize() {
     });
 }
 
-// $(document).ready(function(){
-//     $.each($('.homeWeb__inner-items-content'), function(i, el) {
-//         setTimeout(function() {
-//             $(el).addClass("homeWeb__inner-items-content_down");
-//         }, 500 + (i * 500));
-//
-//     });
-// });
-
-
 if ($(window).width() > 768) {
     window.setTimeout(function(){$('.homeWeb__inner-items-content:eq( 0 )').addClass("homeWeb__inner-items-content_down");}, 500);
     window.setTimeout(function(){$('.homeWeb__inner-items-content:eq( 1 )').addClass("homeWeb__inner-items-content_down");}, 1000);

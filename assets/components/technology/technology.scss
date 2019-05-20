@@ -1,6 +1,5 @@
 @import "./../../common/constants";
 
-
 @mixin animationItem($time) {
     animation-delay: $time;
 }
@@ -11,7 +10,6 @@
         margin-top: 8rem;
         margin-bottom: 4rem;
     }
-
 
     &__list {
         position: relative;
@@ -49,7 +47,6 @@
     }
 
     &__item {
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -163,7 +160,6 @@
         }
 
         &:nth-child(2n + 1) {
-
             .technologies__name {
                 display: flex;
                 align-items: flex-end;
@@ -244,14 +240,12 @@
     }
 }
 
-
 @keyframes animationItem {
 
     100% {
         opacity: 1;
     }
 }
-
 
 @keyframes animationItemReverse {
     0% {
