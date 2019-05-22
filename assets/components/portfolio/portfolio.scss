@@ -52,7 +52,7 @@ $DARK_GREY : #6A747D;
             animation-fill-mode : forwards;
         }
 
-        &_deact {
+        &_deactivated {
             animation           : animDeactItem 1s;
             animation-fill-mode : forwards;
         }
@@ -190,8 +190,11 @@ $DARK_GREY : #6A747D;
         }
 
         &_active-open {
-            display : none;
+            //display : none;
+            animation           : 1s slideDownMd;
+            animation-fill-mode : forwards;
         }
+
 
         &_click {
             flex-direction  : column;
@@ -222,6 +225,10 @@ $DARK_GREY : #6A747D;
                 animation           : 1s slideDownHd;
                 animation-fill-mode : forwards;
             }
+        }
+
+        &_deactive {
+            display : none;
         }
     }
 
@@ -1185,41 +1192,70 @@ $DARK_GREY : #6A747D;
 }
 
 .testDiva {
-    opacity : 0;
+    //opacity : 0;
+    display : none;
     top     : 0;
     z-index : 998;
 
     &_active {
-        animation           : 1s ease-out openDiv;
-        animation-fill-mode : forwards;
-        position            : absolute;
-        height              : 100%;
-        width               : 100%;
-        background          : #fff;
+        //animation           : 1s ease-out openDiv;
+        //animation-fill-mode : forwards;
+        display    : block;
+        position   : absolute;
+        height     : 100%;
+        width      : 100%;
+        background : #fff;
     }
 }
 
-@keyframes openDiv {
-    100% {
-        opacity : 1;
-    }
-}
+//@keyframes openDiv {
+//    100% {
+//        opacity : 1;
+//    }
+//}
 
 
 @keyframes animItem {
     100% {
-        //position        : fixed;
-        //position        : absolute;
-        z-index         : 999;
         width           : 100%;
         height          : 100%;
         background-size : cover;
-        left            : 0;
+        margin          : 0 auto;
     }
 }
 
+
 @keyframes animDeactItem {
+
     100% {
-        width : 0;
+
+        .portfolio__portfolio-item {
+            width : 248px;
+
+            @include sm {
+                width : 285px;
+            }
+
+            @include md {
+                width : 386px;
+            }
+
+            @include lg {
+                width : 486px;
+            }
+
+            @include hd {
+                width : 728px;
+            }
+        }
     }
+}
+
+
+@keyframes slideMenu {
+    100% {
+        display : none;
+        width   : 0;
+    }
+
 }
