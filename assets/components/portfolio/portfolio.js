@@ -101,9 +101,10 @@ swiper.on('tap', function () {
             url: mastakSendMail.url,
             data: data,
             success: function (response) {
+                $(".testDiva").html(response);
                 timeoutItem = setTimeout(function () {
                     console.log(response);
-                    $(".testDiva").html(response);
+                    $(".testDiva").addClass("testDiva_active");
                 },1500);
             },
             error: function (x, y, z) {
@@ -129,7 +130,7 @@ swiper.on('tap', function () {
         $(".portfolio__slide-menu-list-item").removeClass("portfolio__slide-menu-list-item_active-menu_active");
 
         // $(".portfolio__portfolio-container").addClass("portfolio__portfolio-container_active");
-        $(".testDiva").addClass("testDiva_active");
+
         $(".header__burger").addClass("header__burger_close");
         $(".header__close").addClass("header__close_active");
         swiper.params.slidesOffsetBefore = 0;
