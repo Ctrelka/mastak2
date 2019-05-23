@@ -508,7 +508,6 @@ $DARK_GREY : #6A747D;
     position : relative;
 }
 
-
 @keyframes port {
     100% {
         width : 100%;
@@ -575,9 +574,7 @@ $DARK_GREY : #6A747D;
     }
 }
 
-.portfolio-wrapper {
-    position : relative;
-}
+
 
 @keyframes slideDownMd {
     100% {
@@ -838,6 +835,7 @@ $DARK_GREY : #6A747D;
         }
     }
 }
+
 
 @keyframes animItem {
     0% {
@@ -1228,7 +1226,6 @@ $DARK_GREY : #6A747D;
 @keyframes animDeactItem {
 
     100% {
-
         .portfolio__portfolio-item {
             width : 248px;
 
@@ -1257,5 +1254,4 @@ $DARK_GREY : #6A747D;
         display : none;
         width   : 0;
     }
-
 }
