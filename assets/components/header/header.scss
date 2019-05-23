@@ -66,6 +66,7 @@
 
     &__burger{
         z-index: 9999;
+        display: block;
         span{
             &:first-child {
                 transform: rotate(0deg);
@@ -90,6 +91,43 @@
                     transition-duration: .7s;
                     margin-top: -4px;
                     background: #fff;
+                }
+            }
+        }
+
+        &_close{
+            display: none;
+        }
+    }
+
+    &__close{
+        z-index: 9999;
+        display: none;
+        span{
+            &:first-child {
+                transform: rotate(0deg);
+                transition-duration: .7s;
+            }
+
+            &:last-child {
+                transform: rotate(0deg);
+                transition-duration: .7s;
+            }
+        }
+        &_active{
+            display: block;
+            span{
+                &:first-child {
+                    transform: rotate(-45deg);
+                    transition-duration: .7s;
+                    background: #4B5661;
+                }
+
+                &:last-child {
+                    transform: rotate(45deg);
+                    transition-duration: .7s;
+                    margin-top: -4px;
+                    background: #4B5661;
                 }
             }
         }
@@ -387,6 +425,8 @@
 
 
 
+
+
     &__menu-soc{
         margin-top: 3rem;
         @include sm{
@@ -468,6 +508,15 @@
         }
 
 
+    }
+
+    @keyframes topUp {
+        0%{
+            display: none;
+        }
+        100%{
+            display: block;
+        }
     }
 
 

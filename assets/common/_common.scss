@@ -20,16 +20,16 @@ body {
     flex-direction : column;
     min-height     : 100vh;
 
-    &__bg_color-grey{
-        background: radial-gradient(1234.98px at 25.37% 5.49%,#fff 0,#fbfcfc 30.43%,#e1e6e8 100%);
+    &__bg_color-grey {
+        background : radial-gradient(1234.98px at 25.37% 5.49%, #fff 0, #fbfcfc 30.43%, #e1e6e8 100%);
     }
 
-    &__bg_color-grey_light{
-        background: #F6F6F6;
+    &__bg_color-grey_light {
+        background : #F6F6F6;
     }
 
-    &__bg_color-red{
-        background: radial-gradient(752.32px at 52.23% 16.73%, #F55172 0%, #F5515F 31.15%, #970017 100%);
+    &__bg_color-red {
+        background : radial-gradient(752.32px at 52.23% 16.73%, #F55172 0%, #F5515F 31.15%, #970017 100%);
 
     }
 
@@ -37,8 +37,9 @@ body {
         flex-shrink : 0;
     }
 
+
     main {
-        flex : 1;
+        flex     : 1;
 
         &__h_100vh {
             height : 100vh;
@@ -58,7 +59,6 @@ body {
         position : relative;
         z-index  : 2;
     }
-
 
 
 }

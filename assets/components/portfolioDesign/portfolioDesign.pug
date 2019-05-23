@@ -1,0 +1,54 @@
+mixin colorItem(color)
+    .portfolioDesign__content(style=`background-image:url(${require("./../images/b-back.png")})`)
+        .container
+            .portfolioDesign__inner
+                +titleMedium("About project")
+                P.portfolioDesign__inner-title Logo & Branding
+                .portfolioDesign__inner-logo
+                    .portfolioDesign__inner-image
+                        IMG.portfolioDesign__inner-image-item(src=require("./../images/b-logo.png"), alt='Sushi')
+                    SPAN.portfolioDesign__inner-name
+                .portfolioDesign__inner-content
+                    .portfolioDesign__inner-content-item.portfolioDesign__color_white
+                        SPAN.portfolioDesign__inner-content-item-title Client
+                        P.portfolioDesign__inner-content-item-text JSC “MTBank” is a modern commercial bank, providing full variety of services to corporate and individual clients.
+                    .portfolioDesign__inner-content-item
+                        SPAN.portfolioDesign__inner-content-item-title Tasks
+                        UL.portfolioDesign__inner-content-item-list.portfolioDesign__color_white
+                            LI.portfolioDesign__inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
+                            LI.portfolioDesign__inner-content-item-list-text возможность пополнения базы любым пользователем;
+                            LI.portfolioDesign__inner-content-item-list-text создать административную панель для работы с базой данных.
+                            LI.portfolioDesign__inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
+                            LI.portfolioDesign__inner-content-item-list-text возможность пополнения базы любым пользователем;
+                            LI.portfolioDesign__inner-content-item-list-text создать административную панель для работы с базой данных.
+                    .portfolioDesign__inner-content-item
+                        SPAN.portfolioDesign__inner-content-item-title Realisation
+                        UL.portfolioDesign__inner-content-item-list.portfolioDesign__color_white
+                            LI.portfolioDesign__inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
+                            LI.portfolioDesign__inner-content-item-list-text возможность пополнения базы любым пользователем;
+                            LI.portfolioDesign__inner-content-item-list-text создать административную панель для работы с базой данных.
+                            LI.portfolioDesign__inner-content-item-list-text создать сервис для поиска истории о б/у машинах с имеющейся базой автомобилей, попавших в ДТП;
+                            LI.portfolioDesign__inner-content-item-list-text возможность пополнения базы любым пользователем;
+                            LI.portfolioDesign__inner-content-item-list-text создать административную панель для работы с базой данных.
+                IMG.portfolioDesign_full(src=require('./../images/b-v.png'))
+                    footer
+                        .container
+                            +footer-line("footer__pos_a")
+
+mixin colorTitle(colorTitle)
+    .P.portfolioDesign__inner-title(style=`color: ${colorTitle}`)
+
+mixin portfolioDesign(colorMod)
+    - var titleColorMod = colorMod ? colorMod : ''
+    +b.portfolioDesign(class = `${titleColorMod}`)
+        +e.image
+            +e.image-background(style=`background-image:url(${require("./../images/brutto-preview.png")})`)
+                .container
+                    +e.image-content
+                        +e.button
+                            +button('web','button__color_grey')
+                        +e.SPAN.image-content-title.portfolioDesign__color_white Site for the service Rebox for the delivery of products
+                        +e.image-content-item
+                            +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
+        +colorItem()
+

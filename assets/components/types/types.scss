@@ -1,0 +1,163 @@
+@import "./../../common/constants";
+
+$GREY_DARK : #4B5661;
+$GREY_MIDDLE : #4A4A4A;
+$GREY_GRAFIT : #565656;
+
+.types {
+    overflow         : hidden;
+    background-color : $WHITE;
+    margin-bottom    : -.25rem;
+
+    &__inner {
+        margin-top : 4rem;
+
+        @include sm {
+            margin-top : 7rem;
+        }
+
+        @include lg {
+            margin-top : 6rem;
+        }
+    }
+
+    &__content {
+        margin-top : 2rem;
+    }
+
+    &__description {
+        color         : $GREY_DARK;
+        font-family   : 'Gilroy', sans-serif;
+        font-size     : 26px;
+        line-height   : 32px;
+        font-weight   : 800;
+        margin-bottom : 2rem;
+
+        @include sm {
+            margin-bottom : 4rem;
+        }
+    }
+
+    &__items {
+
+        @include sm {
+            display         : flex;
+            flex-wrap       : wrap;
+            justify-content : space-between;
+            margin    : {
+                left  : 1.5rem;
+                right : 1.5rem;
+            }
+        }
+
+        @include md {
+            margin    : {
+                left  : 9rem;
+                right : 9rem;
+            }
+        }
+
+        @include lg {
+            margin    : {
+                left  : 1.125rem;
+                right : 1.125rem;
+            }
+        }
+
+        @include hd {
+            margin    : {
+                left  : 7rem;
+                right : 7rem;
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom : 2.5rem;
+
+        @include sm {
+            margin-bottom : 4.5rem;
+            flex          : 1 0 41%;
+            max-width     : 41%;
+        }
+
+        @include lg {
+            margin-bottom : initial;
+            flex          : 1 0 24%;
+            max-width     : 24%;
+        }
+
+        @include hd {
+            flex      : 1 0 19%;
+            max-width : 19%;
+        }
+    }
+
+    &__item-title {
+        color          : $GREY_DARK;
+        font-family    : 'Gilroy', sans-serif;
+        font-size      : 36px;
+        line-height    : 44px;
+        font-weight    : 800;
+        text-transform : uppercase;
+        margin-bottom  : 2rem;
+        width          : 80%;
+        opacity        : 0;
+
+        @include sm {
+            width : 90%;
+        }
+
+        &_active {
+            animation           : animTitle 1s;
+            animation-fill-mode : forwards;
+        }
+    }
+
+    &__item-description {
+        color         : $GREY_MIDDLE;
+        font-family   : 'Open Sans', sans-serif;
+        font-weight   : bold;
+        font-size     : 18px;
+        line-height   : 24px;
+        margin-bottom : 1.5rem;
+        opacity       : 0;
+    }
+
+    &__list {
+        margin-left     : 1rem;
+        list-style-type : disc;
+        color           : $GREY_GRAFIT;
+        opacity         : 0;
+        transform       : translateY(50px);
+
+        &_active {
+            animation           : animList 1s;
+            animation-fill-mode : forwards;
+        }
+    }
+
+    &__paragraph {
+        font-family    : 'Open Sans', sans-serif;
+        font-size      : 16px;
+        line-height    : 18px;
+        color          : $GREY_GRAFIT;
+        padding-bottom : 1rem;
+    }
+}
+
+
+@keyframes animTitle {
+
+    100% {
+        opacity : 1;
+    }
+}
+
+@keyframes animList {
+
+    100% {
+        opacity   : 1;
+        transform : translateY(0);
+    }
+}

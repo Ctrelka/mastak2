@@ -1,11 +1,15 @@
 import './welcome.scss';
 import $ from 'jquery';
-
+import sticky from "jquery-sticky";
 $(window).on('resize load', paddingResize);
 
 function paddingResize() {
     let pt = $('.header').outerHeight();
     $('.welcome').css({
+        'padding-top': pt
+    });
+
+    $('.welcome__inner-class_active').css({
         'padding-top': pt
     });
 }
@@ -14,6 +18,17 @@ let intervalSecond;
 let intervalFirst;
 let timeoutFirst;
 let timeoutSecond;
+
+
+$( document ).ready(function() {
+    $('.button__color_red').click(function () {
+        $(".welcome-dev").addClass("welcome-dev_active");
+        let pt = $('.header').outerHeight();
+        $(".welcome__inner-class").sticky({topSpacing:pt,getWidthFrom: '.welcome__inner-class'});
+
+    }
+    )
+});
 
 $('.welcome__item').click(function () {
         intervalSecond = clearInterval(intervalSecond);

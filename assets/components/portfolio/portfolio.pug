@@ -1,0 +1,75 @@
+mixin portfolio()
+    +b.portfolio
+        +e.inner
+            +e.slide-menu
+                +e.title
+                    +titleLittle("portfolio")
+                +e.UL.slide-menu-list.controls
+                    +e.LI.slide-menu-list-item.portfolio__slide-menu-list-item_active.portfolio__slide-menu-list-item_active-menu_active.control(data-filter="all")
+                        a All projects
+                        +e.SPAN.slide-menu-desc All projects
+                    +e.LI.slide-menu-list-item.control(data-filter=".web")
+                        a web services
+                        +e.SPAN.slide-menu-desc web services
+                    +e.LI.slide-menu-list-item.control(data-filter=".design")
+                        a design
+                        +e.SPAN.slide-menu-desc design
+            +e.portfolio-container.swiper-container
+                .swiper-wrapper.portfolio-wrapper
+                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/mtb.jpg")})` data-id='1')
+                        +e.portfolio-item-container
+                            +e.image-content
+                                +e.button
+                                    +e.A.button-tag.portfolio__button-tag_color-red(href='#')
+                                        +e.SPAN.button-tag-text web
+                                +e.SPAN.image-content-title.portfolio__color_white Site for the service Rebox for the delivery of products
+                                +e.image-content-item
+                                    +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
+                    +e.portfolio-item.swiper-slide.mix.design(style=`background-image:url(${require("./../images/bruto.jpg")})` data-id='2')
+                        +e.portfolio-item-container
+                            +e.image-content
+                                +e.button
+                                    +e.A.button-tag.portfolio__button-tag_color-grey(href='#')
+                                        +e.SPAN.button-tag-text design & branding
+                                +e.SPAN.image-content-title.portfolio__color_white Site for the service Rebox for the delivery of products
+                                +e.image-content-item
+                                    +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
+                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/krasnogorka.jpg")})` data-id='3')
+                        +e.portfolio-item-container
+                            +e.image-content
+                                +e.button
+                                    +e.A.button-tag.portfolio__button-tag_color-red(href='#')
+                                        +e.SPAN.button-tag-text web
+                                +e.SPAN.image-content-title Site for the service Rebox for the delivery of products
+                                +e.image-content-item
+                                    +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
+                    +e.portfolio-item.swiper-slide.mix.design(style=`background-image:url(${require("./../images/s144.jpg")})` data-id='4')
+                        +e.portfolio-item-container
+                            +e.image-content
+                                +e.button
+                                    +e.A.button-tag.portfolio__button-tag_color-grey(href='#')
+                                        +e.SPAN.button-tag-text design & branding
+                                +e.SPAN.image-content-title.portfolio__color_white Site for the service Rebox for the delivery of products
+                                +e.image-content-item
+                                    +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox')
+                    +e.portfolio-item.swiper-slide.mix.web(style=`background-image:url(${require("./../images/prosushii.jpg")})` data-id='5')
+                        +e.portfolio-item-container
+                            +e.image-content
+                                +e.button
+                                    +e.A.button-tag.portfolio__button-tag_color-red(href='#')
+                                        +e.SPAN.button-tag-text web
+                                +e.SPAN.image-content-title.portfolio__color_white Site for the service Rebox for the delivery of products
+                                +e.image-content-item
+                                    +e.image-content-item-text(src=require("./../images/b-logo.png"), alt='Rebox' )
+                    +e.portfolio-item.swiper-slide
+                        +e.portfolio-item-container
+                            +e.navigation-container
+                                +e.navigation
+                                    +e.nav(href="#") SERVICES
+                                    +e.nav(href="#") team
+    .testDiva
+
+
+
+
+

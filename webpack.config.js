@@ -30,6 +30,10 @@ let entries = {
     contact: './contact.js',
     team: './team.js',
     teamAll: './teamAll.js',
+    homeWeb: './homeWeb.js',
+    portfolio: './portfolio.js',
+    portfolioDev: './portfolioDev.js',
+    portfolioDesign: './portfolioDesign.js',
 };
 
 let pugs = {
@@ -50,6 +54,18 @@ let pugs = {
     },
     teamAll: {
         title: "teamAll title"
+    },
+    homeWeb: {
+        title: "homeWeb title"
+    },
+    portfolio: {
+        title: "portfolio title"
+    },
+    portfolioDev: {
+        title: "portfolioDev title"
+    },
+    portfolioDesign: {
+        title: "portfolioDesign title"
     },
 };
 

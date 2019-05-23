@@ -8,4 +8,9 @@ import './../components/header/header';
 import './../components/footer/footer';
 import './../components/welcome/welcome';
 import './../components/button/button';
+import './../components/process/process';
+import './../components/types/types';
+import './../components/technologiesHome/technologiesHome';
+import './../components/swiperWe/swiperWe';
+import './../components/footer-line/footer-line';
 

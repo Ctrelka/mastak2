@@ -1,0 +1,301 @@
+@import "./../../common/constants";
+
+$RED : #D0021B;
+$GREY_DARK : #4B5661;
+$GREY_MIDDLE : #565656;
+
+.process {
+    overflow         : hidden;
+    background-color : $WHITE;
+    padding-top      : 2rem;
+    margin-bottom    : -.25rem;
+
+    &__inner {
+
+    }
+
+    &__content {
+        margin-top : 2rem;
+    }
+
+    &__description {
+        color       : $GREY_DARK;
+        font-family : 'Gilroy', sans-serif;
+        font-size   : 26px;
+        line-height : 32px;
+        font-weight : 800;
+    }
+
+    &__items {
+        display         : flex;
+        justify-content : space-between;
+        flex-wrap       : wrap;
+        margin-left     : 3rem;
+        margin-top      : 4rem;
+        margin-right    : .5rem;
+        position        : absolute;
+        top             : 2rem;
+
+        @include sm {
+            margin    : {
+                top   : 8rem;
+                left  : 6.25rem;
+                right : 3.25rem;
+            };
+        }
+
+        @include md {
+            margin    : {
+                top   : 6rem;
+                left  : 10rem;
+                right : 7rem;
+            };
+        }
+
+        @include lg {
+            margin    : {
+                top   : 10rem;
+                left  : 1.25rem;
+                right : 9rem;
+            };
+        }
+
+        @include hd {
+            margin-top : 11rem;
+        }
+    }
+
+    &__item {
+        flex      : 1 0 100%;
+        max-width : 100%;
+        position  : relative;
+        opacity   : 1;
+
+
+        @include sm {
+            flex      : 1 0 42%;
+            max-width : 42%;
+            height    : 360px;
+        }
+
+        @include lg {
+            flex      : 1 0 29%;
+            max-width : 29%;
+        }
+
+        @include hd {
+            flex      : 1 0 30%;
+            max-width : 30%;
+        }
+
+        &:nth-child(1) {
+            @include sm {
+                order : 1;
+            }
+        }
+
+        &:nth-child(2) {
+            @include sm {
+                order : 2;
+            }
+        }
+
+        &:nth-child(3) {
+            @include sm {
+                order : 4;
+            }
+
+            @include lg {
+                order : 3;
+            }
+        }
+
+        &:nth-child(4) {
+            @include sm {
+                order : 3;
+            }
+
+            @include lg {
+                order     : 6;
+                transform : translateX(170px);
+            }
+        }
+
+        &:nth-child(5) {
+
+            @include sm {
+                order : 5;
+            }
+
+            @include lg {
+                transform : translateX(170px);
+            }
+        }
+
+        &:nth-child(6) {
+
+            @include sm {
+                order : 6;
+            }
+
+            @include lg {
+                order     : 4;
+                transform : translateX(170px);
+            }
+        }
+    }
+
+    &__image-wrapper {
+        position : relative;
+        left     : 36%;
+        opacity  : 0;
+
+        &_active {
+            animation           : animImage 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include sm {
+            left : 22%;
+        }
+
+        @include md {
+            left : -10%;
+        }
+
+        @include hd {
+            left : -6%;
+        }
+    }
+
+    &__item:first-child .process__image-wrapper {
+        left : -25%;
+
+        @include sm {
+            left : 22%;
+        }
+
+        @include md {
+            left : -10%;
+        }
+
+        @include hd {
+            left : -6%;
+        }
+    }
+
+    &__item-title {
+        color          : $RED;
+        font-family    : ' Gilroy ', sans-serif;
+        font-size      : 36px;
+        line-height    : 36px;
+        font-weight    : 800;
+        text-transform : uppercase;
+        margin-bottom  : 2.5rem;
+        margin-left    : 1.5rem;
+        opacity        : 0;
+
+        @include hd {
+            font-size     : 44px;
+            line-height   : 44px;
+            margin-bottom : 1.5rem;
+        }
+
+        &_active {
+            animation           : animTitle 1s;
+            animation-fill-mode : forwards;
+        }
+
+        &:before {
+            content     : attr(data-numeral);
+            position    : absolute;
+            color       : rgba(205, 214, 222, 0.3);
+            font-family : ' Gilroy ', sans-serif;
+            font-size   : 80px;
+            line-height : 80px;
+            left        : -18%;
+            top         : 45%;
+            opacity     : 0;
+            transform   : scale(3);
+
+            @include sm {
+                top : 16%;
+            }
+
+            @include md {
+                top : 20%;
+            }
+
+            @include lg {
+                top  : -16%;
+                left : 10%;
+            }
+        }
+    }
+
+    &__list {
+        list-style-type : decimal;
+        margin-left     : 3rem;
+        opacity         : 0;
+        transform       : translateY(50px);
+
+        &_active {
+            animation           : animList 1s;
+            animation-fill-mode : forwards;
+        }
+    }
+
+    &__paragraph {
+        color          : $GREY_MIDDLE;
+        font-family    : ' Open Sans ', sans-serif;
+        font-size      : 14px;
+        line-height    : 16px;
+        padding-bottom : 1rem;
+
+        @include md {
+            font-size   : 16px;
+            line-height : 20px;
+        }
+
+        @include hd {
+            font-size   : 20px;
+            line-height : 24px;
+        }
+    }
+}
+
+
+@keyframes animNumber {
+
+    100% {
+        opacity   : 1;
+        transform : scale(1);
+    }
+}
+
+@keyframes animTitle {
+
+    100% {
+        opacity : 1;
+    }
+}
+
+@keyframes animList {
+
+    100% {
+        opacity   : 1;
+        transform : translateY(0);
+    }
+}
+
+@keyframes animImage {
+
+    50% {
+        transform : scale(2);
+    }
+
+    100% {
+        opacity   : 1;
+        transform : scale(1);
+    }
+}

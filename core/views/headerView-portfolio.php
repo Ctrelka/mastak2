@@ -17,6 +17,10 @@
                     <span class="header__burger-line"></span>
                     <span class="header__burger-line"></span>
                 </a>
+                <a class="header__close" href="#">
+                    <span class="header__burger-line close-line"></span>
+                    <span class="header__burger-line close-line"></span>
+                </a>
             </div>
         </div>
     </div>
