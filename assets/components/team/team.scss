@@ -6,9 +6,9 @@ $MAX-WIDTH_HD : 1728px;
 .team {
     overflow : hidden;
 
-    &_active {
-        overflow : auto;
-    }
+    //&_active {
+    //    overflow : auto;
+    //}
 
     &__inner {
         margin-top : 2rem;
@@ -46,10 +46,10 @@ $MAX-WIDTH_HD : 1728px;
 
         &_active {
             position : fixed;
-            display: block;
-            left: 0;
-            right: 0;
-            height: 100%;
+            display  : block;
+            left     : 0;
+            right    : 0;
+            height   : 100%;
         }
     }
 
@@ -184,6 +184,8 @@ $MAX-WIDTH_HD : 1728px;
         width      : 100%;
         overflow   : hidden;
 
+
+
         @include m-land {
             height : 280px;
         }
@@ -192,7 +194,7 @@ $MAX-WIDTH_HD : 1728px;
             height     : 479px;
             margin-top : 0px;
             bottom     : 0;
-            position   : absolute;
+            position : fixed;
             width      : 97%;
         }
 
@@ -262,23 +264,35 @@ $MAX-WIDTH_HD : 1728px;
 
 
 .team-add {
+    //box-shadow          : 0 0 50px rgba(0, 0, 0, .2);
+    //opacity             : 0;
+    //background-position : center;
+    //background-size     : cover;
+    //background-repeat   : no-repeat;
+    //height              : 0;
+    //position            : relative;
+    //right               : 0;
+    //left                : 0;
+    //background-color    : #fff;
+
+
     box-shadow          : 0 0 50px rgba(0, 0, 0, .2);
     opacity             : 0;
-    background-position : center;
-    background-size     : cover;
-    background-repeat   : no-repeat;
+    position            : relative;
+    right               : 0;
+    left                : 0;
+    background-color    : $WHITE;
     height              : 0;
-    position         : relative;
-    right            : 0;
-    left             : 0;
-    background-color : #fff;
+    animation           : animItemEnd 1s;
+    animation-fill-mode : forwards;
+
 
     &_active {
-        height              : auto;
+        height              : 100%;
         opacity             : 1;
         position            : absolute;
-        right               : 0;
-        left                : 0;
+        //right               : 0;
+        //left                : 0;
         animation           : animItem 1s;
         animation-fill-mode : forwards;
 
@@ -319,7 +333,10 @@ $MAX-WIDTH_HD : 1728px;
     }
 }
 
-
+.close-item {
+    animation           : animItemEnd 1s;
+    animation-fill-mode : forwards;
+}
 
 @keyframes animItem {
     0% {
@@ -362,7 +379,7 @@ $MAX-WIDTH_HD : 1728px;
         transform : translateY(100vh);
     }
     100% {
-        transform : translateY(4vh);
+        transform : translateY(50%);
     }
 }
 
@@ -402,9 +419,9 @@ $MAX-WIDTH_HD : 1728px;
     }
 }
 
-
 @keyframes animItemEnd {
     100% {
         transform : translateY(100vh);
     }
 }
+
