@@ -78,6 +78,9 @@ $(".header__close").click( function () {
         .addClass('portfolio__portfolio-item_deactivated')
         .removeClass('portfolio__portfolio-item_activated');
 })
+
+let timeoutItem;
+
 swiper.on('tap', function () {
     $( ".portfolio__portfolio-item" ).click(function(e) {
         e.preventDefault();
@@ -95,8 +98,10 @@ swiper.on('tap', function () {
             url: mastakSendMail.url,
             data: data,
             success: function (response) {
-                console.log(response);
-                $(".testDiva").html(response);
+                timeoutItem = setTimeout(function () {
+                    console.log(response);
+                    $(".testDiva").html(response);
+                },1500);
             },
             error: function (x, y, z) {
                 console.log(x);
