@@ -11,3 +11,20 @@ function paddingResize() {
     });
 }
 
+
+$( document ).ready(function() {
+    $('.button__color_white').click(function () {
+        $(".header__burger").addClass("header__burger_close");
+        $(".header__close").addClass("header__close_active");
+        $(".team__inner").addClass("team__inner_active");
+        $(".team-add").addClass("team-add_active");
+        $(".team").addClass("team_active");
+    });
+});
+
+$('.header__close').click(function () {
+    $(".header__burger").removeClass("header__burger_close");
+    $(".header__close").removeClass("header__close_active");
+    $(".team-add").addClass("close-item").removeClass("team-add_active");
+});
+

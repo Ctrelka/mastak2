@@ -6,6 +6,10 @@ $MAX-WIDTH_HD : 1728px;
 .team {
     overflow : hidden;
 
+    &_active {
+        overflow : auto;
+    }
+
     &__inner {
         margin-top : 2rem;
         padding   : {
@@ -38,6 +42,14 @@ $MAX-WIDTH_HD : 1728px;
         @include hd {
             max-width  : $MAX-WIDTH_HD;
             margin-top : 6rem;
+        }
+
+        &_active {
+            position : fixed;
+            display: block;
+            left: 0;
+            right: 0;
+            height: 100%;
         }
     }
 
@@ -202,12 +214,12 @@ $MAX-WIDTH_HD : 1728px;
 
         @include hd {
             width  : 50%;
-            height : 860px;
+            height : 1400px;
             right  : 8%;
         }
 
         @include xhd {
-            height : 1160px;
+            height : 1400px;
         }
     }
 }
@@ -245,5 +257,154 @@ $MAX-WIDTH_HD : 1728px;
     100% {
         opacity   : 1;
         transform : translateY(0);
+    }
+}
+
+
+.team-add {
+    box-shadow          : 0 0 50px rgba(0, 0, 0, .2);
+    opacity             : 0;
+    background-position : center;
+    background-size     : cover;
+    background-repeat   : no-repeat;
+    height              : 0;
+    position         : relative;
+    right            : 0;
+    left             : 0;
+    background-color : #fff;
+
+    &_active {
+        height              : auto;
+        opacity             : 1;
+        position            : absolute;
+        right               : 0;
+        left                : 0;
+        animation           : animItem 1s;
+        animation-fill-mode : forwards;
+
+        @include m-land {
+            animation           : animItemLand 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include sm {
+            animation           : animItemSm 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include md {
+            animation           : animItemMd 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include lg {
+            animation           : animItemLg 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include hd {
+            animation           : animItemHd 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include xhd {
+            animation           : animItemXhd 1s;
+            animation-fill-mode : forwards;
+        }
+    }
+
+    &_end {
+        animation           : animEnd 1s;
+        animation-fill-mode : forwards;
+    }
+}
+
+
+
+@keyframes animItem {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(-78vh);
+    }
+}
+
+@keyframes animItemLand {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(-202vh);
+    }
+}
+
+@keyframes animItemSm {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(17vh);
+    }
+}
+
+@keyframes animItemMd {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(6vh);
+    }
+}
+
+@keyframes animItemLg {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(4vh);
+    }
+}
+
+@keyframes animItemXl {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(-8vh);
+    }
+}
+
+@keyframes animItemXll {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(23vh);
+    }
+}
+
+@keyframes animItemHd {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(15vh);
+    }
+}
+
+@keyframes animItemXhd {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(36vh);
+    }
+}
+
+
+@keyframes animItemEnd {
+    100% {
+        transform : translateY(100vh);
     }
 }

@@ -6,8 +6,9 @@ $C_SPINNER: #000;
     $SVG_LOADER_MTB: './images/mtb.svg';
     $SVG_LOADER_EGG: './images/egg.svg';
     $SVG_LOADER_ZANKOAV: './images/zankoav.svg';
+    $SVG_LOADER_MASTAK: './images/logo-gif.gif';
 
-    $LOADER: $SVG_LOADER_EGG;
+    $LOADER: $SVG_LOADER_MASTAK;
 
     .body_overflow_hidden {
         overflow: hidden;
@@ -30,24 +31,15 @@ $C_SPINNER: #000;
 
             &:after {
                 content: '';
-                width: 60px;
-                height: 60px;
+                width: 300px;
+                height: 120px;
                 display: block;
                 text-align: center;
                 transform-origin: center;
                 background: url($LOADER) no-repeat;
                 background-size: cover;
-                animation: spinner 1s linear infinite;
             }
         }
     }
 
-    @keyframes spinner {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
 }

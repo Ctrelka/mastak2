@@ -26,13 +26,43 @@ $GREY_MIDDLE : #565656;
         font-weight : 800;
     }
 
+    &__description-start {
+        color       : $GREY_DARK;
+        font-family : 'Gilroy', sans-serif;
+        font-size   : 26px;
+        line-height : 32px;
+        font-weight : 800;
+        margin-top: -37px;
+        margin-left: 185px;
+
+        @include sm{
+            margin-top: -20px;
+            margin-left: 200px;
+        }
+
+        @include md{
+            margin-top: -20px;
+        }
+
+        @include lg{
+            margin-left: 680px;
+            margin-top: -20px;
+        }
+
+        @include hd{
+            margin-left: 820px;
+            margin-top: -20px;
+        }
+
+    }
+
     &__items {
         display         : flex;
         justify-content : space-between;
         flex-wrap       : wrap;
         margin-left     : 3rem;
-        margin-top      : 4rem;
-        margin-right    : .5rem;
+        margin-top      : 8rem;
+        margin-right    : 4rem;
         position        : absolute;
         top             : 2rem;
 
@@ -70,12 +100,14 @@ $GREY_MIDDLE : #565656;
         max-width : 100%;
         position  : relative;
         opacity   : 1;
+        min-height: 320px;
 
 
         @include sm {
             flex      : 1 0 42%;
             max-width : 42%;
             height    : 360px;
+            min-height: unset;
         }
 
         @include lg {
@@ -101,17 +133,24 @@ $GREY_MIDDLE : #565656;
         }
 
         &:nth-child(3) {
+            margin-top: -.5rem;
+
             @include sm {
+                margin-top: 0;
                 order : 4;
             }
 
             @include lg {
                 order : 3;
             }
+
+
         }
 
         &:nth-child(4) {
+            margin-top: -.5rem;
             @include sm {
+                margin-top: 0;
                 order : 3;
             }
 
@@ -122,8 +161,9 @@ $GREY_MIDDLE : #565656;
         }
 
         &:nth-child(5) {
-
+            margin-top: -.5rem;
             @include sm {
+                margin-top: 0;
                 order : 5;
             }
 
@@ -145,14 +185,36 @@ $GREY_MIDDLE : #565656;
         }
     }
 
+
+    &__snake{
+
+        @include sm{
+            margin-top: 4rem;
+        }
+
+        @include md{
+            margin-top: 2rem;
+        }
+
+        @include lg{
+            margin-top: 5rem;
+        }
+
+    }
+
+
+
     &__image-wrapper {
         position : relative;
+        width: 65px;
         left     : 36%;
         opacity  : 0;
 
         &_active {
-            animation           : animImage 1s;
+            animation           : animImage .7s ease-in-out;
             animation-fill-mode : forwards;
+            display: block;
+            z-index: 99;
         }
 
         @include sm {
@@ -169,7 +231,7 @@ $GREY_MIDDLE : #565656;
     }
 
     &__item:first-child .process__image-wrapper {
-        left : -25%;
+
 
         @include sm {
             left : 22%;
@@ -192,8 +254,13 @@ $GREY_MIDDLE : #565656;
         font-weight    : 800;
         text-transform : uppercase;
         margin-bottom  : 2.5rem;
-        margin-left    : 1.5rem;
         opacity        : 0;
+        text-align: center;
+
+        @include sm{
+            margin-left    : 1.5rem;
+            text-align: unset;
+        }
 
         @include hd {
             font-size     : 44px;
@@ -233,11 +300,23 @@ $GREY_MIDDLE : #565656;
         }
     }
 
+     &__snake{
+
+         @include hd{
+             margin-top: 5.6rem;
+         }
+
+     }
+
     &__list {
         list-style-type : decimal;
-        margin-left     : 3rem;
+
         opacity         : 0;
         transform       : translateY(50px);
+
+        @include sm{
+            margin-left     : 3rem;
+        }
 
         &_active {
             animation           : animList 1s;
@@ -290,12 +369,742 @@ $GREY_MIDDLE : #565656;
 
 @keyframes animImage {
 
+
+    0%{
+        opacity: 1;
+    }
+
+
+
     50% {
-        transform : scale(2);
+        transform : scale(1.2);
     }
 
     100% {
         opacity   : 1;
         transform : scale(1);
+    }
+}
+
+
+.line1{
+    height: 2px;
+    width: 1px;
+    transition: width 1.5s linear;
+    background: #000;
+    margin-left: 35px;
+    z-index: 2;
+    position: relative;
+    display: none;
+
+    &_active{
+        width: 1450px;
+    }
+
+    @include sm{
+        display: block;
+        margin-left: 174px;
+        &_active{
+            width: 391px;
+        }
+    }
+
+    @include md{
+        margin-left: 174px;
+        &_active{
+            width: 599px;
+        }
+    }
+
+    @include lg{
+        margin-left: 35px;
+        &_active{
+            width: 940px;
+        }
+    }
+
+    @include hd{
+        margin-left: 35px;
+        &_active{
+            width: 1433px;
+        }
+    }
+
+
+}
+
+.line2{
+    position: absolute;
+    right:337px;
+    height: 2px;
+    width: 1px;
+    transition: right 2s, width 1.5s linear;
+    background: #000;
+    margin-top: -2px;
+    display: none;
+
+    &_active{
+        width: 980px;
+    }
+
+    @include sm{
+        display: block;
+        right: 187px;
+        &_active{
+            width: 380px;
+        }
+    }
+
+    @include md{
+        right: 226px;
+        &_active{
+            width: 600px;
+        }
+    }
+
+    @include lg{
+        right:224px;
+        &_active{
+            width: 804px;
+        }
+    }
+
+    @include hd{
+        right:259px;
+        &_active{
+            width: 1290px;
+        }
+    }
+
+
+}
+
+
+.line3{
+    height: 2px;
+    width: 1px;
+    transition: width 1.5s linear;
+    background: #000;
+    margin-left: 410px;
+    margin-top: -2px;
+    display: block;
+
+    &_active{
+        width: 980px;
+    }
+
+    @include sm{
+        display: block;
+        margin-left: 159px;
+        &_active{
+            width: 400px;
+        }
+    }
+
+    @include md{
+        margin-left: 171px;
+        &_active{
+            width: 600px;
+        }
+    }
+
+    @include lg{
+        margin-left: 166px;
+        &_active{
+            width: 500px;
+        }
+    }
+
+    @include hd{
+        margin-left: 204px;
+        &_active{
+            width: 600px;
+        }
+    }
+
+
+}
+
+
+.line4{
+    position: absolute;
+    right:337px;
+    height: 2px;
+    width: 1px;
+    transition: right 2s, width 1.5s linear;
+    background: #000;
+    margin-top: -2px;
+    display: none;
+
+    &_active{
+        width: 980px;
+    }
+
+    @include sm{
+        display: block;
+        right: 191px;
+        &_active{
+            width: 200px;
+        }
+    }
+
+    @include md{
+        display: block;
+        right: 226px;
+        &_active{
+            width: 600px;
+        }
+    }
+
+    @include lg{
+        display: none;
+        right:224px;
+        &_active{
+            width: 804px;
+        }
+    }
+
+    @include hd{
+        right:259px;
+        &_active{
+            width: 1290px;
+        }
+    }
+
+
+}
+
+
+.b-circle {
+    position: relative;
+    margin-top: 44px;
+    margin-left: -15px;
+    width: 320px;
+    height: 320px;
+    background: transparent;
+    border-radius: 50%;
+    max-width: unset!important;
+
+    @include sm{
+        margin-top: -2px;
+        margin-left: 381px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include md{
+        margin-top: -2px;
+        margin-left: 590px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include lg{
+        margin-top: -2px;
+        margin-left: 790px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include hd{
+        margin-top: -1.5px;
+        margin-left: 1286px;
+        width: 365px;
+        height: 365px;
+    }
+
+}
+
+
+.b-circle-arc {
+    width: 50%;
+    height: 100%;
+    position: absolute; right: 0px;
+    overflow: hidden;
+    transform-origin: left center;
+    max-width: unset !important;
+}
+
+.b-circle-arc-path {
+
+
+    &_active{
+        height: 100%;
+        position: absolute; right: 0px;
+        border: solid 2px transparent;
+        border-top-color: #000;
+        border-left-color: #000;
+        border-radius: 50%;
+        max-width: unset !important;
+        width: 200%;
+        animation: rotate .5s linear forwards;
+        max-width: unset !important;
+    }
+
+    @include hd{
+        &_active{
+            height: 100%;
+            position: absolute; right: 0px;
+            border: solid 2px transparent;
+            border-top-color: #000;
+            border-left-color: #000;
+            border-radius: 50%;
+            max-width: unset !important;
+            width: 200%;
+            animation: rotate .3s linear forwards;
+            max-width: unset !important;
+        }
+    }
+}
+
+
+@keyframes rotate {
+    0% {transform: rotate(-45deg);}
+    100% {transform: rotate(135deg);}
+}
+
+
+.b-circle2 {
+    position: relative;
+    margin-top: -2px;
+    margin-left: 0px;
+    width: 320px;
+    height: 320px;
+    background: transparent;
+    border-radius: 50%;
+    max-width: unset !important;
+
+    @include sm{
+        margin-top: -2px;
+        margin-left: -14px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include md{
+        margin-top: -2px;
+        margin-left: -14px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include lg{
+        margin-top: -2px;
+        margin-left: -16px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include hd{
+        margin-top: -2px;
+        margin-left: 22px;
+        width: 365px;
+        height: 365px;
+    }
+
+}
+
+
+.b-circle-arc2 {
+    width: 50%;
+    height: 100%;
+    position: absolute; right: 0px;
+    overflow: hidden;
+    transform-origin: left center;
+    max-width: unset !important;
+    transform: rotate(180deg) rotateX(180deg);
+
+}
+
+.b-circle-arc-path2 {
+
+
+    &_active{
+        height: 100%;
+        position: absolute; right: 0px;
+        border: solid 2px transparent;
+        border-top-color: #000;
+        border-left-color: #000;
+        border-radius: 50%;
+        max-width: unset !important;
+        width: 200%;
+        animation: rotate2 .1s linear forwards;
+        max-width: unset !important;
+    }
+
+
+    @include hd{
+        &_active{
+            height: 100%;
+            position: absolute; right: 0px;
+            border: solid 2px transparent;
+            border-top-color: #000;
+            border-left-color: #000;
+            border-radius: 50%;
+            max-width: unset !important;
+            width: 200%;
+            animation: rotate2 .3s linear forwards;
+            max-width: unset !important;
+        }
+    }
+}
+
+
+@keyframes rotate2 {
+    0% {transform: rotate(-45deg);
+    }
+    100% {transform: rotate(135deg);}
+}
+
+
+.b-circle3 {
+    position: relative;
+    margin-top: -1.5px;
+    margin-left: -15px;
+    width: 320px;
+    height: 320px;
+    background: transparent;
+    border-radius: 50%;
+    max-width: unset!important;
+
+    @include sm{
+        display: block;
+        margin-top: -2px;
+        margin-left: 376px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include md{
+        display: block;
+        margin-top: -2px;
+        margin-left: 588px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include lg{
+        display: none;
+        margin-top: -2px;
+        margin-left: 790px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include hd{
+        margin-top: -1.5px;
+        margin-left: 1286px;
+        width: 365px;
+        height: 365px;
+    }
+
+}
+
+
+.b-circle-arc3 {
+    width: 50%;
+    height: 100%;
+    position: absolute; right: 0px;
+    overflow: hidden;
+    transform-origin: left center;
+    max-width: unset !important;
+}
+
+.b-circle-arc-path3 {
+
+
+    &_active{
+        height: 100%;
+        position: absolute; right: 0px;
+        border: solid 2px transparent;
+        border-top-color: #000;
+        border-left-color: #000;
+        border-radius: 50%;
+        max-width: unset !important;
+        width: 200%;
+        animation: rotate .5s linear forwards;
+        max-width: unset !important;
+    }
+
+    @include hd{
+        &_active{
+            height: 100%;
+            position: absolute; right: 0px;
+            border: solid 2px transparent;
+            border-top-color: #000;
+            border-left-color: #000;
+            border-radius: 50%;
+            max-width: unset !important;
+            width: 200%;
+            animation: rotate .3s linear forwards;
+            max-width: unset !important;
+        }
+    }
+}
+
+
+
+
+
+.b-circle4 {
+    position: relative;
+    margin-top: -2px;
+    margin-left: 0px;
+    width: 320px;
+    height: 320px;
+    background: transparent;
+    border-radius: 50%;
+    max-width: unset !important;
+    display: block;
+
+    @include sm{
+        display: none;
+        margin-top: -2px;
+        margin-left: -14px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include md{
+        margin-top: -2px;
+        margin-left: -14px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include lg{
+        margin-top: -2px;
+        margin-left: -16px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include hd{
+        margin-top: -2px;
+        margin-left: 22px;
+        width: 365px;
+        height: 365px;
+    }
+
+}
+
+
+.b-circle-arc4 {
+    width: 50%;
+    height: 100%;
+    position: absolute; right: 0px;
+    overflow: hidden;
+    transform-origin: left center;
+    max-width: unset !important;
+    transform: rotate(180deg) rotateX(180deg);
+
+}
+
+.b-circle-arc-path4 {
+
+
+    &_active{
+        height: 100%;
+        position: absolute; right: 0px;
+        border: solid 2px transparent;
+        border-top-color: #000;
+        border-left-color: #000;
+        border-radius: 50%;
+        max-width: unset !important;
+        width: 200%;
+        animation: rotate2 .1s linear forwards;
+        max-width: unset !important;
+    }
+
+
+    @include hd{
+        &_active{
+            height: 100%;
+            position: absolute; right: 0px;
+            border: solid 2px transparent;
+            border-top-color: #000;
+            border-left-color: #000;
+            border-radius: 50%;
+            max-width: unset !important;
+            width: 200%;
+            animation: rotate2 .3s linear forwards;
+            max-width: unset !important;
+        }
+    }
+}
+
+
+
+.b-circle5 {
+    position: relative;
+    margin-top: -1.5px;
+    margin-left: -15px;
+    width: 320px;
+    height: 320px;
+    background: transparent;
+    border-radius: 50%;
+    max-width: unset!important;
+    display: block;
+
+    @include sm{
+        display: none;
+        margin-top: -2px;
+        margin-left: 381px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include md{
+        margin-top: -2px;
+        margin-left: 590px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include lg{
+        margin-top: -2px;
+        margin-left: 790px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include hd{
+        margin-top: -1.5px;
+        margin-left: 1286px;
+        width: 365px;
+        height: 365px;
+    }
+
+}
+
+
+.b-circle-arc5 {
+    width: 50%;
+    height: 100%;
+    position: absolute; right: 0px;
+    overflow: hidden;
+    transform-origin: left center;
+    max-width: unset !important;
+}
+
+.b-circle-arc-path5 {
+
+
+    &_active{
+        height: 100%;
+        position: absolute; right: 0px;
+        border: solid 2px transparent;
+        border-top-color: #000;
+        border-left-color: #000;
+        border-radius: 50%;
+        max-width: unset !important;
+        width: 200%;
+        animation: rotate .5s linear forwards;
+        max-width: unset !important;
+    }
+
+    @include hd{
+        &_active{
+            height: 100%;
+            position: absolute; right: 0px;
+            border: solid 2px transparent;
+            border-top-color: #000;
+            border-left-color: #000;
+            border-radius: 50%;
+            max-width: unset !important;
+            width: 200%;
+            animation: rotate .3s linear forwards;
+            max-width: unset !important;
+        }
+    }
+}
+
+
+
+
+.b-circle6 {
+    position: relative;
+    margin-top: -2px;
+    margin-left: 0px;
+    width: 320px;
+    height: 320px;
+    background: transparent;
+    border-radius: 50%;
+    max-width: unset !important;
+    display: block;
+
+    @include sm{
+        display: none;
+        margin-top: -2px;
+        margin-left: -14px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include md{
+        margin-top: -2px;
+        margin-left: -14px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include lg{
+        margin-top: -2px;
+        margin-left: -16px;
+        width: 365px;
+        height: 365px;
+    }
+
+    @include hd{
+        margin-top: -2px;
+        margin-left: 22px;
+        width: 365px;
+        height: 365px;
+    }
+
+}
+
+
+.b-circle-arc6 {
+    width: 50%;
+    height: 100%;
+    position: absolute; right: 0px;
+    overflow: hidden;
+    transform-origin: left center;
+    max-width: unset !important;
+    transform: rotate(180deg) rotateX(180deg);
+
+}
+
+.b-circle-arc-path6 {
+
+
+    &_active{
+        height: 100%;
+        position: absolute; right: 0px;
+        border: solid 2px transparent;
+        border-top-color: #000;
+        border-left-color: #000;
+        border-radius: 50%;
+        max-width: unset !important;
+        width: 200%;
+        animation: rotate2 .1s linear forwards;
+        max-width: unset !important;
+    }
+
+
+    @include hd{
+        &_active{
+            height: 100%;
+            position: absolute; right: 0px;
+            border: solid 2px transparent;
+            border-top-color: #000;
+            border-left-color: #000;
+            border-radius: 50%;
+            max-width: unset !important;
+            width: 200%;
+            animation: rotate2 .3s linear forwards;
+            max-width: unset !important;
+        }
     }
 }

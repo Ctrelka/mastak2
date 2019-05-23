@@ -219,6 +219,12 @@
 
     &__inner-container{
         display : flex;
+        flex-direction: column;
+
+        @include lg{
+            flex-direction: row;
+        }
+
 
         @include hd{
             padding-left: 11rem;
@@ -227,7 +233,12 @@
     }
 
     &__inner-text-content{
-        max-width: 45%;
+
+
+        @include lg{
+            max-width: 45%;
+        }
+
     }
 
 }
