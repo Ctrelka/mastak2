@@ -29,9 +29,9 @@ $DARK_GREY : #6A747D;
     }
 
     &__portfolio-item {
-        width : 248px;
+        width      : 248px;
 
-        transition: all 1s;
+        transition : all 1s;
 
         @include sm {
             width : 285px;
@@ -86,6 +86,11 @@ $DARK_GREY : #6A747D;
 
         &_active {
             font-weight : bold;
+        }
+
+        &_deactive {
+            animation           : 1s slideMenuDeact;
+            animation-fill-mode : forwards;
         }
 
         &_active-menu {
@@ -231,10 +236,12 @@ $DARK_GREY : #6A747D;
                 animation           : 1s slideDownHd;
                 animation-fill-mode : forwards;
             }
+
         }
 
         &_deactive {
-            display : none;
+            animation           : 1s menuList;
+            animation-fill-mode : forwards;
         }
     }
 
@@ -579,7 +586,6 @@ $DARK_GREY : #6A747D;
         transform : translateY(0) rotate(90deg);
     }
 }
-
 
 
 @keyframes slideDownMd {
@@ -1230,7 +1236,6 @@ $DARK_GREY : #6A747D;
 
 
 @keyframes animDeactItem {
-
     100% {
         .portfolio__portfolio-item {
             width : 248px;
@@ -1259,5 +1264,19 @@ $DARK_GREY : #6A747D;
     100% {
         display : none;
         width   : 0;
+    }
+}
+
+
+@keyframes menuList {
+    100% {
+        width : 0;
+    }
+}
+
+
+@keyframes slideMenuDeact {
+    100% {
+        opacity : 0;
     }
 }
