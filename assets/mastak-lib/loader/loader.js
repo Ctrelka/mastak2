@@ -22,12 +22,53 @@ function imageLoaded() {
 }
 
 function showContent() {
-    if (count === 0) {
-        stopLoading();
+
+    var check=getCookie("loader");
+
+    if (check!="false") {
+        var loader="true";
+    }else{
+        loader=check;
+    };
+    if (loader=="true") {
+
+        if (count === 0) {
+            stopLoading();
+        }
+
+    }else {
+        if (count === 0) {
+            stopLoading2();
+        }
     }
+
+
+
+}
+
+
+
+function getCookie(name) {
+    return (name = (document.cookie + ';').match(new RegExp(name + '=.*;'))) && name[0].split(/=|;/)[1];
 }
 
 export function stopLoading(event) {
+
+    setTimeout(function() {
+        $body.removeClass('body_overflow_hidden');
+        $loader.fadeOut(function () {
+            $(this).remove();
+            if(typeof event === 'function'){
+                event();
+            }
+        });
+    }, 2000);
+
+
+}
+
+export function stopLoading2(event) {
+
     $body.removeClass('body_overflow_hidden');
     $loader.fadeOut(function () {
         $(this).remove();
@@ -35,6 +76,8 @@ export function stopLoading(event) {
             event();
         }
     });
+
+
 }
 
 export function startLoading() {

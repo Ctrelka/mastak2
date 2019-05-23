@@ -13,3 +13,4 @@ import '../components/button/button';
 import '../components/form/form';
 import '../components/preloader/preloader';
 import '../components/team/team';
+import '../components/teamAll/teamAll';

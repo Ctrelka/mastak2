@@ -1,15 +1,15 @@
-import './swiperWe.scss';
+import './swiperWeWeb.scss';
 import $ from 'jquery';
 import Swiper from 'swiper';
 
-new Swiper('.swiperWe__container', {
+new Swiper('.swiperWeWeb__container', {
     spaceBetween: 36,
 
     pagination: {
-        el: '.swiperWe__pagination',
+        el: '.swiperWeWeb__pagination',
         type: 'bullets',
         clickable: 'true',
-        bulletActiveClass: 'swiperWe__pagination_active',
+        bulletActiveClass: 'swiperWeWeb__pagination_active',
     },
 });
 
@@ -17,7 +17,7 @@ new Swiper('.swiperWe__container', {
 var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
     window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 window.requestAnimationFrame = requestAnimationFrame;
-var canvas = document.getElementById('myCanvas');
+var canvas = document.getElementById('myCanvas2');
 var context = canvas.getContext('2d');
 
 
@@ -32,7 +32,7 @@ if ($(window).width() < 768) {
     canvas.height = 260;
     radius = 105;
 } else {
-    canvas.width = 560;
+    canvas.width = 700;
     canvas.height = 560;
     radius = 235;
 }
@@ -57,9 +57,9 @@ function animate(current) {
 
 let isFlag = false;
 $(window).scroll(function () {
-    let cardItem = $('#myCanvas').offset().top;
+    let cardItem = $('#myCanvas2').offset().top;
     let scroll = $(window).scrollTop();
-    let heightItem = $('#myCanvas').height();
+    let heightItem = $('#myCanvas2').height();
 
     if (scroll > cardItem - heightItem && !isFlag) {
         animate();
