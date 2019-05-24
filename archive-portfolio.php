@@ -15,6 +15,8 @@
 //portfolio_second_btn_link
 	$portfolio_second_btn_link = carbon_get_theme_option("portfolio_second_btn_link");
 
+	$contaners_for_info= [];
+
 	get_template_part( "/core/views/headerView", "portfolio" ); ?>
     <main class="main">
         <div class="portfolio">
@@ -50,6 +52,7 @@
 							if ( have_posts() ):
 								while ( have_posts() ):
 									the_post();
+                                    $contaners_for_info[] = get_the_ID();
 									get_template_part( '/core/views/single_portfolio_arch' );
 								endwhile;
 							endif;
@@ -72,7 +75,9 @@
                 </div>
             </div>
         </div>
-        <div class="testDiva"></div>
+        <?php foreach ( $contaners_for_info as $item ) :?>
+            <div class="testDiva" data = "<?= $item; ?>"></div>
+        <?php endforeach;?>
     </main>
 <?php
 	//	get_template_part( '/core/views/footerView' );
