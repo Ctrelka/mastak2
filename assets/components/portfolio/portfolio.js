@@ -121,6 +121,10 @@ swiper.on('tap', function () {
 
         $(".portfolio__portfolio-container").addClass("portfolio__portfolio-container_active");
         // $(".testDiva").addClass("testDiva_active");
+        $(".portfolio__portfolio-container").addClass("portfolio__portfolio-container_active");
+        // $(".testDiva").addClass("testDiva_active");
+        // $(".portfolio__portfolio-container").addClass("portfolio__portfolio-container_active");
+
         $(".header__burger").addClass("header__burger_close");
         $(".header__close").addClass("header__close_active");
         swiper.params.slidesOffsetBefore = 0;
