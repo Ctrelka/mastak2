@@ -22,6 +22,13 @@
 	$front_of_mac  = carbon_get_post_meta( get_the_ID(), "front_of_mac" );
 
 	//	get_template_part( '/core/views/headerView', "portfolio" );
+	$terms     = get_the_terms( get_the_ID(), "portfolio_type" );
+
+	/**@var WP_Term $current_term */
+	$current_term = $terms[0];
+	//portfolio__button-tag_color-grey
+	//portfolio__button-tag_color-red
+	$label_name = carbon_get_term_meta($current_term->term_id, "label_name");
 ?>
     <main class="main">
         <div class="portfolioDev portfolioDev__color portfolioDev__color_light-grey">
@@ -32,15 +39,15 @@
                         <div class="portfolioDev__image-content">
                             <div class="portfolioDev__button">
                                 <a class="button button__color_red" href="#">
-                                    <span class="button__text">web</span>
+                                    <span class="button__text"><?= $label_name ?></span>
                                 </a>
                             </div>
-                            <span class="portfolioDev__image-content-title"><?= get_the_title(); ?></span>
-                            <div class="portfolioDev__image-content-item">
-                                <img class="portfolioDev__image-content-item-text"
-                                     src="<?= $client_logo; ?>" alt="Rebox"
-                                     title=""/>
-                            </div>
+<!--                            <span class="portfolioDev__image-content-title">--><?//= get_the_title(); ?><!--</span>-->
+<!--                            <div class="portfolioDev__image-content-item">-->
+<!--                                <img class="portfolioDev__image-content-item-text"-->
+<!--                                     src="--><?//= $client_logo; ?><!--" alt="Rebox"-->
+<!--                                     title=""/>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>

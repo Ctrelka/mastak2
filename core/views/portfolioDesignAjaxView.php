@@ -8,7 +8,13 @@
 		$realisation_list = carbon_get_post_meta( get_the_ID(), "realisation_list" );
 		$long_img         = carbon_get_post_meta( get_the_ID(), "long_img" );
 
+	$terms     = get_the_terms( get_the_ID(), "portfolio_type" );
 
+	/**@var WP_Term $current_term */
+	$current_term = $terms[0];
+	//portfolio__button-tag_color-grey
+	//portfolio__button-tag_color-red
+	$label_name = carbon_get_term_meta($current_term->term_id, "label_name");
 		?>
         <main class="main">
             <div class="portfolioDesign portfolioDesign__color portfolioDesign__color_light-grey">
@@ -17,18 +23,18 @@
                          style="background-image:url(<?= $previewBGI; ?>)">
                         <div class="container">
                             <div class="portfolioDesign__image-content">
-                                <div class="portfolioDesign__button">
-                                    <a class="button button__color_grey" href="#">
-                                        <span class="button__text">design</span>
-                                    </a>
-                                </div>
-                                <span class="portfolioDesign__image-content-title portfolioDesign__color portfolioDesign__color_white">
-                                <?= get_the_title(); ?>
-                            </span>
-                                <div class="portfolioDesign__image-content-item">
-                                    <img class="portfolioDesign__image-content-item-text"
-                                         src="<?= $client_logo; ?>" alt="Rebox" title=""/>
-                                </div>
+<!--                                <div class="portfolioDesign__button">-->
+<!--                                    <a class="button button__color_grey" href="#">-->
+<!--                                        <span class="button__text">--><?//= $label_name; ?><!--</span>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                                <span class="portfolioDesign__image-content-title portfolioDesign__color portfolioDesign__color_white">-->
+<!--                                --><?//= get_the_title(); ?>
+<!--                                </span>-->
+<!--                                <div class="portfolioDesign__image-content-item">-->
+<!--                                    <img class="portfolioDesign__image-content-item-text"-->
+<!--                                         src="--><?//= $client_logo; ?><!--" alt="Rebox" title=""/>-->
+<!--                                </div>-->
                             </div>
                         </div>
                     </div>
