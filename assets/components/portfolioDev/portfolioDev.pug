@@ -1,6 +1,7 @@
 mixin colorItemDev(color)
     .portfolioDev__content(style=`background: ${color}`)
         .container
+            IMG.portfolioDev__scroll(src=require("./../images/download.svg"), alt="welcome")
             .portfolioDev__inner
                 +titleMedium("About project")
                 P.portfolioDev__inner-title e-commerce site

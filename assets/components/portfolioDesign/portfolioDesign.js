@@ -12,7 +12,7 @@ function paddingResize() {
     });
 }
 
-$( document ).ready(function() {
+$(document).ready(function () {
     setTimeout(function () {
         $(".portfolioDesign__image").addClass("portfolioDesign__image_active");
         $(".portfolioDesign__content").addClass("portfolioDesign__content_active");
@@ -20,5 +20,29 @@ $( document ).ready(function() {
         $(".header__close").addClass("header__close_active");
         $(".portfolioDesign").addClass("portfolioDesign_active");
 
-    }, 1000);
+    }, 2000);
+});
+
+var allGood = true;
+
+
+$('.button__color_grey').click(function () {
+    $(".portfolioDesign__image").addClass("portfolioDesign__image_active");
+    $(".portfolioDesign__content").addClass("portfolioDesign__content_active");
+    $(".header__burger").addClass("header__burger_close");
+    $(".header__close").addClass("header__close_active");
+    $(".portfolioDesign").addClass("portfolioDesign_active");
+    allGood = false;
+});
+
+
+$('.header__close').click(function () {
+    $(".header__burger").removeClass("header__burger_close");
+    $(".header__close").removeClass("header__close_active");
+    $(".portfolioDesign__image").removeClass("portfolioDesign__image_active");
+    $(".portfolioDesign__content").removeClass("portfolioDesign__content_active");
+    $(".portfolioDesign").removeClass("portfolioDesign_active");
+
+
+    allGood = true;
 });
