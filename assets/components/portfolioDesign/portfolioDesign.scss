@@ -3,6 +3,18 @@
 .portfolioDesign {
     overflow : hidden;
 
+    &__scroll{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        max-height: 40px;
+        top: -70px;
+        transform: rotate(180deg);
+        animation: scrollTop  2s infinite ease;
+    }
+
     &_active {
         overflow : auto;
     }
@@ -304,5 +316,17 @@
     }
     100% {
         transform : translateY(81vh);
+    }
+}
+
+@keyframes scrollTop {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
     }
 }

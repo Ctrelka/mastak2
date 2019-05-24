@@ -1,6 +1,7 @@
 @import "./../../common/constants";
 
 .teamAll {
+    background-color : white;
 
     &__inner {
         margin-top : 2rem;
@@ -339,7 +340,7 @@
 
     &__sharing-inner-items-content {
 
-        @include sm{
+        @include sm {
             display         : flex;
             justify-content : space-between;
             margin-left     : 2rem;
@@ -402,8 +403,7 @@
 
     &__ecom-inner-content {
         padding-top    : 1rem;
-        padding-bottom : 1rem;
-        margin-bottom  : 7rem;
+        padding-bottom : 8rem;
 
         @include sm {
             margin-left  : 3rem;

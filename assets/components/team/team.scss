@@ -6,9 +6,17 @@ $MAX-WIDTH_HD : 1728px;
 .team {
     overflow : hidden;
 
-    //&_active {
-    //    overflow : auto;
-    //}
+    &__scroll{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        max-height: 40px;
+        top: -70px;
+        transform: rotate(180deg);
+        animation: scrollTop  2s infinite ease;
+    }
 
     &__inner {
         margin-top : 2rem;
@@ -184,8 +192,6 @@ $MAX-WIDTH_HD : 1728px;
         width      : 100%;
         overflow   : hidden;
 
-
-
         @include m-land {
             height : 280px;
         }
@@ -264,18 +270,6 @@ $MAX-WIDTH_HD : 1728px;
 
 
 .team-add {
-    //box-shadow          : 0 0 50px rgba(0, 0, 0, .2);
-    //opacity             : 0;
-    //background-position : center;
-    //background-size     : cover;
-    //background-repeat   : no-repeat;
-    //height              : 0;
-    //position            : relative;
-    //right               : 0;
-    //left                : 0;
-    //background-color    : #fff;
-
-
     box-shadow          : 0 0 50px rgba(0, 0, 0, .2);
     opacity             : 0;
     position            : relative;
@@ -291,8 +285,6 @@ $MAX-WIDTH_HD : 1728px;
         height              : 100%;
         opacity             : 1;
         position            : absolute;
-        //right               : 0;
-        //left                : 0;
         animation           : animItem 1s;
         animation-fill-mode : forwards;
 
@@ -425,3 +417,14 @@ $MAX-WIDTH_HD : 1728px;
     }
 }
 
+@keyframes scrollTop {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
