@@ -71,6 +71,9 @@ if(countItem !=0) {
         }
 
         let top = $(window).scrollTop();
+        if ($(".technologies").offset() === undefined){
+            return;
+        }
         let technologiesTop = $(".technologies").offset().top;
         if (top > (technologiesTop - sizeTop)) {
             $(".technologies__list").addClass('technologies__list_anim_list');
