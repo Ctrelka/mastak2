@@ -1203,15 +1203,16 @@ $DARK_GREY : #6A747D;
 
 .testDiva {
     //opacity : 0;
-    display : none;
-    top     : 0;
+    //display : none;
+    top     : 100vh;
     z-index : 998;
 
     &_active {
         //animation           : 1s ease-out openDiv;
         //animation-fill-mode : forwards;
-        display    : block;
+        //display    : block;
         position   : absolute;
+        top        : 0;
         height     : 100%;
         width      : 100%;
         background : #fff;

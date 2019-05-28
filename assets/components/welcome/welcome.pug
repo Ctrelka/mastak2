@@ -34,9 +34,13 @@ mixin welcome()
                         +e.nav(href="#") portfolio
                         +e.nav(href="#") team
         .welcome-dev
+            +e.scroll(src=require("./../images/download.svg"), alt="welcome")
             +process()
             +types()
             +technologiesHome()
             +swiperWe()
             +footer-line()
-
+        .welcome-web
+            +e.scroll(src=require("./../images/download.svg"), alt="welcome")
+            +homeWeb()
+            +footer-line()

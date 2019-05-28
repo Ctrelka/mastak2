@@ -75,9 +75,10 @@
                 </div>
             </div>
         </div>
-        <?php foreach ( $contaners_for_info as $item ) :?>
-            <div class="testDiva" data = "<?= $item; ?>"></div>
-        <?php endforeach;?>
+        <div class="testDiva"></div>
+<!--        --><?php //foreach ( $contaners_for_info as $item ) :?>
+<!--            <div class="testDiva" data = "--><?//= $item; ?><!--"></div>-->
+<!--        --><?php //endforeach;?>
     </main>
 <?php
 	//	get_template_part( '/core/views/footerView' );

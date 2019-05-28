@@ -8,11 +8,14 @@ $(window).on("scroll", function () {
     let technologiesHeight = null;
     let sizeTop = 0;
 
-     if ($(window).width() >= 320) {
+    if ($(".technologies").offset() === undefined)
+        return;
+
+    if ($(window).width() >= 320) {
         sizeTop = 0;
         technologiesTop = $(".technologies").offset().top;
         technologiesHeight = $(".technologies").outerHeight();
-     }
+    }
 
     if ($(window).width() >= 768) {
         sizeTop = 500;

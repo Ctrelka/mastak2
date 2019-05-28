@@ -106,6 +106,19 @@ swiper.on('tap', function () {
                     console.log(response);
                     $(".testDiva").addClass("testDiva_active");
                 },1500);
+
+                if ($(".portfolioDev__image").length > 0){
+                    $(".portfolioDev__image").addClass("portfolioDev__image_active");
+                    $(".portfolioDev__content").addClass("portfolioDev__content_active");
+                    $(".portfolioDev").addClass("portfolioDev_active");
+
+                }
+                if ($(".portfolioDesign__image").length > 0) {
+                    $(".portfolioDesign__image").addClass("portfolioDesign__image_active");
+                    $(".portfolioDesign__content").addClass("portfolioDesign__content_active");
+                    $(".portfolioDesign").addClass("portfolioDesign_active");
+                }
+                
             },
             error: function (x, y, z) {
                 console.log(x);
@@ -139,7 +152,11 @@ swiper.on('tap', function () {
 });
 
 
-
+$(".header__close_active").click(function () {
+    $(".header__close").removeClass("header__close_active");
+    $(".header__burger").removeClass("header__burger_close");
+    $(".testDiva").removeClass("testDiva_active");
+});
 
 var containerEl = document.querySelector('.portfolio-wrapper');
 var mixer = mixitup(containerEl);
@@ -164,20 +181,20 @@ function paddingResize() {
     });
 }
 
-$(document).ready(function () {
-    setTimeout(function () {
-        $(".portfolioDev__image").addClass("portfolioDev__image_active");
-        $(".portfolioDev__content").addClass("portfolioDev__content_active");
-        $(".portfolioDev").addClass("portfolioDev_active");
-
-    }, 1000);
-});
-
-$(document).ready(function () {
-    setTimeout(function () {
-        $(".portfolioDesign__image").addClass("portfolioDesign__image_active");
-        $(".portfolioDesign__content").addClass("portfolioDesign__content_active");
-        $(".portfolioDesign").addClass("portfolioDesign_active");
-
-    }, 1000);
-});
+// $(document).ready(function () {
+//     setTimeout(function () {
+//         $(".portfolioDev__image").addClass("portfolioDev__image_active");
+//         $(".portfolioDev__content").addClass("portfolioDev__content_active");
+//         $(".portfolioDev").addClass("portfolioDev_active");
+//
+//     }, 1000);
+// });
+//
+// $(document).ready(function () {
+//     setTimeout(function () {
+//         $(".portfolioDesign__image").addClass("portfolioDesign__image_active");
+//         $(".portfolioDesign__content").addClass("portfolioDesign__content_active");
+//         $(".portfolioDesign").addClass("portfolioDesign_active");
+//
+//     }, 1000);
+// });

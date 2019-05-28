@@ -4,9 +4,11 @@ import Swiper from 'swiper';
 
 new Swiper('.swiperWe__container', {
     spaceBetween: 36,
+
     pagination: {
         el: '.swiperWe__pagination',
         type: 'bullets',
+        clickable: 'true',
         bulletActiveClass: 'swiperWe__pagination_active',
     },
 });
