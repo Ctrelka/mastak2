@@ -1016,7 +1016,7 @@ $DARK_GREY : #6A747D;
 
         &_active {
             opacity             : 1;
-            position            : relative;
+            position            : absolute;
             animation           : animItem 1s;
             animation-fill-mode : forwards;
 
