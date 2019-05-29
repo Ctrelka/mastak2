@@ -10,7 +10,7 @@ var swiper = new Swiper('.portfolio__portfolio-container', {
     direction: 'horizontal',
     forceToAxis: 'true',
     // centerInsufficientSlides: true,
-    slidesOffsetAfter: 800,
+    slidesOffsetAfter: 400,
     preventClicksPropagation: true,
     // freeModeSticky: true,
     slideToClickedSlide: true,
@@ -71,7 +71,7 @@ $(".header__close").click( function () {
     $(".portfolio__slide-menu").removeClass("portfolio__slide-menu_deactive");
     $(".portfolio__slide-menu-list-item").removeClass("portfolio__slide-menu-list-item_deactive");
     $(".testDiva").removeClass("testDiva_active");
-
+    $(".testDiva").html("");
     $(".portfolio__slide-menu").addClass("portfolio__slide-menu_active");
     $(".portfolio__slide-menu").addClass("portfolio__slide-menu_active-open");
 
