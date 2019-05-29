@@ -1,6 +1,8 @@
 @import "./../../common/constants";
 
 .footer{
+    position: fixed;
+    bottom: 0;
     &__inner{
         padding-top: 1rem;
         padding-bottom: 1rem;

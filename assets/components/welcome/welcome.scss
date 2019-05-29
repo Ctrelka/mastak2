@@ -14,6 +14,12 @@ $RED : #D0021B;
         }
     }
 
+    &__disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: default;
+    }
+
     &__scroll{
         position: absolute;
         margin-left: auto;
@@ -662,7 +668,7 @@ $RED : #D0021B;
         transform : translateY(100vh);
     }
     100% {
-        transform : translateY(17vh);
+        transform : translateY(-7vh);
     }
 }
 
@@ -671,7 +677,7 @@ $RED : #D0021B;
         transform : translateY(100vh);
     }
     100% {
-        transform : translateY(6vh);
+        transform : translateY(-8vh);
     }
 }
 
@@ -680,7 +686,7 @@ $RED : #D0021B;
         transform : translateY(100vh);
     }
     100% {
-        transform : translateY(4vh);
+        transform : translateY(-12vh);
     }
 }
 
@@ -689,7 +695,7 @@ $RED : #D0021B;
         transform : translateY(100vh);
     }
     100% {
-        transform : translateY(-8vh);
+        transform : translateY(-10vh);
     }
 }
 
@@ -698,7 +704,7 @@ $RED : #D0021B;
         transform : translateY(100vh);
     }
     100% {
-        transform : translateY(23vh);
+        transform : translateY(-12vh);
     }
 }
 
@@ -707,7 +713,7 @@ $RED : #D0021B;
         transform : translateY(100vh);
     }
     100% {
-        transform : translateY(15vh);
+        transform : translateY(-6vh);
     }
 }
 
@@ -716,7 +722,7 @@ $RED : #D0021B;
         transform : translateY(100vh);
     }
     100% {
-        transform : translateY(36vh);
+        transform : translateY(-6vh);
     }
 }
 
