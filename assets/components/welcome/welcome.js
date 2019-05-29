@@ -47,6 +47,16 @@ $('.header__close').click(function () {
     $(".welcome-dev").addClass("close-item").removeClass("welcome-dev_active");
     $(".welcome-web").addClass("close-item").removeClass("welcome-web_active");
     allGood = true;
+
+    // let currentUrl = window.location.href;
+    // let url = new URL(currentUrl);
+    // let page = url.searchParams.get("page");
+    //
+    // console.log(window.location.origin);
+    if (link.indexOf("page=") > 0){
+        let currentTitle = $("title").text();
+        window.history.pushState('home', currentTitle, window.location.origin);
+    }
 });
 
 $('.welcome__item').click(function () {
@@ -69,7 +79,7 @@ $('.welcome__item').click(function () {
             .removeClass('welcome__line_active')
             .removeClass('welcome__line_reverse');
     }
-)
+);
 
 $('.welcome__item_first').click(function () {
     $('.welcome__title_first')
@@ -109,7 +119,7 @@ $('.welcome__item_first').click(function () {
     $('.welcome__img_second')
         .addClass('welcome__description_out')
         .removeClass('welcome__description_in');
-})
+});
 
 $('.welcome__item_second').click(function () {
     $('.welcome__title_second')
@@ -149,7 +159,7 @@ $('.welcome__item_second').click(function () {
     $('.welcome__img_first')
         .addClass('welcome__description_out')
         .removeClass('welcome__description_in');
-})
+});
 
 function AnimItemFirst() {
     if(allGood) {
@@ -259,3 +269,82 @@ function AnimItemSecond() {
 intervalSecond = setInterval(AnimItemSecond, 7000);
 intervalFirst = setInterval(AnimItemFirst, 14000);
 
+$(document).ready(function () {
+    $(".test_btn").click(function(e){
+        e.preventDefault();
+
+        // console.log(window.location.href);
+
+        if (window.location.href === window.location.origin || window.location.href === window.location.origin + '/#') {
+            // let link = $(this).children("a").attr("href");
+            let link = $(this).children("a").attr("href");
+            let targetIndexOf = link.indexOf("page=")+5;
+            let target = link.substring(targetIndexOf);
+            console.log(target);
+
+            if($(".header__close").length > 0){
+                closeWebDesignParts();
+            }
+
+            $(".header__burger").toggleClass("header__burger_active");
+            $(".header__menu").toggleClass("header__menu_active");
+            $(".header__menu-title").toggleClass("header__menu-title_active");
+            $(".header__menu-list-item").toggleClass("header__menu-list-item_active-item");
+            $(".header__menu-list-item").toggleClass("active");
+            $(".header__menu-list-item_active").find( "a" ).toggleClass("header__menu-list-item_active-link-load");
+
+            if(target == "web"){
+                displayWebPart();
+            }
+            if(target == "design"){
+                displayDesignPart();
+            }
+        }else{
+            let link = $(this).children("a").attr("href");
+            window.location.replace(link);
+        }
+    });
+
+    displayHomePart();
+});
+
+function displayHomePart() {
+    let currentUrl = window.location.href;
+    let url = new URL(currentUrl);
+    let page = url.searchParams.get("page");
+
+    if(page == "web"){
+        displayWebPart();
+    }
+    if(page == "design"){
+        displayDesignPart();
+    }
+}
+function displayWebPart() {
+    $(".welcome-dev").addClass("welcome-dev_active").removeClass("close-item");
+    $(".header__burger").addClass("header__burger_close");
+    $(".header__close").addClass("header__close_active");
+    let pt = $('.header').outerHeight();
+
+    // $(".welcome__inner-class").addClass("welcome__inner-class");
+    $(".welcome__inner-class").sticky({topSpacing:pt,getWidthFrom: '.welcome__inner-class'});
+    allGood = false;
+}
+function displayDesignPart() {
+    $(".welcome-web").addClass("welcome-web_active").removeClass("close-item");
+    $(".header__burger").addClass("header__burger_close");
+    $(".header__close").addClass("header__close_active");
+    let pt = $('.header').outerHeight();
+
+    // $(".welcome__inner-class").addClass("welcome__inner-class");
+    $(".welcome__inner-class").sticky({topSpacing:pt,getWidthFrom: '.welcome__inner-class'});
+    allGood = false;
+}
+
+function closeWebDesignParts() {
+    $(".header__burger").removeClass("header__burger_close");
+    $(".header__close").removeClass("header__close_active");
+    $(".welcome-dev").addClass("close-item").removeClass("welcome-dev_active");
+    $(".welcome-web").addClass("close-item").removeClass("welcome-web_active");
+    allGood = true;
+}
