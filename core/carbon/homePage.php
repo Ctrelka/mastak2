@@ -45,7 +45,7 @@
 		         ->where( 'post_template', '=', 'template-home.php' )
 		         ->add_fields( [
 				         Field::make( 'text', 'crb_dev_subtitle', 'Подзаголовок' ),
-				         Field::make( 'complex', 'contact_what_we_do', 'Процесс' )
+				         Field::make( 'complex', 'dev_process_list', 'Процесс' )
 					         ->set_collapsed( true )
 				              ->add_fields( 'item', [
 					              Field::make( 'text', 'title', 'Заголовок' )
