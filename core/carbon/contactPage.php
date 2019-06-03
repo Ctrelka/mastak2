@@ -32,7 +32,9 @@
                                 Field::make( 'textarea', 'address', 'Адресс' )
                                      ->set_width( 40 ),
                                 Field::make( 'text', 'phone', 'Телефон' )
-                                     ->set_width( 40 )
+                                     ->set_width( 40 ),
+                                Field::make( 'text', 'map_link', 'map link' )
+                                     ->set_width( 50 ),
                             ]
                         ),
                 ]

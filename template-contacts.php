@@ -62,7 +62,7 @@
                                             <div class="contactPage__info-adrress-content-text">
 	                                            <?= $info_1["address"]; ?>
                                             </div>
-                                            <a class="button button__color_red" href="#">
+                                            <a class="button button__color_red" href="<?= esc_url($info_1["map_link"]); ?>">
                                                 <span class="button__text">view on map</span>
                                             </a>
                                         </div>
