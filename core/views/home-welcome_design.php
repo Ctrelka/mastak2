@@ -22,14 +22,16 @@
                 <p class="homeWeb__inner-text"><?= $crb_des_desc; ?></p>
                 <span class="homeWeb__inner-preview">What we do:</span>
                 <div class="homeWeb__inner-items">
-                    <?php foreach ( $des_offers as $des_offer ) :
+                    <?php
+                        $counter = 1;
+                        foreach ( $des_offers as $des_offer ) :
                         $des_title = $des_offer["des_title"];
 	                    $des_icon = $des_offer["des_icon"];
 	                    $crb_des_text = $des_offer["crb_des_text"];
                     ?>
                     <div class="homeWeb__inner-items-content">
                         <div class="homeWeb__inner-items-content-image">
-                            <span class="homeWeb__inner-items-content-image-number">9</span>
+                            <span class="homeWeb__inner-items-content-image-number"><?= $counter++;?></span>
                             <div class="homeWeb__inner-items-content-image-container">
                                 <img class="homeWeb__inner-items-content-image-item"
                                      src="<?= $des_icon; ?>" alt="Item" title=""/>
