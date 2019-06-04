@@ -57,7 +57,7 @@
 								endwhile;
 							endif;
 						?>
-                        <div class="portfolio__portfolio-item swiper-slide">
+                        <div class="portfolio__tap">
                             <div class="portfolio__portfolio-item-container">
                                 <div class="portfolio__navigation-container">
                                     <div class="portfolio__navigation">
@@ -65,7 +65,7 @@
                                             <?= $portfolio_first_btn_text; ?>
                                         </a>
                                         <a class="portfolio__nav" href="<?= esc_url($portfolio_second_btn_link)?>">
-	                                        <?= $portfolio_second_btn_text; ?>
+                                            <?= $portfolio_second_btn_text; ?>
                                         </a>
                                     </div>
                                 </div>
