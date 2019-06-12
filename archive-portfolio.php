@@ -6,16 +6,16 @@
 		'hide_empty' => false,
 	] );
 
-//	portfolio_first_btn_text
-    $portfolio_first_btn_text = carbon_get_theme_option("portfolio_first_btn_text");
-//portfolio_first_btn_link
-	$portfolio_first_btn_link = carbon_get_theme_option("portfolio_first_btn_link");
-//portfolio_second_btn_text
-	$portfolio_second_btn_text = carbon_get_theme_option("portfolio_second_btn_text");
-//portfolio_second_btn_link
-	$portfolio_second_btn_link = carbon_get_theme_option("portfolio_second_btn_link");
+	//	portfolio_first_btn_text
+	$portfolio_first_btn_text = carbon_get_theme_option( "portfolio_first_btn_text" );
+	//portfolio_first_btn_link
+	$portfolio_first_btn_link = carbon_get_theme_option( "portfolio_first_btn_link" );
+	//portfolio_second_btn_text
+	$portfolio_second_btn_text = carbon_get_theme_option( "portfolio_second_btn_text" );
+	//portfolio_second_btn_link
+	$portfolio_second_btn_link = carbon_get_theme_option( "portfolio_second_btn_link" );
 
-	$contaners_for_info= [];
+	$contaners_for_info = [];
 
 	get_template_part( "/core/views/headerView", "portfolio" ); ?>
     <main class="main">
@@ -24,7 +24,8 @@
                 <div class="portfolio__slide-menu">
                     <div class="portfolio__title">
                         <div class="titleLittle">
-                            <h1 class="titleLittle__text text">portfolio</h1>
+                            <h1 class="titleLittle__text text">portfolio
+                            </h1>
                         </div>
                     </div>
                     <ul class="portfolio__slide-menu-list controls">
@@ -46,18 +47,21 @@
 							<?php endforeach; ?>
                     </ul>
                 </div>
-                <div class="portfolio__portfolio-container swiper-container">
+                <div class="portfolio__portfolio-container">
+                    <img class="portfolio__scroll" src="/wp-content/themes/mastak2/src/icons/download.d5388e.svg"
+                         alt="welcome" title=""/>
+                    <div class="back"></div>
                     <div class="swiper-wrapper portfolio-wrapper">
-						<?php
-							if ( have_posts() ):
-								while ( have_posts() ):
-									the_post();
-                                    $contaners_for_info[] = get_the_ID();
-									get_template_part( '/core/views/single_portfolio_arch' );
-								endwhile;
-							endif;
-						?>
-                        <div class="portfolio__tap">
+	                    <?php
+		                    if ( have_posts() ):
+			                    while ( have_posts() ):
+				                    the_post();
+				                    $contaners_for_info[] = get_the_ID();
+				                    get_template_part( '/core/views/single_portfolio_arch' );
+			                    endwhile;
+		                    endif;
+	                    ?>
+                        <div class="portfolio__portfolio-item swiper-slide">
                             <div class="portfolio__portfolio-item-container">
                                 <div class="portfolio__navigation-container">
                                     <div class="portfolio__navigation">
@@ -76,9 +80,6 @@
             </div>
         </div>
         <div class="testDiva"></div>
-<!--        --><?php //foreach ( $contaners_for_info as $item ) :?>
-<!--            <div class="testDiva" data = "--><?//= $item; ?><!--"></div>-->
-<!--        --><?php //endforeach;?>
     </main>
 <?php
 	//	get_template_part( '/core/views/footerView' );

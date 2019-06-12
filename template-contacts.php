@@ -51,11 +51,11 @@
                             <div class="contactPage__info row">
                                 <div class="contactPage__info-adrress col-12 col-sm-6">
                                     <div class="contactPage__info-adrress-tabs">
-                                        <span class="contactPage__info-adrress-tabs-item"><?= $info_1["country"]; ?></span>
-                                        <span class="contactPage__info-adrress-tabs-item"><?= $info_2["country"]; ?></span>
+                                        <span class="contactPage__info-adrress-tabs-item" id="tab1"><?= $info_1["country"]; ?></span>
+                                        <span class="contactPage__info-adrress-tabs-item" id="tab2"><?= $info_2["country"]; ?></span>
                                     </div>
                                     <div class="contactPage__info-adrress-contents">
-                                        <div class="contactPage__info-adrress-content">
+                                        <div class="contactPage__info-adrress-content" id="cont1">
                                             <a class="contactPage__info-adrress-content-link" href="tel:<?= $info_1["phone"]; ?>">
 	                                            <?= $info_1["phone"]; ?>
                                             </a>
@@ -66,7 +66,7 @@
                                                 <span class="button__text">view on map</span>
                                             </a>
                                         </div>
-                                        <div class="contactPage__info-adrress-content">
+                                        <div class="contactPage__info-adrress-content" id="cont2">
                                             <a class="contactPage__info-adrress-content-link" href="tel:<?= $info_2["phone"]; ?>">
 	                                            <?= $info_2["phone"]; ?>
                                             </a>

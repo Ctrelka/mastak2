@@ -12,18 +12,24 @@
 		Container::make( 'post_meta', "Дополнительная информация" )
 		         ->where( 'post_type', '=', 'portfolio' )
 		         ->add_fields( [
+			         Field::make( 'select', 'title_color_arch_page', 'Title color(archive page)' )
+			              ->add_options( [
+				              'portfolio__color portfolio__color_white' => 'light',
+				              ' ' => 'dark',
+				              ]),
 				         Field::make( 'image', 'client_logo', 'Logo' )
 				              ->set_value_type( 'url' )
-				              ->set_width( 25 ),
+				              ->set_width( 50 ),
 				         Field::make( 'image', 'background', 'Background image' )
-				              ->set_value_type( 'url' ),
+				              ->set_value_type( 'url' )
+				              ->set_width( 50 ),
 				         Field::make( 'textarea', 'client_name', 'Client' ),
 				         Field::make( 'textarea', 'work_type', 'work type' ),
 				         Field::make( 'complex', 'task_list', 'Tasks' )
 				              ->add_fields( 'task', [
 						              Field::make( 'text', 'task', 'Task' ),
 					              ]
-				              ),
+				              )->set_collapsed( true ),
 				         Field::make( 'complex', 'realisation_list', 'Realisations' )
 				              ->add_fields( 'realisation', [
 						              Field::make( 'text', 'realisation', 'Realisation' ),

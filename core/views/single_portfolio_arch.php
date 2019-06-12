@@ -10,8 +10,9 @@
 
 	$background  = carbon_get_post_meta( get_the_ID(), "background" );
 	$client_logo = carbon_get_post_meta( get_the_ID(), "client_logo" );
+	$title_color = carbon_get_post_meta( get_the_ID(), "title_color_arch_page" );
 ?>
-<div class="portfolio__portfolio-item swiper-slide mix <?= $current_term->slug ?>"
+<div class="portfolio__portfolio-item swiper-slide tap mix <?= $current_term->slug ?>"
 	<?php if (! empty( $background ) ): ?>
         style="background-image:url(<?= $background; ?>)"
 	<?php endif; ?>
@@ -25,7 +26,7 @@
                     </a>
 				<?php endif; ?>
             </div>
-            <span class="portfolio__image-content-title portfolio__color portfolio__color_white"><?= get_the_title(); ?></span>
+            <span class="portfolio__image-content-title <?= $title_color;?>"><?= get_the_title(); ?></span>
             <div class="portfolio__image-content-item">
 				<?php if (! empty( $client_logo ) ): ?>
                     <img class="portfolio__image-content-item-text"
