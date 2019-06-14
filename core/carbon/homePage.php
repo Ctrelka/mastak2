@@ -13,7 +13,7 @@
 		         ->where( 'post_type', '=', 'page' )
 		         ->where( 'post_template', '=', 'template-home.php' )
 //			->add_fields([
-//				Field::make( 'text', 'crb_title_first_slide', 'Заготовок' ),
+//				Field::make( 'text', 'crb_title_first_slide', 'Заголовок' ),
 //			]);
 		         ->add_tab( 'Первый слайд', [
 			         Field::make( 'text', 'crb_title_first_slide', 'Заготовок' ),
@@ -22,7 +22,9 @@
 			         Field::make( 'text', 'crb_link_first_slide', 'Ссылка' ),
 			         Field::make( 'image', 'crb_img_first_slide', 'Изображение' )
 			              ->set_value_type( 'url' )
-			              ->set_width( 30 )
+			              ->set_width( 30 ),
+			         Field::make( 'select', 'crb_first_slide_target_project', 'Ссылка на проект' )
+			              ->add_options( 'get_portfolio_link' ),
 		         ] )
 		         ->add_tab( 'Второй слайд', [
 			         Field::make( 'text', 'crb_title_second_slide', 'Заготовок' ),
@@ -32,6 +34,8 @@
 			         Field::make( 'image', 'crb_img_second_slide', 'Изображение' )
 			              ->set_value_type( 'url' )
 			              ->set_width( 30 ),
+			         Field::make( 'select', 'crb_second_slide_target_project', 'Ссылка на проект' )
+			              ->add_options( 'get_portfolio_link' ),
 		         ] )
 		         ->add_tab( 'Ссылки', [
 			         Field::make( 'text', 'crb_text_first_link', 'Текст первой ссылки' ),
@@ -127,4 +131,19 @@
 	add_action( 'after_setup_theme', 'crb_load_home_meta' );
 	function crb_load_home_meta() {
 		\Carbon_Fields\Carbon_Fields::boot();
+	}
+
+	function get_portfolio_link(){
+		$archive = get_post_type_archive_link("portfolio");
+
+		$my_query   = new WP_Query();
+		$portfolios = $my_query->query( [
+			'post_type' => 'portfolio'
+		] );
+
+		$portfolios_links = [];
+		foreach($portfolios as $news) {
+			$news_list[ $archive.'?id='.$news->ID ] = $news->post_title;
+		}
+		return $news_list;
 	}

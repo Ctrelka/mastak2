@@ -48,9 +48,6 @@
                     </ul>
                 </div>
                 <div class="portfolio__portfolio-container">
-                    <img class="portfolio__scroll" src="/wp-content/themes/mastak2/src/icons/download.d5388e.svg"
-                         alt="welcome" title=""/>
-                    <div class="back"></div>
                     <div class="swiper-wrapper portfolio-wrapper">
 	                    <?php
 		                    if ( have_posts() ):
@@ -79,7 +76,11 @@
                 </div>
             </div>
         </div>
-        <div class="testDiva"></div>
+        <div class="testDiva"><?php
+                if (!empty($_GET['id'])){
+                    singlePortfolioById($_GET['id']);
+                }
+            ?></div>
     </main>
 <?php
 	//	get_template_part( '/core/views/footerView' );

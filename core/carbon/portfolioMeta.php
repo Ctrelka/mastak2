@@ -37,8 +37,12 @@
 				              ),
 				         Field::make( 'image', 'content_back', 'Content background' )
 				              ->set_value_type( 'url' ),
-				         Field::make( 'image', 'long_img', 'Long Image' )
-				              ->set_value_type( 'url' ),
+				         Field::make( 'complex', 'long_img', 'Long Image' )
+				              ->add_fields( 'img', [
+				              	Field::make( 'image', 'url', 'Image' )
+						                   ->set_value_type( 'url' )
+					              ]
+				              )->set_layout( "tabbed-horizontal" ),
 			         ]
 		         );
 		Container::make( 'post_meta', "Technologies list" )

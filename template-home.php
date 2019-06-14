@@ -9,12 +9,16 @@
 	$desc_first_slide     = carbon_get_post_meta( get_the_ID(), 'crb_description_first_slide' );
 	$link_first_slide     = carbon_get_post_meta( get_the_ID(), 'crb_link_first_slide' );
 	$img_first_slide      = carbon_get_post_meta( get_the_ID(), 'crb_img_first_slide' );
+	$first_slide_target_project      = carbon_get_post_meta( get_the_ID(), 'crb_first_slide_target_project' );
+
 
 	$title_second_slide    = carbon_get_post_meta( get_the_ID(), 'crb_title_second_slide' );
 	$subtitle_second_slide = carbon_get_post_meta( get_the_ID(), 'crb_subtitle_second_slide' );
 	$desc_second_slide     = carbon_get_post_meta( get_the_ID(), 'crb_description_second_slide' );
 	$link_second_slide     = carbon_get_post_meta( get_the_ID(), 'crb_link_second_slide' );
 	$img_second_slide      = carbon_get_post_meta( get_the_ID(), 'crb_img_second_slide' );
+	$second_slide_target_project      = carbon_get_post_meta( get_the_ID(), 'crb_second_slide_target_project' );
+
 
 	$text_first_link  = carbon_get_post_meta( get_the_ID(), 'crb_text_first_link' );
 	$link_first_link  = carbon_get_post_meta( get_the_ID(), 'crb_link_first_link' );
@@ -32,7 +36,10 @@
                                 <div class="welcome__inner">
                                     <div class="welcome__wrapper">
                                         <img class="welcome__img welcome__img_first welcome__img_in"
-                                             src="<?= $img_second_slide; ?>" alt="welcome" title=""/>
+                                             src="<?= $img_first_slide; ?>" alt="welcome" title=""/>
+                                        <?php if (!empty($first_slide_target_project)):?>
+                                        <a class="welcome__text-desscription df" href="<?= esc_url($first_slide_target_project); ?>">About project</a>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="welcome__content">
                                         <div class="welcome__title welcome__title_first welcome__title_in">
@@ -54,6 +61,9 @@
                                 <div class="welcome__inner">
                                     <div class="welcome__wrapper">
                                         <img class="welcome__img welcome__img_second" src="<?= $img_second_slide; ?>" alt="welcome" title=""/>
+<?php if (!empty($second_slide_target_project)):?>
+                                        <a class="welcome__text-desscription ds" href="<?= esc_url($second_slide_target_project); ?>">About project</a>
+<?php endif; ?>
                                     </div>
                                     <div class="welcome__content">
                                         <div class="welcome__title welcome__title_second">

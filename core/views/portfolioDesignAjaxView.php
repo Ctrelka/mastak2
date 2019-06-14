@@ -77,7 +77,10 @@
                                     </ul>
                                 </div>
                             </div>
-                            <img class="portfolioDesign_full" src="<?= $long_img; ?>">
+<!--                            <img class="portfolioDesign_full" src="--><?//= $long_img; ?><!--">-->
+	                        <?php foreach ( $long_img as $item ) : ?>
+                                <img class="portfolio-image_full" src="<?= $item["url"]; ?>">
+	                        <?php endforeach; ?>
                             <footer>
                                 <div class="container">
                                     <div class="footer-line">
