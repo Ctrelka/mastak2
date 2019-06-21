@@ -8,6 +8,7 @@
 	$previewBGI = carbon_get_post_meta(get_the_ID(),"background");
 	$client_logo = carbon_get_post_meta(get_the_ID(),"client_logo");
 	$content_back = carbon_get_post_meta(get_the_ID(),"content_back");
+	$content_back_color     = carbon_get_post_meta( get_the_ID(), "content_back_color" );
 	$work_type = carbon_get_post_meta(get_the_ID(),"work_type");
 	$client_name = carbon_get_post_meta(get_the_ID(),"client_name");
 	$task_list = carbon_get_post_meta(get_the_ID(),"task_list");
@@ -39,7 +40,7 @@
                 </div>
             </div>
             <div class="portfolioDesign__content"
-                 style="background-image:url(<?= $content_back; ?>)">
+                 style="background-image:url(<?= $content_back; ?>);background-color: <?=$content_back_color?>;">
                 <div class="container">
                     <div class="portfolioDesign__inner">
                         <div class="titleMedium">

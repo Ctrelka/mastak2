@@ -36,7 +36,10 @@
 					              ]
 				              ),
 				         Field::make( 'image', 'content_back', 'Content background' )
-				              ->set_value_type( 'url' ),
+				              ->set_value_type( 'url' )
+				              ->set_width( 50 ),
+				         Field::make( 'color', 'content_back_color', 'Content background color' )
+				              ->set_width( 50 ),
 				         Field::make( 'complex', 'long_img', 'Long Image' )
 				              ->add_fields( 'img', [
 				              	Field::make( 'image', 'url', 'Image' )
