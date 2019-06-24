@@ -30,8 +30,9 @@
                                     </div>
                                     <div class="contactPage__person-item-first-about">
                                         <p class="contactPage__person-item-first-about-name"><?= $m_1["person_name"]; ?></p>
-                                        <span class="contactPage__person-item-first-about-text"><?= $m_1["person_position"]; ?></span>
-                                        <span class="contactPage__person-item-first-about-text"><?= $m_1["person_email"]; ?></span>
+                                        <a class="contactPage__person-item-first-about-text"><?= $m_1["person_position"]; ?></a>
+                                        <a class="contactPage__person-item-first-about-text"
+                                           href="mailto:<?= $m_1["person_email"]; ?>"><?= $m_1["person_email"]; ?></a>
                                     </div>
                                 </div>
                                 <div class="contactPage__person-item-second col-12 col-md-6">
@@ -41,8 +42,9 @@
                                     </div>
                                     <div class="contactPage__person-item-second-about">
                                         <p class="contactPage__person-item-second-about-name"><?= $m_2["person_name"]; ?></p>
-                                        <span class="contactPage__person-item-second-about-text"><?= $m_2["person_position"]; ?></span>
-                                        <span class="contactPage__person-item-second-about-text"><?= $m_2["person_email"]; ?></span>
+                                        <a class="contactPage__person-item-second-about-text"><?= $m_2["person_position"]; ?></a>
+                                        <a class="contactPage__person-item-second-about-text"
+                                           href="mailto:<?= $m_2["person_email"]; ?>"><?= $m_2["person_email"]; ?></a>
                                     </div>
                                 </div>
                             </div>
@@ -59,9 +61,9 @@
                                             <a class="contactPage__info-adrress-content-link" href="tel:<?= $info_1["phone"]; ?>">
 	                                            <?= $info_1["phone"]; ?>
                                             </a>
-                                            <div class="contactPage__info-adrress-content-text">
+                                            <a class="contactPage__info-adrress-content-text" href="<?= esc_url($info_1["map_link"]); ?>">
 	                                            <?= $info_1["address"]; ?>
-                                            </div>
+                                            </a>
                                             <a class="button button__color_red" href="<?= esc_url($info_1["map_link"]); ?>">
                                                 <span class="button__text">view on map</span>
                                             </a>
@@ -70,10 +72,10 @@
                                             <a class="contactPage__info-adrress-content-link" href="tel:<?= $info_2["phone"]; ?>">
 	                                            <?= $info_2["phone"]; ?>
                                             </a>
-                                            <div class="contactPage__info-adrress-content-text">
+                                            <a class="contactPage__info-adrress-content-text" href="<?= esc_url($info_2["map_link"]); ?>">
 	                                            <?= $info_2["address"]; ?>
-                                            </div>
-                                            <a class="button button__color_red" href="#">
+                                            </a>
+                                            <a class="button button__color_red" href="<?= esc_url($info_2["map_link"]); ?>">
                                                 <span class="button__text">view on map</span>
                                             </a>
                                         </div>
