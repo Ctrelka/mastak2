@@ -16,7 +16,7 @@
 	function sendForm() {
 		$mail_to = carbon_get_theme_option("crb_form_mail");
 		$subject = 'question!';
-		$headers = 'From: Zankoav Web Site <zankoav@mail.ru>' . "\r\n";
+		$headers = 'From: MastakStudio <' . $mail_to .'>' . "\r\n";
 
 		$response           = array();
 		$response['status'] = 0;
@@ -24,11 +24,6 @@
 		$form_name    = empty( $_POST['name'] ) ? '' : esc_attr( $_POST['name'] );
 		$form_email   = empty( $_POST['email'] ) ? '' : esc_attr( $_POST['email'] );
 		$form_message = empty( $_POST['message'] ) ? '' : esc_attr( $_POST['message'] );
-//		$form_spam    = empty( $_POST['spam'] ) ? '' : esc_attr( $_POST['spam'] );
-
-//		if ( ! empty( $form_spam ) ) {
-//			return;
-//		}
 
 		if ( ! filter_var( $form_email, FILTER_VALIDATE_EMAIL ) ) {
 
