@@ -16,8 +16,8 @@
 //				Field::make( 'text', 'crb_title_first_slide', 'Заголовок' ),
 //			]);
 		         ->add_tab( 'Первый слайд', [
-			         Field::make( 'text', 'crb_title_first_slide', 'Заготовок' ),
-			         Field::make( 'text', 'crb_subtitle_first_slide', 'Подзаготовок' ),
+			         Field::make( 'text', 'crb_title_first_slide', 'Заголовок' ),
+			         Field::make( 'text', 'crb_subtitle_first_slide', 'Подзаголовок' ),
 			         Field::make( 'textarea', 'crb_description_first_slide', 'Описание' ),
 			         Field::make( 'text', 'crb_link_first_slide', 'Ссылка' ),
 			         Field::make( 'image', 'crb_img_first_slide', 'Изображение' )
@@ -27,8 +27,8 @@
 			              ->add_options( 'get_portfolio_link' ),
 		         ] )
 		         ->add_tab( 'Второй слайд', [
-			         Field::make( 'text', 'crb_title_second_slide', 'Заготовок' ),
-			         Field::make( 'text', 'crb_subtitle_second_slide', 'Подзаготовок' ),
+			         Field::make( 'text', 'crb_title_second_slide', 'Заголовок' ),
+			         Field::make( 'text', 'crb_subtitle_second_slide', 'Подзаголовок' ),
 			         Field::make( 'textarea', 'crb_description_second_slide', 'Описание' ),
 			         Field::make( 'text', 'crb_link_second_slide', 'Ссылка' ),
 			         Field::make( 'image', 'crb_img_second_slide', 'Изображение' )
@@ -118,7 +118,7 @@
 				         Field::make( 'textarea', 'crb_des_short_bold', 'Параграф (жирный текст)' ),
 				         Field::make( 'textarea', 'crb_des_big_regular', 'Параграф (обычный текст)' ),
 				         Field::make( 'textarea', 'crb_des_order', 'Параграф (конец страницы)' ),
-				         Field::make( 'complex', 'des_slider_end', 'Сдлайдер' )
+				         Field::make( 'complex', 'des_slider_end', 'Слайдер' )
 				              ->set_layout( "tabbed-horizontal" )
 				              ->set_collapsed( true )
 				              ->add_fields( 'slide', [
