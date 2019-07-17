@@ -15,8 +15,7 @@
 	//portfolio_second_btn_link
 	$portfolio_second_btn_link = carbon_get_theme_option( "portfolio_second_btn_link" );
 
-	$contaners_for_info = [];
-
+	$portfolio_list = carbon_get_theme_option( "portfolio_list" );
 	get_template_part( "/core/views/headerView", "portfolio" ); ?>
     <main class="main">
         <div class="portfolio">
@@ -50,12 +49,22 @@
                 <div class="portfolio__portfolio-container">
                     <div class="swiper-wrapper portfolio-wrapper">
 	                    <?php
-		                    if ( have_posts() ):
-			                    while ( have_posts() ):
-				                    the_post();
-				                    $contaners_for_info[] = get_the_ID();
-				                    get_template_part( '/core/views/single_portfolio_arch' );
-			                    endwhile;
+                            if (count($portfolio_list ) > 1):
+		                    foreach ( $portfolio_list as $item ) {
+			                    $args = array(
+				                    'post_type' => 'portfolio',
+				                    'post__in' => [$item["first_new_id"]]
+			                    );
+			                    $query = new WP_Query( $args );
+
+			                    if ( $query->have_posts() ):
+				                    while ( $query->have_posts() ):
+					                    $query->the_post();
+					                    get_template_part( '/core/views/single_portfolio_arch' );
+				                    endwhile;
+				                    wp_reset_postdata();
+			                    endif;
+		                    }
 		                    endif;
 	                    ?>
                         <div class="portfolio__portfolio-item swiper-slide">
